@@ -2264,8 +2264,6 @@ C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Client\obj\Debug\
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Client\obj\Debug\net10.0\compressed\cj9hdiq41a-{0}-psdnut96f4-psdnut96f4.gz
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Client\obj\Debug\net10.0\compressed\ecmo2p2my8-{0}-2bcwsotwth-2bcwsotwth.gz
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\LibraryApp.Client.runtimeconfig.json
-D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\LibraryApp.Client.st2d2vrcfx.wasm
-D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\LibraryApp.Client.yx1qvcjhr2.pdb
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\LibraryApp.Shared.qleueqq0oy.wasm
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\LibraryApp.Shared.v03cj4s24k.pdb
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.286cdd0mnj.wasm
@@ -2466,7 +2464,6 @@ D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\System.Xml.dvbhh7ypsi.wasm
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\WindowsBase.sai7rvg6jy.wasm
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\blazor.webassembly.w3qd1tpl0e.js
-D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\dotnet.7i53tgr2dz.js
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\dotnet.js.map
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\dotnet.native.puryxhmhq9.js
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\dotnet.native.u31nt9bth6.wasm
@@ -2544,7 +2541,6 @@ D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\System.Security.Principal.Windows.rdh8dkjzrz.wasm.gz
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\System.IO.MemoryMappedFiles.dud9xjr6ji.wasm.gz
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\System.Private.Xml.q1h1022344.wasm.gz
-D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\LibraryApp.Client.st2d2vrcfx.wasm.gz
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\System.Xml.dvbhh7ypsi.wasm.gz
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\System.Runtime.Serialization.Json.qudur1ne02.wasm.gz
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\System.Drawing.Primitives.cfbgr8gzc9.wasm.gz
@@ -2553,11 +2549,9 @@ D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\System.Xml.ReaderWriter.5aewgdxgx5.wasm.gz
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\System.Runtime.CompilerServices.Unsafe.psp9r1rjx3.wasm.gz
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\Microsoft.Extensions.Configuration.FileExtensions.lhv6s59pp1.wasm.gz
-D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\dotnet.7i53tgr2dz.js.gz
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\Microsoft.Extensions.FileProviders.Abstractions.21el9em0un.wasm.gz
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\LibraryApp.Shared.qleueqq0oy.wasm.gz
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\System.Runtime.Serialization.Formatters.rvz6whau2l.wasm.gz
-D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\LibraryApp.Client.yx1qvcjhr2.pdb.gz
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\System.Reflection.Emit.Lightweight.2uboz65mda.wasm.gz
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\System.Collections.ggdo1btk42.wasm.gz
 D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\System.Collections.Concurrent.mjcda8szaq.wasm.gz
@@ -3386,10 +3380,6 @@ D:\Blazor-app\LibraryApp\LibraryApp.Client\obj\Debug\net10.0\compressed\icnyo38a
 D:\Blazor-app\LibraryApp\LibraryApp.Client\obj\Debug\net10.0\compressed\co911t9p41-{0}-qleueqq0oy-qleueqq0oy.gz
 D:\Blazor-app\LibraryApp\LibraryApp.Client\obj\Debug\net10.0\compressed\12s7k5dm9f-{0}-v03cj4s24k-v03cj4s24k.gz
 D:\Blazor-app\LibraryApp\LibraryApp.Client\obj\Debug\net10.0\compressed\oses4t349h-{0}-ccsptreuls-ccsptreuls.gz
-D:\Blazor-app\LibraryApp\LibraryApp.Client\obj\Debug\net10.0\compressed\berwmnizk2-{0}-st2d2vrcfx-st2d2vrcfx.gz
-D:\Blazor-app\LibraryApp\LibraryApp.Client\obj\Debug\net10.0\compressed\cval78tm38-{0}-yx1qvcjhr2-yx1qvcjhr2.gz
-D:\Blazor-app\LibraryApp\LibraryApp.Client\obj\Debug\net10.0\compressed\cj9hdiq41a-{0}-7i53tgr2dz-7i53tgr2dz.gz
-D:\Blazor-app\LibraryApp\LibraryApp.Client\obj\Debug\net10.0\compressed\ecmo2p2my8-{0}-yopcctzzli-yopcctzzli.gz
 D:\Blazor-app\LibraryApp\LibraryApp.Client\obj\Debug\net10.0\staticwebassets.build.json
 D:\Blazor-app\LibraryApp\LibraryApp.Client\obj\Debug\net10.0\staticwebassets.build.json.cache
 D:\Blazor-app\LibraryApp\LibraryApp.Client\obj\Debug\net10.0\staticwebassets.development.json
@@ -3401,3 +3391,13 @@ D:\Blazor-app\LibraryApp\LibraryApp.Client\obj\Debug\net10.0\LibraryApp.Client.d
 D:\Blazor-app\LibraryApp\LibraryApp.Client\obj\Debug\net10.0\refint\LibraryApp.Client.dll
 D:\Blazor-app\LibraryApp\LibraryApp.Client\obj\Debug\net10.0\LibraryApp.Client.pdb
 D:\Blazor-app\LibraryApp\LibraryApp.Client\obj\Debug\net10.0\ref\LibraryApp.Client.dll
+D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\LibraryApp.Client.i9885ou869.wasm
+D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\LibraryApp.Client.k7iubjzmxd.pdb
+D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\dotnet.k3jgyycwo4.js
+D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\LibraryApp.Client.i9885ou869.wasm.gz
+D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\dotnet.k3jgyycwo4.js.gz
+D:\Blazor-app\LibraryApp\LibraryApp.Client\bin\Debug\net10.0\wwwroot\_framework\LibraryApp.Client.k7iubjzmxd.pdb.gz
+D:\Blazor-app\LibraryApp\LibraryApp.Client\obj\Debug\net10.0\compressed\berwmnizk2-{0}-i9885ou869-i9885ou869.gz
+D:\Blazor-app\LibraryApp\LibraryApp.Client\obj\Debug\net10.0\compressed\cval78tm38-{0}-k7iubjzmxd-k7iubjzmxd.gz
+D:\Blazor-app\LibraryApp\LibraryApp.Client\obj\Debug\net10.0\compressed\cj9hdiq41a-{0}-k3jgyycwo4-k3jgyycwo4.gz
+D:\Blazor-app\LibraryApp\LibraryApp.Client\obj\Debug\net10.0\compressed\ecmo2p2my8-{0}-7y0nx7mvm8-7y0nx7mvm8.gz
