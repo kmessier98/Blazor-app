@@ -3,6 +3,7 @@ using LibraryApp.Application.Services;
 using LibraryApp.Infrastructure.Data;
 using LibraryApp.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,6 +34,12 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/openapi/v1.json", "v1");
+    });
+    app.MapScalarApiReference();
 }
 
 app.UseHttpsRedirection();

@@ -384,3 +384,5 @@ C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\obj\Debug\net
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\obj\Debug\net10.0\LibraryApp.Api.pdb
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\obj\Debug\net10.0\LibraryApp.Api.genruntimeconfig.cache
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\obj\Debug\net10.0\ref\LibraryApp.Api.dll
+C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\Scalar.AspNetCore.dll
