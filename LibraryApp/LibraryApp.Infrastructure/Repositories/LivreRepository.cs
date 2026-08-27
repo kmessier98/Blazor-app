@@ -1,6 +1,7 @@
 ﻿using LibraryApp.Application.Interfaces;
 using LibraryApp.Domain.Entities;
 using LibraryApp.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
 namespace LibraryApp.Infrastructure.Repositories
@@ -31,7 +32,12 @@ namespace LibraryApp.Infrastructure.Repositories
 
         public async Task<IReadOnlyList<Livre>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            var result = await _dbContext.Livres
+                .Include(e => e.Editeur)
+                .Include(a => a.Auteurs)
+                .ToListAsync();
+
+            return result;
         }
 
         public Task<Livre> GetByAsync(Expression<Func<Livre, bool>> predicate)

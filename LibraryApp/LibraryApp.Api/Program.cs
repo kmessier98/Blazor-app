@@ -1,4 +1,5 @@
 using LibraryApp.Application.Interfaces;
+using LibraryApp.Application.Mapping;
 using LibraryApp.Application.Services;
 using LibraryApp.Infrastructure.Data;
 using LibraryApp.Infrastructure.Repositories;
@@ -19,7 +20,7 @@ builder.Services.AddCors(options =>
     });
 });
 
-
+builder.Services.AddAutoMapper(cfg => { }, typeof(MappingProfile).Assembly);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
