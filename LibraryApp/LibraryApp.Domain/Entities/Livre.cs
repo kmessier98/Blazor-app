@@ -11,5 +11,7 @@ namespace LibraryApp.Domain.Entities
         public int EditeurId { get; set; }
         public Editeur Editeur { get; set; }
         public List<Auteur> Auteurs { get; set; }
+        public List<Categorie> Categories { get; set; }
+        public List<Emprunt> Emprunts { get; set; }
     }
 }
