@@ -1,0 +1,12 @@
+D:\Blazor-app\LibraryApp\LibraryApp.Domain\bin\Debug\net10.0\LibraryApp.Domain.deps.json
+D:\Blazor-app\LibraryApp\LibraryApp.Domain\bin\Debug\net10.0\LibraryApp.Domain.dll
+D:\Blazor-app\LibraryApp\LibraryApp.Domain\bin\Debug\net10.0\LibraryApp.Domain.pdb
+D:\Blazor-app\LibraryApp\LibraryApp.Domain\obj\Debug\net10.0\LibraryApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Blazor-app\LibraryApp\LibraryApp.Domain\obj\Debug\net10.0\LibraryApp.Domain.AssemblyInfoInputs.cache
+D:\Blazor-app\LibraryApp\LibraryApp.Domain\obj\Debug\net10.0\LibraryApp.Domain.AssemblyInfo.cs
+D:\Blazor-app\LibraryApp\LibraryApp.Domain\obj\Debug\net10.0\LibraryApp.Domain.csproj.CoreCompileInputs.cache
+D:\Blazor-app\LibraryApp\LibraryApp.Domain\obj\Debug\net10.0\LibraryApp.Domain.sourcelink.json
+D:\Blazor-app\LibraryApp\LibraryApp.Domain\obj\Debug\net10.0\LibraryApp.Domain.dll
+D:\Blazor-app\LibraryApp\LibraryApp.Domain\obj\Debug\net10.0\refint\LibraryApp.Domain.dll
+D:\Blazor-app\LibraryApp\LibraryApp.Domain\obj\Debug\net10.0\LibraryApp.Domain.pdb
+D:\Blazor-app\LibraryApp\LibraryApp.Domain\obj\Debug\net10.0\ref\LibraryApp.Domain.dll

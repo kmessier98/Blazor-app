@@ -1,5 +1,8 @@
 <Solution>
   <Project Path="LibraryApp.Api/LibraryApp.Api.csproj" />
+  <Project Path="LibraryApp.Application/LibraryApp.Application.csproj" Id="53131189-f6f0-487a-832a-c4dd346c1c4f" />
   <Project Path="LibraryApp.Client/LibraryApp.Client.csproj" />
+  <Project Path="LibraryApp.Domain/LibraryApp.Domain.csproj" Id="69de55bc-4038-4c5d-96d4-9d8b951e0f38" />
+  <Project Path="LibraryApp.Infrastructure/LibraryApp.Infrastructure.csproj" Id="b9d43396-8c06-40e6-91e7-0deba6de099a" />
   <Project Path="LibraryApp.Shared/LibraryApp.Shared.csproj" Id="61be914a-455b-4deb-a817-aa695873fb67" />
 </Solution>

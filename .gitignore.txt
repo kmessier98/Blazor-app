@@ -1,0 +1,6 @@
+# Fichiers de configuration de Visual Studio
+.vs/
+
+# Dossiers de compilation .NET
+**/bin/
+**/obj/

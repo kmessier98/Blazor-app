@@ -1,6 +1,6 @@
 [
   {
-    "Name": "Nouveau profil",
+    "Name": "LibraryAppBundle",
     "Projects": [
       {
         "Path": "LibraryApp.Api\\LibraryApp.Api.csproj",
