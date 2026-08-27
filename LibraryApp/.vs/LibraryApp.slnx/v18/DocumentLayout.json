@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Blazor-app\\LibraryApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{61BE914A-455B-4DEB-A817-AA695873FB67}|LibraryApp.Shared\\LibraryApp.Shared.csproj|d:\\blazor-app\\libraryapp\\libraryapp.shared\\interfaces\\igenericinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61BE914A-455B-4DEB-A817-AA695873FB67}|LibraryApp.Shared\\LibraryApp.Shared.csproj|solutionrelative:libraryapp.shared\\interfaces\\igenericinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EF05E336-EC23-C08F-1512-859272F45D6A}|LibraryApp.Client\\LibraryApp.Client.csproj|d:\\blazor-app\\libraryapp\\libraryapp.client\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EF05E336-EC23-C08F-1512-859272F45D6A}|LibraryApp.Client\\LibraryApp.Client.csproj|solutionrelative:libraryapp.client\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -47,8 +51,8 @@
       "RelativeMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|solutionrelative:libraryapp.api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{61BE914A-455B-4DEB-A817-AA695873FB67}|LibraryApp.Shared\\LibraryApp.Shared.csproj|d:\\blazor-app\\libraryapp\\libraryapp.shared\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61BE914A-455B-4DEB-A817-AA695873FB67}|LibraryApp.Shared\\LibraryApp.Shared.csproj|solutionrelative:libraryapp.shared\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{61BE914A-455B-4DEB-A817-AA695873FB67}|LibraryApp.Shared\\LibraryApp.Shared.csproj|d:\\blazor-app\\libraryapp\\libraryapp.shared\\dtos\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61BE914A-455B-4DEB-A817-AA695873FB67}|LibraryApp.Shared\\LibraryApp.Shared.csproj|solutionrelative:libraryapp.shared\\dtos\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EF05E336-EC23-C08F-1512-859272F45D6A}|LibraryApp.Client\\LibraryApp.Client.csproj|d:\\blazor-app\\libraryapp\\libraryapp.client\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -67,6 +71,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "IGenericInterface.cs",
+              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Shared\\Interfaces\\IGenericInterface.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Shared\\Interfaces\\IGenericInterface.cs",
+              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Shared\\Interfaces\\IGenericInterface.cs",
+              "RelativeToolTip": "LibraryApp.Shared\\Interfaces\\IGenericInterface.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T18:45:15.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Client\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "LibraryApp.Client\\Layout\\NavMenu.razor",
@@ -79,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Home.razor",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Client\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "LibraryApp.Client\\Pages\\Home.razor",
@@ -87,12 +104,11 @@
               "RelativeToolTip": "LibraryApp.Client\\Pages\\Home.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-27T18:37:36.637Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T18:37:36.637Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "NotFound.razor",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Client\\Pages\\NotFound.razor",
               "RelativeDocumentMoniker": "LibraryApp.Client\\Pages\\NotFound.razor",
@@ -100,12 +116,11 @@
               "RelativeToolTip": "LibraryApp.Client\\Pages\\NotFound.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-27T18:37:35.693Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T18:37:35.693Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Infrastructure\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "LibraryApp.Infrastructure\\Data\\AppDbContext.cs",
@@ -113,12 +128,11 @@
               "RelativeToolTip": "LibraryApp.Infrastructure\\Data\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T18:25:01.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T18:25:01.077Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Counter.razor",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Client\\Pages\\Counter.razor",
               "RelativeDocumentMoniker": "LibraryApp.Client\\Pages\\Counter.razor",
@@ -126,12 +140,11 @@
               "RelativeToolTip": "LibraryApp.Client\\Pages\\Counter.razor",
               "ViewState": "AgIAABYAAAAAAAAAAAAewB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-27T17:04:43.885Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T17:04:43.885Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Api\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "LibraryApp.Api\\Properties\\launchSettings.json",
@@ -139,12 +152,11 @@
               "RelativeToolTip": "LibraryApp.Api\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-08-27T17:04:23.593Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T17:04:23.593Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Client\\Program.cs",
               "RelativeDocumentMoniker": "LibraryApp.Client\\Program.cs",
@@ -152,12 +164,11 @@
               "RelativeToolTip": "LibraryApp.Client\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T17:04:04.893Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T17:04:04.893Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Api\\Program.cs",
               "RelativeDocumentMoniker": "LibraryApp.Api\\Program.cs",
@@ -165,12 +176,11 @@
               "RelativeToolTip": "LibraryApp.Api\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T17:02:45.975Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T17:02:45.975Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "weather.json",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Client\\wwwroot\\sample-data\\weather.json",
               "RelativeDocumentMoniker": "LibraryApp.Client\\wwwroot\\sample-data\\weather.json",
@@ -178,12 +188,11 @@
               "RelativeToolTip": "LibraryApp.Client\\wwwroot\\sample-data\\weather.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-08-27T18:34:52.604Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T18:34:52.604Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Api\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "LibraryApp.Api\\Controllers\\WeatherForecastController.cs",
@@ -196,7 +205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Api\\appsettings.json",
               "RelativeDocumentMoniker": "LibraryApp.Api\\appsettings.json",
@@ -204,17 +213,16 @@
               "RelativeToolTip": "LibraryApp.Api\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-08-27T18:31:14.125Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T18:31:14.125Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Shared\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "LibraryApp.Shared\\WeatherForecast.cs",
-              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Shared\\WeatherForecast.cs",
-              "RelativeToolTip": "LibraryApp.Shared\\WeatherForecast.cs",
+              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Shared\\DTOs\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Shared\\DTOs\\WeatherForecast.cs",
+              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Shared\\DTOs\\WeatherForecast.cs",
+              "RelativeToolTip": "LibraryApp.Shared\\DTOs\\WeatherForecast.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-27T17:07:32.826Z",
@@ -222,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Client\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "LibraryApp.Client\\Properties\\launchSettings.json",
@@ -230,8 +238,7 @@
               "RelativeToolTip": "LibraryApp.Client\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-08-27T17:03:15.976Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T17:03:15.976Z"
             }
           ]
         }

@@ -1,4 +1,4 @@
-namespace LibraryApp.Shared
+namespace LibraryApp.Shared.DTOs
 {
     public class WeatherForecast
     {
