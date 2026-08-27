@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="LibraryApp.Api/LibraryApp.Api.csproj" />
+  <Project Path="LibraryApp.Client/LibraryApp.Client.csproj" />
+  <Project Path="LibraryApp.Shared/LibraryApp.Shared.csproj" Id="61be914a-455b-4deb-a817-aa695873fb67" />
+</Solution>

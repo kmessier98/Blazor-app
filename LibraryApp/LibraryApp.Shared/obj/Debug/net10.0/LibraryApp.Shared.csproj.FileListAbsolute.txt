@@ -1,0 +1,11 @@
+C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Shared\bin\Debug\net10.0\LibraryApp.Shared.deps.json
+C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Shared\bin\Debug\net10.0\LibraryApp.Shared.dll
+C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Shared\bin\Debug\net10.0\LibraryApp.Shared.pdb
+C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Shared\obj\Debug\net10.0\LibraryApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Shared\obj\Debug\net10.0\LibraryApp.Shared.AssemblyInfoInputs.cache
+C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Shared\obj\Debug\net10.0\LibraryApp.Shared.AssemblyInfo.cs
+C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Shared\obj\Debug\net10.0\LibraryApp.Shared.csproj.CoreCompileInputs.cache
+C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Shared\obj\Debug\net10.0\LibraryApp.Shared.dll
+C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Shared\obj\Debug\net10.0\refint\LibraryApp.Shared.dll
+C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Shared\obj\Debug\net10.0\LibraryApp.Shared.pdb
+C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Shared\obj\Debug\net10.0\ref\LibraryApp.Shared.dll
