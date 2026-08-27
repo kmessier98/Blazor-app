@@ -11,9 +11,4 @@
     <ProjectReference Include="..\LibraryApp.Shared\LibraryApp.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
-
 </Project>

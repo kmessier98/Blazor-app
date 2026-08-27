@@ -13,6 +13,18 @@
     }
   ],
   "paths": {
+    "/api/Livre/GetAll": {
+      "get": {
+        "tags": [
+          "Livre"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -89,6 +101,9 @@
     }
   },
   "tags": [
+    {
+      "name": "Livre"
+    },
     {
       "name": "WeatherForecast"
     }

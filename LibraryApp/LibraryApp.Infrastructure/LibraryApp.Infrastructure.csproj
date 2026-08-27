@@ -15,8 +15,4 @@
     <ProjectReference Include="..\LibraryApp.Application\LibraryApp.Application.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
 </Project>

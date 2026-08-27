@@ -1,4 +1,7 @@
+using LibraryApp.Application.Interfaces;
+using LibraryApp.Application.Services;
 using LibraryApp.Infrastructure.Data;
+using LibraryApp.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +23,9 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<ILivreService, LivreService>();
+builder.Services.AddScoped<ILivreRepository, LivreRepository>();
 
 var app = builder.Build();
 
