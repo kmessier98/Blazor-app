@@ -3,32 +3,16 @@
   "WorkspaceRootPath": "D:\\Blazor-app\\LibraryApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|d:\\blazor-app\\libraryapp\\libraryapp.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|solutionrelative:libraryapp.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|d:\\blazor-app\\libraryapp\\libraryapp.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|solutionrelative:libraryapp.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|d:\\blazor-app\\libraryapp\\libraryapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|solutionrelative:libraryapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9D43396-8C06-40E6-91E7-0DEBA6DE099A}|LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj|d:\\blazor-app\\libraryapp\\libraryapp.infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9D43396-8C06-40E6-91E7-0DEBA6DE099A}|LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj|solutionrelative:libraryapp.infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9D43396-8C06-40E6-91E7-0DEBA6DE099A}|LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj|d:\\blazor-app\\libraryapp\\libraryapp.infrastructure\\data\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9D43396-8C06-40E6-91E7-0DEBA6DE099A}|LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj|solutionrelative:libraryapp.infrastructure\\data\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9D43396-8C06-40E6-91E7-0DEBA6DE099A}|LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj|d:\\blazor-app\\libraryapp\\libraryapp.infrastructure\\data\\migrations\\20260827191307_addentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9D43396-8C06-40E6-91E7-0DEBA6DE099A}|LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj|solutionrelative:libraryapp.infrastructure\\data\\migrations\\20260827191307_addentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Blazor-app\\LibraryApp\\LibraryApp.Infrastructure\\Data\\Migrations\\20260827192647_UpdateTableName.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LibraryApp.Infrastructure\\Data\\Migrations\\20260827192647_UpdateTableName.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{69DE55BC-4038-4C5D-96D4-9D8B951E0F38}|LibraryApp.Domain\\LibraryApp.Domain.csproj|d:\\blazor-app\\libraryapp\\libraryapp.domain\\entities\\livre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69DE55BC-4038-4C5D-96D4-9D8B951E0F38}|LibraryApp.Domain\\LibraryApp.Domain.csproj|solutionrelative:libraryapp.domain\\entities\\livre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DE55BC-4038-4C5D-96D4-9D8B951E0F38}|LibraryApp.Domain\\LibraryApp.Domain.csproj|d:\\blazor-app\\libraryapp\\libraryapp.domain\\entities\\utilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DE55BC-4038-4C5D-96D4-9D8B951E0F38}|LibraryApp.Domain\\LibraryApp.Domain.csproj|solutionrelative:libraryapp.domain\\entities\\utilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{69DE55BC-4038-4C5D-96D4-9D8B951E0F38}|LibraryApp.Domain\\LibraryApp.Domain.csproj|d:\\blazor-app\\libraryapp\\libraryapp.domain\\entities\\emprunt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,16 +23,40 @@
       "RelativeMoniker": "D:0:0:{69DE55BC-4038-4C5D-96D4-9D8B951E0F38}|LibraryApp.Domain\\LibraryApp.Domain.csproj|solutionrelative:libraryapp.domain\\entities\\editeur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69DE55BC-4038-4C5D-96D4-9D8B951E0F38}|LibraryApp.Domain\\LibraryApp.Domain.csproj|d:\\blazor-app\\libraryapp\\libraryapp.domain\\entities\\auteur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69DE55BC-4038-4C5D-96D4-9D8B951E0F38}|LibraryApp.Domain\\LibraryApp.Domain.csproj|solutionrelative:libraryapp.domain\\entities\\auteur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{69DE55BC-4038-4C5D-96D4-9D8B951E0F38}|LibraryApp.Domain\\LibraryApp.Domain.csproj|d:\\blazor-app\\libraryapp\\libraryapp.domain\\entities\\categorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69DE55BC-4038-4C5D-96D4-9D8B951E0F38}|LibraryApp.Domain\\LibraryApp.Domain.csproj|solutionrelative:libraryapp.domain\\entities\\categorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69DE55BC-4038-4C5D-96D4-9D8B951E0F38}|LibraryApp.Domain\\LibraryApp.Domain.csproj|d:\\blazor-app\\libraryapp\\libraryapp.domain\\entities\\utilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69DE55BC-4038-4C5D-96D4-9D8B951E0F38}|LibraryApp.Domain\\LibraryApp.Domain.csproj|solutionrelative:libraryapp.domain\\entities\\utilisateur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{69DE55BC-4038-4C5D-96D4-9D8B951E0F38}|LibraryApp.Domain\\LibraryApp.Domain.csproj|d:\\blazor-app\\libraryapp\\libraryapp.domain\\entities\\auteur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DE55BC-4038-4C5D-96D4-9D8B951E0F38}|LibraryApp.Domain\\LibraryApp.Domain.csproj|solutionrelative:libraryapp.domain\\entities\\auteur.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9D43396-8C06-40E6-91E7-0DEBA6DE099A}|LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj|d:\\blazor-app\\libraryapp\\libraryapp.infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9D43396-8C06-40E6-91E7-0DEBA6DE099A}|LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj|solutionrelative:libraryapp.infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9D43396-8C06-40E6-91E7-0DEBA6DE099A}|LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj|d:\\blazor-app\\libraryapp\\libraryapp.infrastructure\\data\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9D43396-8C06-40E6-91E7-0DEBA6DE099A}|LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj|solutionrelative:libraryapp.infrastructure\\data\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|d:\\blazor-app\\libraryapp\\libraryapp.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|solutionrelative:libraryapp.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Blazor-app\\LibraryApp\\LibraryApp.Infrastructure\\Data\\Migrations\\20260827192320_LivreAuteurManyToMany.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LibraryApp.Infrastructure\\Data\\Migrations\\20260827192320_LivreAuteurManyToMany.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|d:\\blazor-app\\libraryapp\\libraryapp.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|solutionrelative:libraryapp.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|d:\\blazor-app\\libraryapp\\libraryapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|solutionrelative:libraryapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9D43396-8C06-40E6-91E7-0DEBA6DE099A}|LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj|d:\\blazor-app\\libraryapp\\libraryapp.infrastructure\\data\\migrations\\20260827191307_addentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9D43396-8C06-40E6-91E7-0DEBA6DE099A}|LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj|solutionrelative:libraryapp.infrastructure\\data\\migrations\\20260827191307_addentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EF05E336-EC23-C08F-1512-859272F45D6A}|LibraryApp.Client\\LibraryApp.Client.csproj|d:\\blazor-app\\libraryapp\\libraryapp.client\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -98,63 +106,128 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AppDbContextModelSnapshot.cs",
-              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Infrastructure\\Data\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "LibraryApp.Infrastructure\\Data\\Migrations\\AppDbContextModelSnapshot.cs",
-              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Infrastructure\\Data\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeToolTip": "LibraryApp.Infrastructure\\Data\\Migrations\\AppDbContextModelSnapshot.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "20260827192647_UpdateTableName.cs",
+              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Infrastructure\\Data\\Migrations\\20260827192647_UpdateTableName.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Infrastructure\\Data\\Migrations\\20260827192647_UpdateTableName.cs",
+              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Infrastructure\\Data\\Migrations\\20260827192647_UpdateTableName.cs",
+              "RelativeToolTip": "LibraryApp.Infrastructure\\Data\\Migrations\\20260827192647_UpdateTableName.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T19:16:13.235Z",
+              "WhenOpened": "2026-08-27T19:26:47.353Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "20260827191307_AddEntities.cs",
-              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Infrastructure\\Data\\Migrations\\20260827191307_AddEntities.cs",
-              "RelativeDocumentMoniker": "LibraryApp.Infrastructure\\Data\\Migrations\\20260827191307_AddEntities.cs",
-              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Infrastructure\\Data\\Migrations\\20260827191307_AddEntities.cs",
-              "RelativeToolTip": "LibraryApp.Infrastructure\\Data\\Migrations\\20260827191307_AddEntities.cs",
-              "ViewState": "AgIAAGcAAAAAAAAAAAAzwHMAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T19:13:08.618Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Infrastructure\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "LibraryApp.Infrastructure\\Data\\AppDbContext.cs",
               "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Infrastructure\\Data\\AppDbContext.cs",
               "RelativeToolTip": "LibraryApp.Infrastructure\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAswBEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-27T18:25:01.077Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Api\\Program.cs",
-              "RelativeDocumentMoniker": "LibraryApp.Api\\Program.cs",
-              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Api\\Program.cs",
-              "RelativeToolTip": "LibraryApp.Api\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "AppDbContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Infrastructure\\Data\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Infrastructure\\Data\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Infrastructure\\Data\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeToolTip": "LibraryApp.Infrastructure\\Data\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T17:02:45.975Z",
+              "WhenOpened": "2026-08-27T19:16:13.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Auteur.cs",
+              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Auteur.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Domain\\Entities\\Auteur.cs",
+              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Auteur.cs",
+              "RelativeToolTip": "LibraryApp.Domain\\Entities\\Auteur.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T18:58:09.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Categorie.cs",
+              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Categorie.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Domain\\Entities\\Categorie.cs",
+              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Categorie.cs",
+              "RelativeToolTip": "LibraryApp.Domain\\Entities\\Categorie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T18:58:27.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Editeur.cs",
+              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Editeur.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Domain\\Entities\\Editeur.cs",
+              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Editeur.cs",
+              "RelativeToolTip": "LibraryApp.Domain\\Entities\\Editeur.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T18:58:17.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Emprunt.cs",
+              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Emprunt.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Domain\\Entities\\Emprunt.cs",
+              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Emprunt.cs",
+              "RelativeToolTip": "LibraryApp.Domain\\Entities\\Emprunt.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T18:58:41.92Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Livre.cs",
+              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Livre.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Domain\\Entities\\Livre.cs",
+              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Livre.cs",
+              "RelativeToolTip": "LibraryApp.Domain\\Entities\\Livre.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T18:58:02.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Utilisateur.cs",
+              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Utilisateur.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Domain\\Entities\\Utilisateur.cs",
+              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Utilisateur.cs",
+              "RelativeToolTip": "LibraryApp.Domain\\Entities\\Utilisateur.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T18:58:34.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Api\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "LibraryApp.Api\\Properties\\launchSettings.json",
@@ -167,20 +240,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 10,
+              "Title": "20260827192320_LivreAuteurManyToMany.cs",
+              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Infrastructure\\Data\\Migrations\\20260827192320_LivreAuteurManyToMany.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Infrastructure\\Data\\Migrations\\20260827192320_LivreAuteurManyToMany.cs",
+              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Infrastructure\\Data\\Migrations\\20260827192320_LivreAuteurManyToMany.cs",
+              "RelativeToolTip": "LibraryApp.Infrastructure\\Data\\Migrations\\20260827192320_LivreAuteurManyToMany.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T19:23:20.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Api\\appsettings.json",
               "RelativeDocumentMoniker": "LibraryApp.Api\\appsettings.json",
-              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Api\\appsettings.json*",
-              "RelativeToolTip": "LibraryApp.Api\\appsettings.json*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABRAAAAAAAAAA==",
+              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Api\\appsettings.json",
+              "RelativeToolTip": "LibraryApp.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-08-27T18:31:14.125Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "Counter.razor",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Client\\Pages\\Counter.razor",
               "RelativeDocumentMoniker": "LibraryApp.Client\\Pages\\Counter.razor",
@@ -192,67 +278,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Auteur.cs",
-              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Auteur.cs",
-              "RelativeDocumentMoniker": "LibraryApp.Domain\\Entities\\Auteur.cs",
-              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Auteur.cs",
-              "RelativeToolTip": "LibraryApp.Domain\\Entities\\Auteur.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Api\\Program.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Api\\Program.cs",
+              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Api\\Program.cs",
+              "RelativeToolTip": "LibraryApp.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T18:58:09.257Z"
+              "WhenOpened": "2026-08-27T17:02:45.975Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Editeur.cs",
-              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Editeur.cs",
-              "RelativeDocumentMoniker": "LibraryApp.Domain\\Entities\\Editeur.cs",
-              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Editeur.cs",
-              "RelativeToolTip": "LibraryApp.Domain\\Entities\\Editeur.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "20260827191307_AddEntities.cs",
+              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Infrastructure\\Data\\Migrations\\20260827191307_AddEntities.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Infrastructure\\Data\\Migrations\\20260827191307_AddEntities.cs",
+              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Infrastructure\\Data\\Migrations\\20260827191307_AddEntities.cs",
+              "RelativeToolTip": "LibraryApp.Infrastructure\\Data\\Migrations\\20260827191307_AddEntities.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAzwHMAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T18:58:17.056Z"
+              "WhenOpened": "2026-08-27T19:13:08.618Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Categorie.cs",
-              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Categorie.cs",
-              "RelativeDocumentMoniker": "LibraryApp.Domain\\Entities\\Categorie.cs",
-              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Categorie.cs",
-              "RelativeToolTip": "LibraryApp.Domain\\Entities\\Categorie.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T18:58:27.079Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Emprunt.cs",
-              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Emprunt.cs",
-              "RelativeDocumentMoniker": "LibraryApp.Domain\\Entities\\Emprunt.cs",
-              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Emprunt.cs",
-              "RelativeToolTip": "LibraryApp.Domain\\Entities\\Emprunt.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T18:58:41.92Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Livre.cs",
-              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Livre.cs",
-              "RelativeDocumentMoniker": "LibraryApp.Domain\\Entities\\Livre.cs",
-              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Livre.cs",
-              "RelativeToolTip": "LibraryApp.Domain\\Entities\\Livre.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T18:58:02.354Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "Home.razor",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Client\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "LibraryApp.Client\\Pages\\Home.razor",
@@ -264,19 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Utilisateur.cs",
-              "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Utilisateur.cs",
-              "RelativeDocumentMoniker": "LibraryApp.Domain\\Entities\\Utilisateur.cs",
-              "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Domain\\Entities\\Utilisateur.cs",
-              "RelativeToolTip": "LibraryApp.Domain\\Entities\\Utilisateur.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T18:58:34.936Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "IGenericInterface.cs",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Shared\\Interfaces\\IGenericInterface.cs",
               "RelativeDocumentMoniker": "LibraryApp.Shared\\Interfaces\\IGenericInterface.cs",
@@ -288,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Client\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "LibraryApp.Client\\Layout\\NavMenu.razor",
@@ -300,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "NotFound.razor",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Client\\Pages\\NotFound.razor",
               "RelativeDocumentMoniker": "LibraryApp.Client\\Pages\\NotFound.razor",
@@ -312,7 +350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Client\\Program.cs",
               "RelativeDocumentMoniker": "LibraryApp.Client\\Program.cs",
@@ -324,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "weather.json",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Client\\wwwroot\\sample-data\\weather.json",
               "RelativeDocumentMoniker": "LibraryApp.Client\\wwwroot\\sample-data\\weather.json",
@@ -336,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Api\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "LibraryApp.Api\\Controllers\\WeatherForecastController.cs",
@@ -348,7 +386,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Shared\\DTOs\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "LibraryApp.Shared\\DTOs\\WeatherForecast.cs",
@@ -360,7 +398,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Client\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "LibraryApp.Client\\Properties\\launchSettings.json",

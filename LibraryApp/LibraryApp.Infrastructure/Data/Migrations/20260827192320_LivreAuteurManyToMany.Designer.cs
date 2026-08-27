@@ -3,6 +3,7 @@ using LibraryApp.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LibraryApp.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260827192320_LivreAuteurManyToMany")]
+    partial class LivreAuteurManyToMany
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -54,7 +57,7 @@ namespace LibraryApp.Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Auteur");
+                    b.ToTable("Auteurs");
                 });
 
             modelBuilder.Entity("LibraryApp.Domain.Entities.Categorie", b =>
@@ -67,7 +70,7 @@ namespace LibraryApp.Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categorie");
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("LibraryApp.Domain.Entities.Editeur", b =>
@@ -84,7 +87,7 @@ namespace LibraryApp.Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Editeur");
+                    b.ToTable("Editeurs");
                 });
 
             modelBuilder.Entity("LibraryApp.Domain.Entities.Emprunt", b =>
@@ -97,7 +100,7 @@ namespace LibraryApp.Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Emprunt");
+                    b.ToTable("Emprunts");
                 });
 
             modelBuilder.Entity("LibraryApp.Domain.Entities.Livre", b =>
@@ -122,7 +125,7 @@ namespace LibraryApp.Infrastructure.Data.Migrations
 
                     b.HasIndex("EditeurId");
 
-                    b.ToTable("Livre");
+                    b.ToTable("Livres");
                 });
 
             modelBuilder.Entity("LibraryApp.Domain.Entities.Utilisateur", b =>
@@ -143,7 +146,7 @@ namespace LibraryApp.Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Utilisateur");
+                    b.ToTable("Utilisateurs");
                 });
 
             modelBuilder.Entity("AuteurLivre", b =>

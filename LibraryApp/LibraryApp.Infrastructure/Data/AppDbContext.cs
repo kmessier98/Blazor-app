@@ -15,12 +15,6 @@ namespace LibraryApp.Infrastructure.Data
         protected void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            // Parcourt toutes les entités et force le nom de la table au nom de la classe (au singulier)
-            foreach (var entity in modelBuilder.Model.GetEntityTypes())
-            {
-                entity.SetTableName(entity.DisplayName());
-            }
         }
     }
 }
