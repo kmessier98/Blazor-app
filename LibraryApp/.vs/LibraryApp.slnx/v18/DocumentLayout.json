@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|solutionrelative:libraryapp.api\\controllers\\empruntcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|d:\\blazor-app\\libraryapp\\libraryapp.api\\controllers\\livrecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|solutionrelative:libraryapp.api\\controllers\\livrecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|d:\\blazor-app\\libraryapp\\libraryapp.api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|solutionrelative:libraryapp.api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|d:\\blazor-app\\libraryapp\\libraryapp.api\\controllers\\auteurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|solutionrelative:libraryapp.api\\controllers\\auteurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|d:\\blazor-app\\libraryapp\\libraryapp.api\\controllers\\livrecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|solutionrelative:libraryapp.api\\controllers\\livrecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{53131189-F6F0-487A-832A-C4DD346C1C4F}|LibraryApp.Application\\LibraryApp.Application.csproj|d:\\blazor-app\\libraryapp\\libraryapp.application\\services\\livreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -164,14 +164,14 @@
               "RelativeDocumentMoniker": "LibraryApp.Api\\Controllers\\EmpruntController.cs",
               "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Api\\Controllers\\EmpruntController.cs",
               "RelativeToolTip": "LibraryApp.Api\\Controllers\\EmpruntController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAArwB0AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAADgvxgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-28T19:14:12.502Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Api\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "LibraryApp.Api\\Controllers\\CategoryController.cs",
@@ -179,8 +179,7 @@
               "RelativeToolTip": "LibraryApp.Api\\Controllers\\CategoryController.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAmwB0AAACRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-28T01:26:52.419Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-28T01:26:52.419Z"
             },
             {
               "$type": "Document",
@@ -192,8 +191,7 @@
               "RelativeToolTip": "LibraryApp.Shared\\DTOs\\EmpruntDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-28T18:43:35.663Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-28T18:43:35.663Z"
             },
             {
               "$type": "Document",
@@ -205,8 +203,7 @@
               "RelativeToolTip": "LibraryApp.Application\\Services\\LivreService.cs",
               "ViewState": "AgIAABAAAAAAAAAAAADgvyQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T21:04:40.149Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T21:04:40.149Z"
             },
             {
               "$type": "Document",
@@ -218,25 +215,24 @@
               "RelativeToolTip": "LibraryApp.Infrastructure\\Repositories\\LivreRepository.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAA6wCIAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T21:02:55.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T21:02:55.797Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "LivreController.cs",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Api\\Controllers\\LivreController.cs",
               "RelativeDocumentMoniker": "LibraryApp.Api\\Controllers\\LivreController.cs",
               "ToolTip": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Api\\Controllers\\LivreController.cs",
               "RelativeToolTip": "LibraryApp.Api\\Controllers\\LivreController.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAiwCQAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAIwDMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-27T21:06:46.943Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AuteurController.cs",
               "DocumentMoniker": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Api\\Controllers\\AuteurController.cs",
               "RelativeDocumentMoniker": "LibraryApp.Api\\Controllers\\AuteurController.cs",
@@ -244,8 +240,7 @@
               "RelativeToolTip": "LibraryApp.Api\\Controllers\\AuteurController.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAQwAwAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-28T17:39:58.865Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-28T17:39:58.865Z"
             },
             {
               "$type": "Document",
@@ -257,8 +252,7 @@
               "RelativeToolTip": "LibraryApp.Api\\Program.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAACMAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T21:08:06.235Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T21:08:06.235Z"
             },
             {
               "$type": "Document",
@@ -270,8 +264,7 @@
               "RelativeToolTip": "LibraryApp.Application\\Interfaces\\IEmpruntService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-28T19:13:24.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-28T19:13:24.317Z"
             },
             {
               "$type": "Document",
@@ -283,8 +276,7 @@
               "RelativeToolTip": "LibraryApp.Infrastructure\\Repositories\\EmpruntRepository.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAkwDYAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-28T19:09:18.444Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-28T19:09:18.444Z"
             },
             {
               "$type": "Document",
@@ -296,8 +288,7 @@
               "RelativeToolTip": "LibraryApp.Application\\Services\\EmpruntService.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAAABcAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-28T19:29:40.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-28T19:29:40.359Z"
             },
             {
               "$type": "Document",
@@ -309,8 +300,7 @@
               "RelativeToolTip": "LibraryApp.Application\\Mapping\\MappingProfile.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAQwB0AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T22:17:57.008Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T22:17:57.008Z"
             },
             {
               "$type": "Document",
@@ -358,8 +348,7 @@
               "RelativeToolTip": "LibraryApp.Application\\Services\\AuteurService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-28T17:37:26.708Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-28T17:37:26.708Z"
             },
             {
               "$type": "Document",
@@ -419,8 +408,7 @@
               "RelativeToolTip": "LibraryApp.Infrastructure\\Repositories\\AuteurRepository.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAYwCIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-28T17:35:46.346Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-28T17:35:46.346Z"
             },
             {
               "$type": "Document",

@@ -43,5 +43,13 @@ namespace LibraryApp.Api.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, new { message = "Une erreur interne est survenue sur le serveur." });
             }
         }
+
+        [HttpPut("{livreId}/emprunt")]
+        public async Task<ActionResult> EmprunterLivre([FromRoute] int livreId)
+        {
+
+            return NoContent();
+        }
+
     }
 }
