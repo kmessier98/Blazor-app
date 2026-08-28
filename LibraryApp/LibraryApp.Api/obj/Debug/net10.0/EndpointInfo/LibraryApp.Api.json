@@ -95,6 +95,18 @@
         }
       }
     },
+    "/api/Emprunt/GetAllActive": {
+      "get": {
+        "tags": [
+          "Emprunt"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Livre/GetAll": {
       "get": {
         "tags": [
@@ -385,6 +397,9 @@
     },
     {
       "name": "Category"
+    },
+    {
+      "name": "Emprunt"
     },
     {
       "name": "Livre"

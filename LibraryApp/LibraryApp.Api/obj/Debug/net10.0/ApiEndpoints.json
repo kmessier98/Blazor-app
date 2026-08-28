@@ -46,6 +46,16 @@
     ]
   },
   {
+    "ContainingType": "LibraryApp.Api.Controllers.EmpruntController",
+    "Method": "GetAllActive",
+    "RelativePath": "api/Emprunt/GetAllActive",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LibraryApp.Api.Controllers.LivreController",
     "Method": "GetAll",
     "RelativePath": "api/Livre/GetAll",
