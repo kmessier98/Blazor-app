@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "LibraryApp.Client",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-AWy6DsA7eyK0BnUdTYsTSq0S6XyrzjPNs65qvJFaIJo=",
+    "hash": "sha256-OWsBaiX8DqccJCobaAxwqE51us3rIpx8p8RqTowEvLg=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.vzj2a6aakt.js"
@@ -1236,8 +1236,8 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "LibraryApp.Shared.wasm",
-        "name": "LibraryApp.Shared.twsafrg0pj.wasm",
-        "hash": "sha256-I5TCf2fejmeYCAACOpTftSi2EEHUlILwYwDawdZXT1A=",
+        "name": "LibraryApp.Shared.slpiofkgtw.wasm",
+        "hash": "sha256-4Lld9SN+zQm9Y+NJ9jRBqLLbmzSKApvRuAjY1JIUb6U=",
         "cache": "force-cache"
       },
       {
@@ -1248,22 +1248,22 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "LibraryApp.Client.wasm",
-        "name": "LibraryApp.Client.76a9s98d64.wasm",
-        "hash": "sha256-v7vrm4AUOaFwUJwnPO4xRTfLG6yHRWYOwELnVNiCct4=",
+        "name": "LibraryApp.Client.k57w4mg3wb.wasm",
+        "hash": "sha256-OEif5ywZgT5bY9oeNYBcvHMmd6AKMazas6AWrwxKvSs=",
         "cache": "force-cache"
       }
     ],
     "pdb": [
       {
         "virtualPath": "LibraryApp.Shared.pdb",
-        "name": "LibraryApp.Shared.ofudbv2rh8.pdb",
-        "hash": "sha256-rH3C0sdCBxDmGqdt3wkMCSNyRBpbDUGEPwg0B3y8nsg=",
+        "name": "LibraryApp.Shared.z4pr5fc52u.pdb",
+        "hash": "sha256-A3mZkMZXlyc/HwsimUczd7BafdvpTh4oGTlncUKN5uM=",
         "cache": "force-cache"
       },
       {
         "virtualPath": "LibraryApp.Client.pdb",
-        "name": "LibraryApp.Client.1qv27akgcp.pdb",
-        "hash": "sha256-GRxB+sNDBj0AAw+FrXuG42LmPv0GBlw961KzWD2GcCg=",
+        "name": "LibraryApp.Client.dupx3ajluq.pdb",
+        "hash": "sha256-60MRny1Gk2+sHdkRuWfQyxwum4EZ7MWLMBQN3CQbr54=",
         "cache": "force-cache"
       }
     ],

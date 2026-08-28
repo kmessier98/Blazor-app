@@ -1,5 +1,6 @@
 ﻿using LibraryApp.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 
 namespace LibraryApp.Infrastructure.Data
 {
@@ -40,6 +41,13 @@ namespace LibraryApp.Infrastructure.Data
                     });
 
             SeedData(modelBuilder);
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            base.OnConfiguring(optionsBuilder);
+
+            optionsBuilder.LogTo(message => Debug.WriteLine(message));
         }
 
         private void SeedData(ModelBuilder modelBuilder)

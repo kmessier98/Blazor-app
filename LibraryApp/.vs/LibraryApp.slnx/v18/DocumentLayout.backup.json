@@ -3,40 +3,72 @@
   "WorkspaceRootPath": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{53131189-F6F0-487A-832A-C4DD346C1C4F}|LibraryApp.Application\\LibraryApp.Application.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.application\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53131189-F6F0-487A-832A-C4DD346C1C4F}|LibraryApp.Application\\LibraryApp.Application.csproj|solutionrelative:libraryapp.application\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53131189-F6F0-487A-832A-C4DD346C1C4F}|LibraryApp.Application\\LibraryApp.Application.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.application\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53131189-F6F0-487A-832A-C4DD346C1C4F}|LibraryApp.Application\\LibraryApp.Application.csproj|solutionrelative:libraryapp.application\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9D43396-8C06-40E6-91E7-0DEBA6DE099A}|LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.infrastructure\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9D43396-8C06-40E6-91E7-0DEBA6DE099A}|LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj|solutionrelative:libraryapp.infrastructure\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{53131189-F6F0-487A-832A-C4DD346C1C4F}|LibraryApp.Application\\LibraryApp.Application.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.application\\services\\livreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{53131189-F6F0-487A-832A-C4DD346C1C4F}|LibraryApp.Application\\LibraryApp.Application.csproj|solutionrelative:libraryapp.application\\services\\livreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|solutionrelative:libraryapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{61BE914A-455B-4DEB-A817-AA695873FB67}|LibraryApp.Shared\\LibraryApp.Shared.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.shared\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61BE914A-455B-4DEB-A817-AA695873FB67}|LibraryApp.Shared\\LibraryApp.Shared.csproj|solutionrelative:libraryapp.shared\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{53131189-F6F0-487A-832A-C4DD346C1C4F}|LibraryApp.Application\\LibraryApp.Application.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{53131189-F6F0-487A-832A-C4DD346C1C4F}|LibraryApp.Application\\LibraryApp.Application.csproj|solutionrelative:libraryapp.application\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{61BE914A-455B-4DEB-A817-AA695873FB67}|LibraryApp.Shared\\LibraryApp.Shared.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.shared\\dtos\\livredto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61BE914A-455B-4DEB-A817-AA695873FB67}|LibraryApp.Shared\\LibraryApp.Shared.csproj|solutionrelative:libraryapp.shared\\dtos\\livredto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{53131189-F6F0-487A-832A-C4DD346C1C4F}|LibraryApp.Application\\LibraryApp.Application.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.application\\interfaces\\ilivreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{53131189-F6F0-487A-832A-C4DD346C1C4F}|LibraryApp.Application\\LibraryApp.Application.csproj|solutionrelative:libraryapp.application\\interfaces\\ilivreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{61BE914A-455B-4DEB-A817-AA695873FB67}|LibraryApp.Shared\\LibraryApp.Shared.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.shared\\interfaces\\igenericinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{61BE914A-455B-4DEB-A817-AA695873FB67}|LibraryApp.Shared\\LibraryApp.Shared.csproj|solutionrelative:libraryapp.shared\\interfaces\\igenericinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9D43396-8C06-40E6-91E7-0DEBA6DE099A}|LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.infrastructure\\repositories\\livrerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9D43396-8C06-40E6-91E7-0DEBA6DE099A}|LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj|solutionrelative:libraryapp.infrastructure\\repositories\\livrerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|solutionrelative:libraryapp.api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.api\\controllers\\livrecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|solutionrelative:libraryapp.api\\controllers\\livrecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD496903-E0F9-8FD8-4192-FAAC277CDFF9}|LibraryApp.Api\\LibraryApp.Api.csproj|solutionrelative:libraryapp.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53131189-F6F0-487A-832A-C4DD346C1C4F}|LibraryApp.Application\\LibraryApp.Application.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.application\\interfaces\\ilivreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53131189-F6F0-487A-832A-C4DD346C1C4F}|LibraryApp.Application\\LibraryApp.Application.csproj|solutionrelative:libraryapp.application\\interfaces\\ilivreservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69DE55BC-4038-4C5D-96D4-9D8B951E0F38}|LibraryApp.Domain\\LibraryApp.Domain.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.domain\\entities\\categorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69DE55BC-4038-4C5D-96D4-9D8B951E0F38}|LibraryApp.Domain\\LibraryApp.Domain.csproj|solutionrelative:libraryapp.domain\\entities\\categorie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53131189-F6F0-487A-832A-C4DD346C1C4F}|LibraryApp.Application\\LibraryApp.Application.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.application\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53131189-F6F0-487A-832A-C4DD346C1C4F}|LibraryApp.Application\\LibraryApp.Application.csproj|solutionrelative:libraryapp.application\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{53131189-F6F0-487A-832A-C4DD346C1C4F}|LibraryApp.Application\\LibraryApp.Application.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.application\\interfaces\\ilivrerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{53131189-F6F0-487A-832A-C4DD346C1C4F}|LibraryApp.Application\\LibraryApp.Application.csproj|solutionrelative:libraryapp.application\\interfaces\\ilivrerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9D43396-8C06-40E6-91E7-0DEBA6DE099A}|LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.infrastructure\\repositories\\livrerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9D43396-8C06-40E6-91E7-0DEBA6DE099A}|LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj|solutionrelative:libraryapp.infrastructure\\repositories\\livrerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9D43396-8C06-40E6-91E7-0DEBA6DE099A}|LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9D43396-8C06-40E6-91E7-0DEBA6DE099A}|LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj|solutionrelative:libraryapp.infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61BE914A-455B-4DEB-A817-AA695873FB67}|LibraryApp.Shared\\LibraryApp.Shared.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.shared\\dtos\\livredto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61BE914A-455B-4DEB-A817-AA695873FB67}|LibraryApp.Shared\\LibraryApp.Shared.csproj|solutionrelative:libraryapp.shared\\dtos\\livredto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61BE914A-455B-4DEB-A817-AA695873FB67}|LibraryApp.Shared\\LibraryApp.Shared.csproj|c:\\apprentissage\\blazor-app\\blazor-app-4\\libraryapp\\libraryapp.shared\\interfaces\\igenericinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61BE914A-455B-4DEB-A817-AA695873FB67}|LibraryApp.Shared\\LibraryApp.Shared.csproj|solutionrelative:libraryapp.shared\\interfaces\\igenericinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,54 +98,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Application\\Mapping\\MappingProfile.cs",
               "RelativeDocumentMoniker": "LibraryApp.Application\\Mapping\\MappingProfile.cs",
               "ToolTip": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Application\\Mapping\\MappingProfile.cs",
               "RelativeToolTip": "LibraryApp.Application\\Mapping\\MappingProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-27T22:17:57.008Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IGenericInterface.cs",
-              "DocumentMoniker": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Shared\\Interfaces\\IGenericInterface.cs",
-              "RelativeDocumentMoniker": "LibraryApp.Shared\\Interfaces\\IGenericInterface.cs",
-              "ToolTip": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Shared\\Interfaces\\IGenericInterface.cs",
-              "RelativeToolTip": "LibraryApp.Shared\\Interfaces\\IGenericInterface.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Api\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Api\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Api\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "LibraryApp.Api\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T22:15:40.201Z",
+              "WhenOpened": "2026-08-28T01:26:52.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CategoryDto.cs",
+              "DocumentMoniker": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Shared\\DTOs\\CategoryDto.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Shared\\DTOs\\CategoryDto.cs",
+              "ToolTip": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Shared\\DTOs\\CategoryDto.cs",
+              "RelativeToolTip": "LibraryApp.Shared\\DTOs\\CategoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T01:22:53.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoryRepository.cs",
+              "DocumentMoniker": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Infrastructure\\Repositories\\CategoryRepository.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Infrastructure\\Repositories\\CategoryRepository.cs",
+              "ToolTip": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Infrastructure\\Repositories\\CategoryRepository.cs",
+              "RelativeToolTip": "LibraryApp.Infrastructure\\Repositories\\CategoryRepository.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwCQAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T01:18:38.745Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "LivreDto.cs",
-              "DocumentMoniker": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Shared\\DTOs\\LivreDto.cs",
-              "RelativeDocumentMoniker": "LibraryApp.Shared\\DTOs\\LivreDto.cs",
-              "ToolTip": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Shared\\DTOs\\LivreDto.cs",
-              "RelativeToolTip": "LibraryApp.Shared\\DTOs\\LivreDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Title": "LivreService.cs",
+              "DocumentMoniker": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Application\\Services\\LivreService.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Application\\Services\\LivreService.cs",
+              "ToolTip": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Application\\Services\\LivreService.cs",
+              "RelativeToolTip": "LibraryApp.Application\\Services\\LivreService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAD4vxUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T22:13:01.127Z",
+              "WhenOpened": "2026-08-27T21:04:40.149Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Api\\Program.cs",
-              "RelativeDocumentMoniker": "LibraryApp.Api\\Program.cs",
-              "ToolTip": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Api\\Program.cs",
-              "RelativeToolTip": "LibraryApp.Api\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Application\\Services\\CategoryService.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Application\\Services\\CategoryService.cs",
+              "ToolTip": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Application\\Services\\CategoryService.cs",
+              "RelativeToolTip": "LibraryApp.Application\\Services\\CategoryService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAD4vxMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T21:08:06.235Z",
+              "WhenOpened": "2026-08-28T01:24:44.804Z",
               "EditorCaption": ""
             },
             {
@@ -124,14 +182,66 @@
               "RelativeDocumentMoniker": "LibraryApp.Api\\Controllers\\LivreController.cs",
               "ToolTip": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Api\\Controllers\\LivreController.cs",
               "RelativeToolTip": "LibraryApp.Api\\Controllers\\LivreController.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAowBQAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-27T21:06:46.943Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "ICategoryService.cs",
+              "DocumentMoniker": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Application\\Interfaces\\ICategoryService.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Application\\Interfaces\\ICategoryService.cs",
+              "ToolTip": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Application\\Interfaces\\ICategoryService.cs",
+              "RelativeToolTip": "LibraryApp.Application\\Interfaces\\ICategoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T01:20:06.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Api\\Program.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Api\\Program.cs",
+              "ToolTip": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Api\\Program.cs",
+              "RelativeToolTip": "LibraryApp.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T21:08:06.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ICategoryRepository.cs",
+              "DocumentMoniker": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Application\\Interfaces\\ICategoryRepository.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Application\\Interfaces\\ICategoryRepository.cs",
+              "ToolTip": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Application\\Interfaces\\ICategoryRepository.cs",
+              "RelativeToolTip": "LibraryApp.Application\\Interfaces\\ICategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T01:18:12.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Categorie.cs",
+              "DocumentMoniker": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Domain\\Entities\\Categorie.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Domain\\Entities\\Categorie.cs",
+              "ToolTip": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Domain\\Entities\\Categorie.cs",
+              "RelativeToolTip": "LibraryApp.Domain\\Entities\\Categorie.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T01:20:29.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "ILivreService.cs",
               "DocumentMoniker": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Application\\Interfaces\\ILivreService.cs",
               "RelativeDocumentMoniker": "LibraryApp.Application\\Interfaces\\ILivreService.cs",
@@ -144,33 +254,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LivreService.cs",
-              "DocumentMoniker": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Application\\Services\\LivreService.cs",
-              "RelativeDocumentMoniker": "LibraryApp.Application\\Services\\LivreService.cs",
-              "ToolTip": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Application\\Services\\LivreService.cs",
-              "RelativeToolTip": "LibraryApp.Application\\Services\\LivreService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "LivreDto.cs",
+              "DocumentMoniker": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Shared\\DTOs\\LivreDto.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Shared\\DTOs\\LivreDto.cs",
+              "ToolTip": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Shared\\DTOs\\LivreDto.cs",
+              "RelativeToolTip": "LibraryApp.Shared\\DTOs\\LivreDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-27T21:04:40.149Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-27T22:13:01.127Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "LivreRepository.cs",
               "DocumentMoniker": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Infrastructure\\Repositories\\LivreRepository.cs",
               "RelativeDocumentMoniker": "LibraryApp.Infrastructure\\Repositories\\LivreRepository.cs",
               "ToolTip": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Infrastructure\\Repositories\\LivreRepository.cs",
               "RelativeToolTip": "LibraryApp.Infrastructure\\Repositories\\LivreRepository.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAowCcAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAA6wCgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-27T21:02:55.797Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
+              "Title": "IGenericInterface.cs",
+              "DocumentMoniker": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Shared\\Interfaces\\IGenericInterface.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Shared\\Interfaces\\IGenericInterface.cs",
+              "ToolTip": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Shared\\Interfaces\\IGenericInterface.cs",
+              "RelativeToolTip": "LibraryApp.Shared\\Interfaces\\IGenericInterface.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-27T22:15:40.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "ILivreRepository.cs",
               "DocumentMoniker": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Application\\Interfaces\\ILivreRepository.cs",
               "RelativeDocumentMoniker": "LibraryApp.Application\\Interfaces\\ILivreRepository.cs",
@@ -179,6 +300,19 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-27T20:59:38.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Infrastructure\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "LibraryApp.Infrastructure\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Infrastructure\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "LibraryApp.Infrastructure\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwGwAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T00:53:49.65Z",
               "EditorCaption": ""
             }
           ]

@@ -13,6 +13,44 @@
     }
   ],
   "paths": {
+    "/api/Category/GetAll": {
+      "get": {
+        "tags": [
+          "Category"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetAllCategoryDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetAllCategoryDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/GetAllCategoryDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/Livre/GetAll": {
       "get": {
         "tags": [
@@ -20,7 +58,24 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAllLivresDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAllLivresDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAllLivresDto"
+                }
+              }
+            }
           }
         }
       }
@@ -67,6 +122,50 @@
   },
   "components": {
     "schemas": {
+      "GetAllCategoryDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "nom": {
+            "type": "string"
+          }
+        }
+      },
+      "GetAllLivresDto": {
+        "type": "object",
+        "properties": {
+          "livreId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "titre": {
+            "type": "string"
+          },
+          "nomAuteur": {
+            "type": "string"
+          },
+          "prenomAuteur": {
+            "type": "string"
+          },
+          "nomEditeur": {
+            "type": "string"
+          },
+          "estDisponible": {
+            "type": "boolean"
+          }
+        }
+      },
       "WeatherForecast": {
         "type": "object",
         "properties": {
@@ -101,6 +200,9 @@
     }
   },
   "tags": [
+    {
+      "name": "Category"
+    },
     {
       "name": "Livre"
     },

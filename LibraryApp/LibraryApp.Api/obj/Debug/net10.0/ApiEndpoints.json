@@ -1,5 +1,25 @@
 [
   {
+    "ContainingType": "LibraryApp.Api.Controllers.CategoryController",
+    "Method": "GetAll",
+    "RelativePath": "api/Category/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[LibraryApp.Shared.DTOs.CategoryDto\u002BGetAllCategoryDto, LibraryApp.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "LibraryApp.Api.Controllers.LivreController",
     "Method": "GetAll",
     "RelativePath": "api/Livre/GetAll",
@@ -7,7 +27,17 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "LibraryApp.Shared.DTOs.LivreDTO\u002BGetAllLivresDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "LibraryApp.Api.Controllers.WeatherForecastController",

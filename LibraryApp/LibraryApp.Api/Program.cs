@@ -28,6 +28,8 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(buil
 
 builder.Services.AddScoped<ILivreService, LivreService>();
 builder.Services.AddScoped<ILivreRepository, LivreRepository>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
 var app = builder.Build();
 
