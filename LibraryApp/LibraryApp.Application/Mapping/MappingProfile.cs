@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using LibraryApp.Domain.Entities;
+using LibraryApp.Shared.DTOs;
 using static LibraryApp.Shared.DTOs.AuteurDto;
 using static LibraryApp.Shared.DTOs.CategoryDto;
 using static LibraryApp.Shared.DTOs.LivreDto;
@@ -21,6 +22,17 @@ namespace LibraryApp.Application.Mapping
                 .ForMember(t => t.Nom, m => m.MapFrom(s => s.Nom));
 
             CreateMap<Auteur, GetAuteurInfosDto>();
+
+            CreateMap<Emprunt, EmpruntDto>()
+                .ForMember(t => t.NomUtilisateur, m => m.MapFrom(s => s.Utilisateur.Nom));
+
+            CreateMap<Livre, GetLivreInfosDto>()
+                .ForMember(t => t.LivreId, m => m.MapFrom(s => s.Id))
+                .ForMember(t => t.NomEditeur, m => m.MapFrom(s => s.Editeur.Nom))
+                .ForMember(t => t.NomAuteur, m => m.MapFrom(s => s.Auteurs.FirstOrDefault().Nom))
+                .ForMember(t => t.PrenomAuteur, m => m.MapFrom(s => s.Auteurs.FirstOrDefault().Prenom));
+
+
         }
     }
 }

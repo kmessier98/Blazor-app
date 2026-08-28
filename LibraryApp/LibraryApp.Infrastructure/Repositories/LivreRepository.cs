@@ -25,9 +25,17 @@ namespace LibraryApp.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<Livre> FindByIdAsync(int id)
+        public async Task<Livre?> FindByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var result = await _dbContext.Livres.Where(l => l.Id == id)
+                 .Include(e => e.Editeur)
+                .Include(a => a.Auteurs)
+                .Include(c => c.Categories)
+                .Include(e => e.Emprunts)
+                    .ThenInclude(u => u.Utilisateur)
+                .SingleOrDefaultAsync();
+
+            return result;
         }
 
         public async Task<IReadOnlyList<Livre>> GetAllAsync()

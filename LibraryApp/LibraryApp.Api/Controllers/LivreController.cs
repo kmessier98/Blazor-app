@@ -1,5 +1,4 @@
 ﻿using LibraryApp.Application.Interfaces;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using static LibraryApp.Shared.DTOs.LivreDto;
 
@@ -10,9 +9,9 @@ namespace LibraryApp.Api.Controllers
     public class LivreController : ControllerBase
     {
         private ILivreService _livreService;
-        public LivreController(ILivreService livreService) 
+        public LivreController(ILivreService livreService)
         {
-            _livreService = livreService;   
+            _livreService = livreService;
         }
 
         [HttpGet("GetAll")]
@@ -24,7 +23,22 @@ namespace LibraryApp.Api.Controllers
 
                 return Ok(livres);
             }
-            catch (Exception ex) 
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { message = "Une erreur interne est survenue sur le serveur." });
+            }
+        }
+
+        [HttpGet("GetLivreInfos/{livreId}")]
+        public async Task<ActionResult<GetLivreInfosDto>> GetLivreInfos([FromRoute] int livreId)
+        {
+            try
+            {
+                var livreInfos = await _livreService.GetLivreInfos(livreId);
+
+                return Ok(livreInfos);
+            }
+            catch (Exception ex)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, new { message = "Une erreur interne est survenue sur le serveur." });
             }

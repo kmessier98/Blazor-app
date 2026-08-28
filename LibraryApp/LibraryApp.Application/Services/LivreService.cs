@@ -21,5 +21,16 @@ namespace LibraryApp.Application.Services
             var dto = _mapper.Map<List<GetAllLivresDto>>(result);
             return dto;
         }
+
+        public async Task<GetLivreInfosDto> GetLivreInfos(int livreId)
+        {
+            var result = await _livreRepository.FindByIdAsync(livreId);
+
+            if (result is null) throw new Exception(); // TODO custom exception NotFound
+
+            var dto = _mapper.Map<GetLivreInfosDto>(result);
+
+            return dto;
+        }
     }
 }

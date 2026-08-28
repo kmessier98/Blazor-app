@@ -124,6 +124,50 @@
         }
       }
     },
+    "/api/Livre/GetLivreInfos/{livreId}": {
+      "get": {
+        "tags": [
+          "Livre"
+        ],
+        "parameters": [
+          {
+            "name": "livreId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetLivreInfosDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetLivreInfosDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetLivreInfosDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -166,6 +210,33 @@
   },
   "components": {
     "schemas": {
+      "EmpruntDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "nomUtilisateur": {
+            "type": "string"
+          },
+          "dateEmprunt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dateRetour": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "format": "date-time"
+          }
+        }
+      },
       "GetAllCategoryDto": {
         "type": "object",
         "properties": {
@@ -231,6 +302,46 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/GetAllLivresDto"
+            }
+          }
+        }
+      },
+      "GetLivreInfosDto": {
+        "type": "object",
+        "properties": {
+          "livreId": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "titre": {
+            "type": "string"
+          },
+          "nomAuteur": {
+            "type": "string"
+          },
+          "prenomAuteur": {
+            "type": "string"
+          },
+          "nomEditeur": {
+            "type": "string"
+          },
+          "estDisponible": {
+            "type": "boolean"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetAllCategoryDto"
+            }
+          },
+          "emprunts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EmpruntDto"
             }
           }
         }

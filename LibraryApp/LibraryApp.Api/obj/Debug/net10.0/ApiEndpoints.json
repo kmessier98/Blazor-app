@@ -66,6 +66,32 @@
     ]
   },
   {
+    "ContainingType": "LibraryApp.Api.Controllers.LivreController",
+    "Method": "GetLivreInfos",
+    "RelativePath": "api/Livre/GetLivreInfos/{livreId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "livreId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "LibraryApp.Shared.DTOs.LivreDto\u002BGetLivreInfosDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "LibraryApp.Api.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",
