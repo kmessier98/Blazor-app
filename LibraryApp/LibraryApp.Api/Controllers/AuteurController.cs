@@ -1,5 +1,6 @@
 ﻿using LibraryApp.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using static LibraryApp.Shared.DTOs.AuteurDto;
 
 namespace LibraryApp.Api.Controllers
 {
@@ -15,10 +16,19 @@ namespace LibraryApp.Api.Controllers
         }
 
         [HttpGet("GetAuteurInfos/{auteurId}")]
-        public async Task<ActionResult> GetAuteurInfos([FromRoute] int auteurId)
+        public async Task<ActionResult<GetAuteurInfosDto>> GetAuteurInfos([FromRoute] int auteurId)
         {
-            await _auteurService.GetAuteurInfos(auteurId);
-            return null;
+            try
+            {
+                var auteurInfos = await _auteurService.GetAuteurInfos(auteurId);
+
+                return Ok(auteurInfos);
+            }
+            catch (Exception ex) //TODO catch notFoundException....
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { message = "Une erreur interne est survenue sur le serveur." });
+            }
+
         }
     }
 }

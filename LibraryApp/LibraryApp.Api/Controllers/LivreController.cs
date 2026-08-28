@@ -1,7 +1,7 @@
 ﻿using LibraryApp.Application.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using static LibraryApp.Shared.DTOs.LivreDTO;
+using static LibraryApp.Shared.DTOs.LivreDto;
 
 namespace LibraryApp.Api.Controllers
 {

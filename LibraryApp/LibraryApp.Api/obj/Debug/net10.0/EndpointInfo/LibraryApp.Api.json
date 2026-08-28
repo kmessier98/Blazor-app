@@ -35,7 +35,24 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAuteurInfosDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAuteurInfosDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAuteurInfosDto"
+                }
+              }
+            }
           }
         }
       }
@@ -190,6 +207,31 @@
           },
           "estDisponible": {
             "type": "boolean"
+          }
+        }
+      },
+      "GetAuteurInfosDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "prenom": {
+            "type": "string"
+          },
+          "nom": {
+            "type": "string"
+          },
+          "livres": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetAllLivresDto"
+            }
           }
         }
       },

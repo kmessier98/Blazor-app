@@ -8,7 +8,7 @@ namespace LibraryApp.Shared.Interfaces
         Task UpdateAsync(T entity);
         Task DeleteAsync(T entity);
         Task<IReadOnlyList<T>> GetAllAsync();
-        Task<T> FindByIdAsync(int id);
+        Task<T?> FindByIdAsync(int id);
         Task<T> GetByAsync(Expression<Func<T, bool>> predicate);
     }
 }

@@ -1,9 +1,6 @@
 ﻿using AutoMapper;
 using LibraryApp.Application.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using static LibraryApp.Shared.DTOs.LivreDTO;
+using static LibraryApp.Shared.DTOs.LivreDto;
 
 namespace LibraryApp.Application.Services
 {

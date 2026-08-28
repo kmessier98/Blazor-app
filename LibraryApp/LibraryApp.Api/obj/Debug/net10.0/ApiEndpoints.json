@@ -13,7 +13,17 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "LibraryApp.Shared.DTOs.AuteurDto\u002BGetAuteurInfosDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "LibraryApp.Api.Controllers.CategoryController",
@@ -45,7 +55,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "LibraryApp.Shared.DTOs.LivreDTO\u002BGetAllLivresDto",
+        "Type": "LibraryApp.Shared.DTOs.LivreDto\u002BGetAllLivresDto",
         "MediaTypes": [
           "text/plain",
           "application/json",

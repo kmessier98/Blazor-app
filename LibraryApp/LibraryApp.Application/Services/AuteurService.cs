@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using LibraryApp.Application.Interfaces;
+using static LibraryApp.Shared.DTOs.AuteurDto;
 
 namespace LibraryApp.Application.Services
 {
@@ -13,9 +14,14 @@ namespace LibraryApp.Application.Services
             _mapper = mapper;
             _auteurRepository = auteurRepository;
         }
-        public async Task GetAuteurInfos(int auteurId)
+        public async Task<GetAuteurInfosDto> GetAuteurInfos(int auteurId)
         {
-            await _auteurRepository.FindByIdAsync(auteurId);
+            var result = await _auteurRepository.FindByIdAsync(auteurId);
+            var dto = _mapper.Map<GetAuteurInfosDto>(result);
+
+            if (dto is null) throw new Exception(); // TODO return custom NotFoundException....
+
+            return dto;
         }
     }
 }

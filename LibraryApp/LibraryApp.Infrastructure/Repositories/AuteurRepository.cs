@@ -1,6 +1,7 @@
 ﻿using LibraryApp.Application.Interfaces;
 using LibraryApp.Domain.Entities;
 using LibraryApp.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
 namespace LibraryApp.Infrastructure.Repositories
@@ -23,9 +24,14 @@ namespace LibraryApp.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<Auteur> FindByIdAsync(int id)
+        public async Task<Auteur?> FindByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var result = await _dbContext.Auteurs.Where(x => x.Id == id)
+                .Include(l => l.Livres)
+                    .ThenInclude(e => e.Editeur)
+                .SingleOrDefaultAsync();
+
+            return result;
         }
 
         public async Task<IReadOnlyList<Auteur>> GetAllAsync()

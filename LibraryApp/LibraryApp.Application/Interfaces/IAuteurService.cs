@@ -1,7 +1,9 @@
-﻿namespace LibraryApp.Application.Interfaces
+﻿using static LibraryApp.Shared.DTOs.AuteurDto;
+
+namespace LibraryApp.Application.Interfaces
 {
     public interface IAuteurService
     {
-        Task GetAuteurInfos(int auteurId);
+        Task<GetAuteurInfosDto> GetAuteurInfos(int auteurId);
     }
 }
