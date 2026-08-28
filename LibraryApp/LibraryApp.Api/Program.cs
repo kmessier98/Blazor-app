@@ -30,6 +30,8 @@ builder.Services.AddScoped<ILivreService, LivreService>();
 builder.Services.AddScoped<ILivreRepository, LivreRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IAuteurService, AuteurService>();
+builder.Services.AddScoped<IAuteurRepository, AuteurRepository>();
 
 var app = builder.Build();
 

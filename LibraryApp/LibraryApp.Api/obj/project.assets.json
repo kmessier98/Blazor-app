@@ -3404,23 +3404,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kmess\\.nuget\\packages\\": {},
+    "C:\\Users\\Kevin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Api\\LibraryApp.Api.csproj",
+      "projectUniqueName": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Api\\LibraryApp.Api.csproj",
       "projectName": "LibraryApp.Api",
-      "projectPath": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Api\\LibraryApp.Api.csproj",
-      "packagesPath": "C:\\Users\\kmess\\.nuget\\packages\\",
-      "outputPath": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Api\\obj\\",
+      "projectPath": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Api\\LibraryApp.Api.csproj",
+      "packagesPath": "C:\\Users\\Kevin\\.nuget\\packages\\",
+      "outputPath": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\kmess\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3436,8 +3436,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj": {
-              "projectPath": "C:\\Apprentissage\\blazor-app\\blazor-app-4\\LibraryApp\\LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj"
+            "D:\\Blazor-app\\LibraryApp\\LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj": {
+              "projectPath": "D:\\Blazor-app\\LibraryApp\\LibraryApp.Infrastructure\\LibraryApp.Infrastructure.csproj"
             }
           }
         }
@@ -3452,7 +3452,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.400"
+      "SdkAnalysisLevel": "10.0.300"
     },
     "frameworks": {
       "net10.0": {
@@ -3503,7 +3503,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "LibraryApp.Api.Controllers.AuteurController",
+    "Method": "GetAuteurInfos",
+    "RelativePath": "api/Auteur/GetAuteurInfos/{auteurId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "auteurId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LibraryApp.Api.Controllers.CategoryController",
     "Method": "GetAll",
     "RelativePath": "api/Category/GetAll",
