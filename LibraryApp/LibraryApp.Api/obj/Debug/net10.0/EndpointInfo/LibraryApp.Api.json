@@ -102,7 +102,33 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EmpruntDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EmpruntDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EmpruntDto"
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -232,6 +258,9 @@
               "string"
             ],
             "format": "int32"
+          },
+          "titreLivre": {
+            "type": "string"
           },
           "nomUtilisateur": {
             "type": "string"

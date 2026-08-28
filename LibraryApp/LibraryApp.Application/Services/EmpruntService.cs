@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using LibraryApp.Application.Interfaces;
+using LibraryApp.Shared.DTOs;
 
 namespace LibraryApp.Application.Services
 {
@@ -14,9 +15,13 @@ namespace LibraryApp.Application.Services
             _empruntRepository = empruntRepository;
         }
 
-        public async Task GetAllActiveAsync()
+        public async Task<List<EmpruntDto>> GetAllActiveAsync()
         {
-            await _empruntRepository.GetAllActiveAsync();
+            var result = await _empruntRepository.GetAllActiveAsync();
+
+            var dto = _mappper.Map<List<EmpruntDto>>(result);
+
+            return dto;
         }
     }
 }

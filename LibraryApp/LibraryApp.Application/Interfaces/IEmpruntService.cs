@@ -1,7 +1,9 @@
-﻿namespace LibraryApp.Application.Interfaces
+﻿using LibraryApp.Shared.DTOs;
+
+namespace LibraryApp.Application.Interfaces
 {
     public interface IEmpruntService
     {
-        Task GetAllActiveAsync();
+        Task<List<EmpruntDto>> GetAllActiveAsync();
     }
 }

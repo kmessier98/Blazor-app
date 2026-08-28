@@ -24,7 +24,8 @@ namespace LibraryApp.Application.Mapping
             CreateMap<Auteur, GetAuteurInfosDto>();
 
             CreateMap<Emprunt, EmpruntDto>()
-                .ForMember(t => t.NomUtilisateur, m => m.MapFrom(s => s.Utilisateur.Nom));
+                .ForMember(t => t.NomUtilisateur, m => m.MapFrom(s => s.Utilisateur.Nom))
+                .ForMember(t => t.TitreLivre, m => m.MapFrom(s => s.Livre != null ? s.Livre.Titre : ""));
 
             CreateMap<Livre, GetLivreInfosDto>()
                 .ForMember(t => t.LivreId, m => m.MapFrom(s => s.Id))
