@@ -44,10 +44,22 @@ namespace LibraryApp.Api.Controllers
             }
         }
 
-        [HttpPut("{livreId}/emprunt")]
-        public async Task<ActionResult> EmprunterLivre([FromRoute] int livreId)
+        [HttpPut("{livreId}/user/{userId}/emprunt")]
+        public async Task<ActionResult> EmprunterLivre([FromRoute] int livreId, [FromRoute] int userId)
         {
-
+            try
+            {
+                await _livreService.EmprunterLivre(livreId, userId);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { message = "Une erreur interne est survenue sur le serveur." });
+            }
+        
             return NoContent();
         }
 

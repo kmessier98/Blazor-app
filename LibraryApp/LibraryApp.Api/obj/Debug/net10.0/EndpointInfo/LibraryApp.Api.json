@@ -133,6 +133,33 @@
         }
       }
     },
+    "/api/Emprunt/{empruntId}/retour": {
+      "put": {
+        "tags": [
+          "Emprunt"
+        ],
+        "parameters": [
+          {
+            "name": "empruntId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Livre/GetAll": {
       "get": {
         "tags": [
@@ -202,6 +229,46 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/Livre/{livreId}/user/{userId}/emprunt": {
+      "put": {
+        "tags": [
+          "Livre"
+        ],
+        "parameters": [
+          {
+            "name": "livreId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }

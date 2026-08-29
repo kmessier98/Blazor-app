@@ -54,5 +54,15 @@ namespace LibraryApp.Infrastructure.Repositories
 
             return result;
         }
+
+        public async Task<Emprunt?> GetActiveAsync(int livreId)
+        {
+            var result = await _dbContext.Emprunts
+                .Where(x =>x.LivreId == livreId && x.DateRetour == null)
+                .Include(l => l.Livre)
+                .SingleOrDefaultAsync();
+
+            return result;
+        }
     }
 }

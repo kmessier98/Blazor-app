@@ -47,6 +47,22 @@
   },
   {
     "ContainingType": "LibraryApp.Api.Controllers.EmpruntController",
+    "Method": "RetournerLivre",
+    "RelativePath": "api/Emprunt/{empruntId}/retour",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "empruntId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryApp.Api.Controllers.EmpruntController",
     "Method": "GetAllActive",
     "RelativePath": "api/Emprunt/GetAllActive",
     "HttpMethod": "GET",
@@ -64,6 +80,27 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "LibraryApp.Api.Controllers.LivreController",
+    "Method": "EmprunterLivre",
+    "RelativePath": "api/Livre/{livreId}/user/{userId}/emprunt",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "livreId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "LibraryApp.Api.Controllers.LivreController",

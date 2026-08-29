@@ -25,6 +25,20 @@ namespace LibraryApp.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
+        public async Task EmprunterLivre(Livre entity, int utilisateurId)
+        {
+            entity.EstDisponible = false;
+            entity.Emprunts.Add(new Emprunt()
+            {
+                LivreId = entity.Id,
+                UtilisateurId = 1,
+                DateEmprunt = DateTime.Now,
+                DateRetour = null
+            });
+
+            await _dbContext.SaveChangesAsync();
+        }
+
         public async Task<Livre?> FindByIdAsync(int id)
         {
             var result = await _dbContext.Livres.Where(l => l.Id == id)
