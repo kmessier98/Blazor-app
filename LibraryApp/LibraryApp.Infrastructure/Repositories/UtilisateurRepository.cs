@@ -1,6 +1,7 @@
 ﻿using LibraryApp.Application.Interfaces;
 using LibraryApp.Domain.Entities;
 using LibraryApp.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
 namespace LibraryApp.Infrastructure.Repositories
@@ -29,9 +30,11 @@ namespace LibraryApp.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<IReadOnlyList<Utilisateur>> GetAllAsync()
+        public async Task<IReadOnlyList<Utilisateur>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            var result = await _dbContext.Utilisateurs.AsNoTracking().ToListAsync();
+
+            return result;
         }
 
         public Task<Utilisateur> GetByAsync(Expression<Func<Utilisateur, bool>> predicate)

@@ -19,8 +19,9 @@ namespace LibraryApp.Api.Controllers
         {
             try
             {
-                await _utilisateurService.GetAll();
-                return Ok(null);
+                var dto = await _utilisateurService.GetAll();
+
+                return Ok(dto);
             }
             catch (Exception ex)
             {

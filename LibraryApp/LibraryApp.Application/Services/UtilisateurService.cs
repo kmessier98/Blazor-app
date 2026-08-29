@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using LibraryApp.Application.Interfaces;
+using LibraryApp.Shared.DTOs;
 
 namespace LibraryApp.Application.Services
 {
@@ -14,9 +15,13 @@ namespace LibraryApp.Application.Services
             _utilisateurRepository = utilisateurRepository;
         }
 
-        public async Task GetAll()
+        public async Task<List<UtilisateurDto>> GetAll()
         {
-            await _utilisateurRepository.GetAllAsync();
+            var entity = await _utilisateurRepository.GetAllAsync();
+
+            var dto = _mapper.Map<List<UtilisateurDto>>(entity);
+
+            return dto;
         }
     }
 }

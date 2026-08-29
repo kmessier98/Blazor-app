@@ -33,6 +33,7 @@ namespace LibraryApp.Application.Mapping
                 .ForMember(t => t.NomAuteur, m => m.MapFrom(s => s.Auteurs.FirstOrDefault().Nom))
                 .ForMember(t => t.PrenomAuteur, m => m.MapFrom(s => s.Auteurs.FirstOrDefault().Prenom));
 
+            CreateMap<Utilisateur, UtilisateurDto>();
 
         }
     }
