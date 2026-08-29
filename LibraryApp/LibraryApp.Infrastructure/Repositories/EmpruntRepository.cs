@@ -55,12 +55,30 @@ namespace LibraryApp.Infrastructure.Repositories
             return result;
         }
 
-        public async Task<Emprunt?> GetActiveAsync(int livreId)
+        public async Task<Emprunt?> GetActiveByLivreIdAsync(int livreId)
         {
             var result = await _dbContext.Emprunts
                 .Where(x =>x.LivreId == livreId && x.DateRetour == null)
                 .Include(l => l.Livre)
                 .SingleOrDefaultAsync();
+
+            return result;
+        }
+
+        public async Task RetournerLivre(Emprunt entity)
+        {
+            entity.DateRetour = DateTime.Now;
+            entity.Livre.EstDisponible = true;
+
+            await _dbContext.SaveChangesAsync();
+        }
+
+        public async Task<Emprunt?> GetActiveAsync(int empruntId)
+        {
+            var result = await _dbContext.Emprunts
+              .Where(x => x.Id == empruntId && x.DateRetour == null)
+              .Include(l => l.Livre)
+              .SingleOrDefaultAsync();
 
             return result;
         }

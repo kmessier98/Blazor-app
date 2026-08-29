@@ -44,7 +44,7 @@ namespace LibraryApp.Application.Services
             // Sécurité si le livre pour X ou y raison il est déjà emprunté...
             if (!currentLivre.EstDisponible)
             {
-                throw new InvalidOperationException("Livre non disponnible");
+                throw new InvalidOperationException("Le livre n'est pas disponible pour un emprunt");
             }
             //Sécurité supplémentaire
             var empruntExistant = await _empruntRepository.GetActiveAsync(livreId);

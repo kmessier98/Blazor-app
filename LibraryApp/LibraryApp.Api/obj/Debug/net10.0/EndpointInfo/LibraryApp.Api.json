@@ -133,7 +133,7 @@
         }
       }
     },
-    "/api/Emprunt/{empruntId}/retour": {
+    "/api/Emprunt/{empruntId}/userId/{userId}/retour": {
       "put": {
         "tags": [
           "Emprunt"
@@ -141,6 +141,19 @@
         "parameters": [
           {
             "name": "empruntId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          },
+          {
+            "name": "userId",
             "in": "path",
             "required": true,
             "schema": {

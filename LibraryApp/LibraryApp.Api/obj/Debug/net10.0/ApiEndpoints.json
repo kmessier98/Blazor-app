@@ -48,13 +48,18 @@
   {
     "ContainingType": "LibraryApp.Api.Controllers.EmpruntController",
     "Method": "RetournerLivre",
-    "RelativePath": "api/Emprunt/{empruntId}/retour",
+    "RelativePath": "api/Emprunt/{empruntId}/userId/{userId}/retour",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "empruntId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
         "Type": "System.Int32",
         "IsRequired": true
       }

@@ -208,6 +208,9 @@ D:\Blazor-app\LibraryApp\LibraryApp.Api\obj\Debug\net10.0\refint\LibraryApp.Api.
 D:\Blazor-app\LibraryApp\LibraryApp.Api\obj\Debug\net10.0\LibraryApp.Api.pdb
 D:\Blazor-app\LibraryApp\LibraryApp.Api\obj\Debug\net10.0\LibraryApp.Api.genruntimeconfig.cache
 D:\Blazor-app\LibraryApp\LibraryApp.Api\obj\Debug\net10.0\ref\LibraryApp.Api.dll
+D:\Blazor-app\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\AutoMapper.dll
+D:\Blazor-app\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\Scalar.AspNetCore.dll
+D:\Blazor-app\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\appsettings.Development.json
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\appsettings.json
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\libman.json
@@ -217,6 +220,7 @@ C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\LibraryApp.Api.runtimeconfig.json
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\LibraryApp.Api.dll
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\LibraryApp.Api.pdb
+C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\AutoMapper.dll
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\Azure.Core.dll
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\Azure.Identity.dll
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\Humanizer.dll
@@ -251,6 +255,8 @@ C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\Microsoft.VisualStudio.SolutionPersistence.dll
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\Mono.TextTemplating.dll
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\Newtonsoft.Json.dll
+C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\Scalar.AspNetCore.dll
+C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\System.ClientModel.dll
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\System.CodeDom.dll
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\System.Composition.AttributedModel.dll
@@ -384,9 +390,3 @@ C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\obj\Debug\net
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\obj\Debug\net10.0\LibraryApp.Api.pdb
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\obj\Debug\net10.0\LibraryApp.Api.genruntimeconfig.cache
 C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\obj\Debug\net10.0\ref\LibraryApp.Api.dll
-C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\Scalar.AspNetCore.dll
-C:\Apprentissage\blazor-app\blazor-app-4\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\AutoMapper.dll
-D:\Blazor-app\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\AutoMapper.dll
-D:\Blazor-app\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\Scalar.AspNetCore.dll
-D:\Blazor-app\LibraryApp\LibraryApp.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
