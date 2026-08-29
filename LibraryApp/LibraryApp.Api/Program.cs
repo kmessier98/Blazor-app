@@ -34,6 +34,8 @@ builder.Services.AddScoped<IAuteurService, AuteurService>();
 builder.Services.AddScoped<IAuteurRepository, AuteurRepository>();
 builder.Services.AddScoped<IEmpruntService, EmpruntService>();
 builder.Services.AddScoped<IEmpruntRepository, EmpruntRepository>();
+builder.Services.AddScoped<IUtilisateurService, UtilisateurService>();
+builder.Services.AddScoped<IUtilisateurRepository, UtilisateurRepository>();
 
 var app = builder.Build();
 

@@ -154,6 +154,16 @@
     ]
   },
   {
+    "ContainingType": "LibraryApp.Api.Controllers.UtilisateurController",
+    "Method": "GetAll",
+    "RelativePath": "api/Utilisateur/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "LibraryApp.Api.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

@@ -286,6 +286,18 @@
         }
       }
     },
+    "/api/Utilisateur/GetAll": {
+      "get": {
+        "tags": [
+          "Utilisateur"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -512,6 +524,9 @@
     },
     {
       "name": "Livre"
+    },
+    {
+      "name": "Utilisateur"
     },
     {
       "name": "WeatherForecast"
