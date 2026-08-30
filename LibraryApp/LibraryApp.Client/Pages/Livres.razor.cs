@@ -12,21 +12,43 @@ namespace LibraryApp.Client.Pages
         [Inject]
         public ICategoryService CategoryService { get; set; }
 
-        private List<GetAllLivresDto>? livres;
-        private List<GetAllCategoryDto>? Categories;
-        private string SearchQuery { get; set; } = string.Empty;
-        private IEnumerable<GetAllLivresDto>? FilteredItems => string.IsNullOrWhiteSpace(SearchQuery)
-            ? livres
-            : livres.Where(x => x.Titre.Contains(SearchQuery, StringComparison.OrdinalIgnoreCase));
+        private List<GetAllLivresDto>? _livres;
+        private List<GetAllCategoryDto>? _categories;
+        private string _searchQuery = string.Empty;
+        private int _selectedCategory = 0;
 
+        private IEnumerable<GetAllLivresDto>? FilteredItems 
+        {
+            get
+            {
+                if (_livres == null) return Enumerable.Empty<GetAllLivresDto>();
+
+                var resultat = _livres.AsEnumerable();
+
+                if (_selectedCategory > 0)
+                {
+                    //TODO avoir categoryId dans le titre
+                    //resultat = resultat.Where(x => x.c)
+                }
+
+                if (!string.IsNullOrWhiteSpace(_searchQuery))
+                {
+                    resultat = resultat.Where(x => x.Titre.Contains(_searchQuery, StringComparison.OrdinalIgnoreCase));
+                }
+
+                return resultat;
+            }
+        }
 
         protected override async Task OnInitializedAsync()
         {
             await base.OnInitializedAsync();
 
-            //TODO loading... 
-            livres = await LivreService.GetAllAsync();
-            Categories = await CategoryService.GetAllAsync();
+            var livresTask = LivreService.GetAllAsync();
+            var categoriesTask = CategoryService.GetAllAsync();
+            await Task.WhenAll(livresTask, categoriesTask);
+            _livres = livresTask.Result;
+            _categories = categoriesTask.Result;
         }
     }
 }
