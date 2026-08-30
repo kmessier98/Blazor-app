@@ -1,0 +1,36 @@
+﻿@page "/auteur/{Id:int}"
+
+@if (_auteur == null)
+{
+    <span>En cours de chargement...</span>
+}
+else
+{
+    <div class="content">
+        <h3>Fiche auteur</h3>
+
+        <div class="author-section">
+            <div class="avatar-circle">
+                @_auteur.Initials
+            </div>
+            <div>
+                <span class="author-name">@_auteur.Prenom @_auteur.Nom</span> <br />
+                @{
+                    string livreText = _auteur.Livres.Count > 1 ? "livres" : "livre";
+                }
+                <span class="number-of-book">@_auteur.Livres.Count @livreText au catalogue</span>
+            </div>
+        </div>
+        <hr />
+        <div class="book-section">
+            @foreach (var book in _auteur.Livres)
+            {
+                <div class="book-row">
+                    <span class="book-title">@book.Titre</span> 
+                    <span class="book-editeur">@book.NomEditeur</span>
+                </div>
+            }
+         
+        </div>
+    </div>
+}

@@ -41,7 +41,7 @@ else
                         <div class="list-livre-item">
                             <div class="left-element">
                                 <span class="title">@FilteredItems.ToList()[i].Titre</span> <br>
-                                <a href="/auteur/@@FilteredItems.ToList()[i].AuteurId" class="author-link text-decoration-none">
+                                <a href="/auteur/@FilteredItems.ToList()[i].AuteurId" class="author-link text-decoration-none">
                                     @FilteredItems.ToList()[i].PrenomAuteur @FilteredItems.ToList()[i].NomAuteur
                                 </a>
                                 <span> · @FilteredItems.ToList()[i].NomEditeur</span>

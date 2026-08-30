@@ -9,6 +9,7 @@ namespace LibraryApp.Shared.DTOs
         {
             public int LivreId { get; set; }
             public string Titre { get; set; }
+            public int AuteurId { get; set; }
             public string NomAuteur { get; set; }
             public string PrenomAuteur { get; set; }
             public string NomEditeur { get; set; }
