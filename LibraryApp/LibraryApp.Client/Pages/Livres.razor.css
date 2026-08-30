@@ -1,2 +1,13 @@
-﻿body {
+﻿h3 {
+    text-align: center;
+}
+
+.filter-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .search-container {
+        width: 90%;
+    }
 }

@@ -10,12 +10,17 @@ namespace LibraryApp.Client.Pages
         public ILivreService LivreService { get; set; }
 
         private List<GetAllLivresDto>? livres;
+        private string SearchQuery { get; set; } = string.Empty;
+        private IEnumerable<GetAllLivresDto>? FilteredItems => string.IsNullOrWhiteSpace(SearchQuery)
+            ? livres
+            : livres.Where(x => x.Titre.Contains(SearchQuery, StringComparison.OrdinalIgnoreCase));
+
 
         protected override async Task OnInitializedAsync()
         {
-            livres = await LivreService.GetAllAsync();
-
             await base.OnInitializedAsync();
+
+            livres = await LivreService.GetAllAsync();
         }
     }
 }
