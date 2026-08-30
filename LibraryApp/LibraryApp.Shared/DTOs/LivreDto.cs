@@ -13,6 +13,7 @@ namespace LibraryApp.Shared.DTOs
             public string PrenomAuteur { get; set; }
             public string NomEditeur { get; set; }
             public bool EstDisponible { get; set; }
+            public List<int> CategoryIds { get; set; }
         }
 
         public class GetLivreInfosDto()

@@ -57,6 +57,7 @@ namespace LibraryApp.Infrastructure.Repositories
             var result = await _dbContext.Livres
                 .Include(e => e.Editeur)
                 .Include(a => a.Auteurs)
+                .Include(c => c.Categories)
                 .ToListAsync();
 
             return result;

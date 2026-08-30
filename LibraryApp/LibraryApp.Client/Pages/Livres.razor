@@ -27,4 +27,20 @@ else
             </select>
         </div>
     </div>
+
+    @if (!FilteredItems.Any())
+    {
+        <div class="alert alert-info">Aucun livre ne correspond à vos critères.</div>
+    }
+    else
+    {
+        <div class="list-group">
+            @foreach (var livre in FilteredItems)
+            {
+                <div class="list-group-item">
+                    <h5>@livre.Titre</h5>
+                </div>
+            }
+        </div>
+    }
 }

@@ -17,7 +17,7 @@ namespace LibraryApp.Client.Pages
         private string _searchQuery = string.Empty;
         private int _selectedCategory = 0;
 
-        private IEnumerable<GetAllLivresDto>? FilteredItems 
+        private IEnumerable<GetAllLivresDto> FilteredItems 
         {
             get
             {
@@ -27,8 +27,7 @@ namespace LibraryApp.Client.Pages
 
                 if (_selectedCategory > 0)
                 {
-                    //TODO avoir categoryId dans le titre
-                    //resultat = resultat.Where(x => x.c)
+                    resultat = resultat.Where(x => x.CategoryIds.Any(x => x == _selectedCategory));
                 }
 
                 if (!string.IsNullOrWhiteSpace(_searchQuery))
