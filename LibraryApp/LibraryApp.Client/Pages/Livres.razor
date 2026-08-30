@@ -1,46 +1,71 @@
 ﻿@page "/livres"
 
-
 @if (_livres == null || _categories == null)
 {
     <span>Les données sont en cours de chargement...</span>
 }
 else
 {
-    <h3>Livres</h3>
+    <div class="content">
+        <h3>Catalogue de livres</h3>
 
-    <div class="filter-container">
-        <div class="search-container">
-            <input type="text"
-                   @bind-value="_searchQuery"
-                   @bind-value:event="oninput"
-                   placeholder="Rechercher un titre..."
-                   class="form-control" />
+        <div class="filter-container">
+            <div class="search-container">
+                <input type="text"
+                        @bind-value="_searchQuery"
+                        @bind-value:event="oninput"
+                        placeholder="Rechercher un titre..."
+                        class="form-control" />
+            </div>
+            <div class="categorie-list-filter">
+                <select class="form-select" @bind="_selectedCategory">
+                    <option value="0">Toutes les catégories</option>
+                    @foreach (var category in _categories)
+                    {
+                        <option value="@category.Id">@category.Nom</option>
+                    }
+                </select>
+            </div>
         </div>
-        <div class="categorie-list-filter">
-            <select class="form-select" @bind="_selectedCategory">
-                <option value="0">Toutes les catégories</option>
-                @foreach (var category in _categories)
-                {
-                    <option value="@category.Id">@category.Nom</option>
-                }
-            </select>
-        </div>
-    </div>
 
-    @if (!FilteredItems.Any())
-    {
-        <div class="alert alert-info">Aucun livre ne correspond à vos critères.</div>
-    }
-    else
-    {
-        <div class="list-group">
-            @foreach (var livre in FilteredItems)
+        <div class="livres-container">
+            @if (!FilteredItems.Any())
             {
-                <div class="list-group-item">
-                    <h5>@livre.Titre</h5>
+                <div class="alert alert-info">Aucun livre ne correspond à vos critères.</div>
+            }
+            else
+            {
+                <div class="list-livres">
+                    @for (int i = 0; i < FilteredItems.Count(); i++)
+                    {
+                        <div class="list-livre-item">
+                            <div class="left-element">
+                                <span class="title">@FilteredItems.ToList()[i].Titre</span> <br>
+                                <a href="/auteur/@@FilteredItems.ToList()[i].AuteurId" class="author-link text-decoration-none">
+                                    @FilteredItems.ToList()[i].PrenomAuteur @FilteredItems.ToList()[i].NomAuteur
+                                </a>
+                                <span> · @FilteredItems.ToList()[i].NomEditeur</span>
+                            </div>
+                            <div class="right-element">
+                                @if (FilteredItems.ToList()[i].EstDisponible)
+                                {
+                                    <span class="badge rounded-pill bg-success-subtle text-success px-3 py-2">Disponible</span>
+                                }
+                                else
+                                {
+                                    <span class="badge rounded-pill bg-danger-subtle text-danger px-3 py-2">Emprunté</span>
+                                }
+                            </div>
+                        </div>
+
+                        @if (i < FilteredItems.Count() - 1)
+                        {
+                            <hr />
+                        }        
+                    }
                 </div>
             }
         </div>
-    }
+    </div>
 }
+
