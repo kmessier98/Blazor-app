@@ -40,11 +40,10 @@ else
                     {
                         <div class="list-livre-item">
                             <div class="left-element">
-                                <span class="title">@FilteredItems.ToList()[i].Titre</span> <br>
-                                <a href="/auteur/@FilteredItems.ToList()[i].AuteurId" class="author-link text-decoration-none">
-                                    @FilteredItems.ToList()[i].PrenomAuteur @FilteredItems.ToList()[i].NomAuteur
-                                </a>
-                                <span> · @FilteredItems.ToList()[i].NomEditeur</span>
+                                <a href="/livre/@FilteredItems.ToList()[i].LivreId" class="title title-link text-decoration-none">
+                                    @FilteredItems.ToList()[i].Titre
+                                </a><br>
+                                <span>@FilteredItems.ToList()[i].PrenomAuteur @FilteredItems.ToList()[i].NomAuteur · @FilteredItems.ToList()[i].NomEditeur</span>
                             </div>
                             <div class="right-element">
                                 @if (FilteredItems.ToList()[i].EstDisponible)

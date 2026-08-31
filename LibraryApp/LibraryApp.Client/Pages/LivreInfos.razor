@@ -1,0 +1,76 @@
+﻿@page "/livre/{Id:int}"
+
+@if (_livre == null)
+{
+    <span>Chargement...</span>
+}
+else
+{
+    <div class="content">
+        <h3>Infos livre</h3>
+
+        <span class="title">@_livre.Titre</span><br />
+        <span class="author-row">par
+            <a href="/auteur/@_livre.AuteurId" class="author-link text-decoration-none">
+            @_livre.PrenomAuteur @_livre.NomAuteur
+            </a>
+            · @_livre.NomEditeur
+        </span><br />
+        <div class="categories">
+            @foreach(var category in _livre.Categories)
+            {
+                <span class="badge rounded-pill custom-badge-color px-3 py-2">@category.Nom</span>
+            }
+        </div>
+        <hr />
+
+        <div class="disponible-row">
+            @if (_livre.EstDisponible)
+            {
+                <div><span class="badge rounded-pill bg-success-subtle text-success px-3 py-2">Disponible</span></div>
+                <button class="btn-emprunter">Emprunter</button>
+            }
+            else
+            {
+                <span class="badge rounded-pill bg-danger-subtle text-danger px-3 py-2">Emprunté</span>
+            }
+        </div>
+
+        <div class="history">
+            <span class="history-title">Historique des emprunts</span>
+            <div class="table-reponsive w-100">
+                <table class="table align-middle custom-table">
+                    <!-- Entête du tableau -->
+                    <thead>
+                        <tr>
+                            <th scope="col" class="col-user">Utilisateur</th>
+                            <th scope="col" class="col-emprunt-date">Emprunté le</th>
+                            <th scope="col" class="retour-date text-end">Retourné le</th>
+                        </tr>
+                    </thead>
+
+                    <!-- Corps du tableau -->
+                    <tbody>
+                        @foreach (var emprunt in _livre.Emprunts)
+                        {
+                            <tr>
+                                <td>@emprunt.NomUtilisateur</td>
+                                <td>@emprunt.DateEmprunt</td>
+                                @if (emprunt.DateRetour != null)
+                                {
+                                    <td class="text-end">@emprunt.DateRetour</td>
+                                }
+                                else
+                                {
+                                    <td class="text-end">En cours d'emprunt</td>
+                                }
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+}
+

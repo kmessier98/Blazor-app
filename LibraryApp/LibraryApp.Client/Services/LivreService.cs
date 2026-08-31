@@ -37,5 +37,27 @@ namespace LibraryApp.Client.Services
                 return null;
             }
         }
+
+        public async Task<GetLivreInfosDto?> GetLivreInfos(int livreId)
+        {
+            try
+            {
+                var response = await _httpClient.GetFromJsonAsync<GetLivreInfosDto>($"api/livre/GetLivreInfos/{livreId}");
+
+                return response;
+            }
+            catch (HttpRequestException ex)
+            {
+                // Erreur réseau ou code HTTP d'erreur (ex: 404, 500)
+                _logger.LogError(ex, "Erreur lors de la communication avec l'API.");
+                return null;
+            }
+            catch (Exception ex)
+            {
+                // Tout autre type d'erreur imprévue
+                _logger.LogError(ex, "Une erreur inattendue est survenue lors de la récupération des données.");
+                return null;
+            }
+        }
     }
 }

@@ -38,12 +38,12 @@
                         font-weight: bold;
                     }
 
-                    .author-link {
+                    .title-link {
                         color: #6c757d; 
                         transition: color 0.2s ease-in-out;
                     }
 
-                    .author-link:hover {
+                    .title-link:hover {
                         color: #0d6efd;
                         text-decoration: underline !important; 
                     }

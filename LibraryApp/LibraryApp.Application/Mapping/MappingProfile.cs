@@ -34,6 +34,7 @@ namespace LibraryApp.Application.Mapping
             CreateMap<Livre, GetLivreInfosDto>()
                 .ForMember(t => t.LivreId, m => m.MapFrom(s => s.Id))
                 .ForMember(t => t.NomEditeur, m => m.MapFrom(s => s.Editeur.Nom))
+                .ForMember(t => t.AuteurId, m => m.MapFrom(s => s.Auteurs.FirstOrDefault().Id))
                 .ForMember(t => t.NomAuteur, m => m.MapFrom(s => s.Auteurs.FirstOrDefault().Nom))
                 .ForMember(t => t.PrenomAuteur, m => m.MapFrom(s => s.Auteurs.FirstOrDefault().Prenom));
 

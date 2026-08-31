@@ -5,5 +5,6 @@ namespace LibraryApp.Client.Services.Interfaces
     public interface ILivreService
     {
         Task<List<GetAllLivresDto>?> GetAllAsync();
+        Task<GetLivreInfosDto?> GetLivreInfos(int livreId);
     }
 }
