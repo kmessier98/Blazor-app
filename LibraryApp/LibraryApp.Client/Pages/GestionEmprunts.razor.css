@@ -1,0 +1,41 @@
+﻿.content {
+    width: 50%;
+    margin: 0 auto;
+
+    h3 {
+        text-align: center;
+    }
+
+    .custom-table {
+        font-family: system-ui, -apple-system, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .custom-table thead th {
+        font-size: 13px;
+        font-weight: 500;
+        color: #6c757d;
+        border-bottom: 1px solid #dee2e6;
+        padding-bottom: 12px;
+    }
+
+    .custom-table tbody td {
+        font-size: 14px;
+        border-bottom: none;
+    }
+
+
+    .btn-retour {
+        font-size: 13px;
+        font-weight: 500;
+        border-color: #d1d5db; 
+        color: #1f2937;
+    }
+
+        .btn-retour:hover {
+            background-color: #f3f4f6;
+            border-color: #9ca3af;
+            color: #1f2937;
+        }
+}
