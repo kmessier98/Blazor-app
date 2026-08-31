@@ -36,5 +36,32 @@ namespace LibraryApp.Client.Services
                 return null;
             }
         }
+
+        public async Task<bool> RetournerLivre(int empruntId, int userId)
+        {
+            try
+            {
+                var response = await _httpClient.PutAsync($"api/emprunt/{empruntId}/user/{userId}/retour", null);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    var errorMessage = await response.Content.ReadAsStringAsync();
+                    _logger.LogWarning("Échec du retour ({StatusCode}): {Message}", response.StatusCode, errorMessage);
+                    return false;
+                }
+
+                return true;
+            }
+            catch (HttpRequestException ex)
+            {
+                _logger.LogError(ex, "Erreur lors de la communication avec l'API.");
+                return false;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Une erreur inattendue est survenue.");
+                return false;
+            }
+        }
     }
 }

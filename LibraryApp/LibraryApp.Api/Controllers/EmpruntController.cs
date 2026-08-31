@@ -30,7 +30,7 @@ namespace LibraryApp.Api.Controllers
             }
         }
 
-        [HttpPut("{empruntId}/userId/{userId}/retour")]
+        [HttpPut("{empruntId}/user/{userId}/retour")]
         public async Task<ActionResult> RetournerLivre([FromRoute] int empruntId, [FromRoute] int userId)
         {
             try

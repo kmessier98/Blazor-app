@@ -33,9 +33,14 @@
         color: #1f2937;
     }
 
-        .btn-retour:hover {
-            background-color: #f3f4f6;
-            border-color: #9ca3af;
-            color: #1f2937;
-        }
+    .btn-retour:hover {
+        background-color: #f3f4f6;
+        border-color: #9ca3af;
+        color: #1f2937;
+    }
+
+    .aucun-emprunt {
+        display: block;
+        text-align:center;
+    }
 }

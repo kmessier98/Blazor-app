@@ -31,7 +31,7 @@ namespace LibraryApp.Infrastructure.Repositories
             entity.Emprunts.Add(new Emprunt()
             {
                 LivreId = entity.Id,
-                UtilisateurId = 1,
+                UtilisateurId = utilisateurId,
                 DateEmprunt = DateTime.Now,
                 DateRetour = null
             });
