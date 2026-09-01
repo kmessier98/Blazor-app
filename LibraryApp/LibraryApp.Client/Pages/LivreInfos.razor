@@ -30,7 +30,7 @@ else
             @if (_livre.EstDisponible)
             {
                 <div><span class="badge rounded-pill bg-success-subtle text-success px-3 py-2">Disponible</span></div>
-                <button class="btn-emprunter" @onclick="() => Emprunter(1)">Emprunter</button>
+                <button class="btn-emprunter" @onclick="(() => { _isModalOpen = true; })">Emprunter</button>
             }
             else
             {
@@ -72,6 +72,27 @@ else
                 </table>
             </div>
         </div>
+    </div>
+}
 
+
+@if (_isModalOpen)
+{
+    <div class="modal fade show d-block" tabindex="-1" style="background-color: rgba(0, 0, 0, 0.5);">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Emprunter</h1>
+                    <button type="button" class="btn-close" @onclick="(() => { _isModalOpen = false; })"></button>
+                </div>
+                <div class="modal-body">
+                    <h4>Sélectionner un utilisateur:</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" @onclick="(() => { _isModalOpen = false; })">Annuler</button>
+                    <button type="button" class="btn btn-primary" @onclick="() => Emprunter(1)">Emprunter</button>
+                </div>
+            </div>
+        </div>
     </div>
 }

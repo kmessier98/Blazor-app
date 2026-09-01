@@ -12,6 +12,7 @@ namespace LibraryApp.Client.Pages
         public int Id { get; set; }
 
         private GetLivreInfosDto? _livre;
+        private bool _isModalOpen = false;
 
         protected override async Task OnInitializedAsync()
         {
@@ -27,6 +28,7 @@ namespace LibraryApp.Client.Pages
             if (success)
             {
                 _livre = await LivreService.GetLivreInfos(Id);
+                _isModalOpen = false;
             } 
             else
             {
