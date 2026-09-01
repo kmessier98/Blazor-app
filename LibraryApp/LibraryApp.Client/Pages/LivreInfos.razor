@@ -30,7 +30,7 @@ else
             @if (_livre.EstDisponible)
             {
                 <div><span class="badge rounded-pill bg-success-subtle text-success px-3 py-2">Disponible</span></div>
-                <button class="btn-emprunter">Emprunter</button>
+                <button class="btn-emprunter" @onclick="() => Emprunter(1)">Emprunter</button>
             }
             else
             {
@@ -75,4 +75,3 @@ else
 
     </div>
 }
-

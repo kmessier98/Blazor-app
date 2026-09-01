@@ -19,5 +19,19 @@ namespace LibraryApp.Client.Pages
 
             _livre = await LivreService.GetLivreInfos(Id);
         }
+
+        private async Task Emprunter(int userId)
+        {
+            var success = await LivreService.EmprunterLivre(Id, userId);
+
+            if (success)
+            {
+                _livre = await LivreService.GetLivreInfos(Id);
+            } 
+            else
+            {
+                // afficher un message d'erreur à l'utilisateur
+            }
+        }
     }
 }
