@@ -12,12 +12,14 @@ namespace LibraryApp.Client.Pages
         public int Id { get; set; }
 
         private GetAuteurInfosDto? _auteur;
+        private bool _isLoading = true;
 
         protected override async Task OnInitializedAsync()
         {
             await base.OnInitializedAsync();
 
             _auteur = await AuteurService.GetAuteurInfos(Id);
+            _isLoading = false;
         }
     }
 }

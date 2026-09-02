@@ -4,50 +4,53 @@
 
 @if (_isLoading)
 {
-    <span>En cours de chargement...</span>
-}
-else
-{
-    <div class="content">
-        <h3>Gestion des emprunts</h3>
-
-        @if (_emprunts.Any())
-        {
-            <div class="table-responsive w-100">
-                <table class="table align-middle custom-table">
-                    <!-- Entête du tableau -->
-                    <thead>
-                        <tr>
-                            <th scope="col" class="col-livre">Livre</th>
-                            <th scope="col" class="col-user">Utilisateur</th>
-                            <th scope="col" class="col-date">Emprunté le</th>
-                            <th scope="col" class="col-action text-end">Retour</th>
-                        </tr>
-                    </thead>
-
-                    <!-- Corps du tableau -->
-                    <tbody>
-                        @foreach (var emprunt in _emprunts)
-                        {
-                            <tr>
-                                <td class="fw-bold text-dark">@emprunt.TitreLivre</td>
-                                <td class="fw-bold text-dark">@emprunt.NomUtilisateur</td>
-                                <td class="text-secondary">@emprunt.DateEmprunt.ToString("d MMMM yyyy HH:mm:ss")</td>
-                                <td class="text-end">
-                                    <button class="btn btn-outline-dark btn-sm rounded-pill px-3 btn-retour" 
-                                    @onclick="() => MarquerRetourne(emprunt.Id, emprunt.UserId)">
-                                        Marquer retourné
-                                    </button>
-                                </td>
-                            </tr>
-                        }
-                    </tbody>
-                </table>
-            </div>
-        }
-        else
-        {
-            <span class="aucun-emprunt">Aucun emprunts en cours!</span>
-        }
+    <div class="loading-overlay">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Chargement...</span>
+        </div>
     </div>
 }
+
+<div class="content">
+    <h3>Gestion des emprunts</h3>
+
+    @if (_emprunts.Any())
+    {
+        <div class="table-responsive w-100">
+            <table class="table align-middle custom-table">
+                <!-- Entête du tableau -->
+                <thead>
+                    <tr>
+                        <th scope="col" class="col-livre">Livre</th>
+                        <th scope="col" class="col-user">Utilisateur</th>
+                        <th scope="col" class="col-date">Emprunté le</th>
+                        <th scope="col" class="col-action text-end">Retour</th>
+                    </tr>
+                </thead>
+
+                <!-- Corps du tableau -->
+                <tbody>
+                    @foreach (var emprunt in _emprunts)
+                    {
+                        <tr>
+                            <td class="fw-bold text-dark">@emprunt.TitreLivre</td>
+                            <td class="fw-bold text-dark">@emprunt.NomUtilisateur</td>
+                            <td class="text-secondary">@emprunt.DateEmprunt.ToString("d MMMM yyyy HH:mm:ss")</td>
+                            <td class="text-end">
+                                <button class="btn btn-outline-dark btn-sm rounded-pill px-3 btn-retour" 
+                                @onclick="() => MarquerRetourne(emprunt.Id, emprunt.UserId)">
+                                    Marquer retourné
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <span class="aucun-emprunt">Aucun emprunts en cours!</span>
+    }
+</div>
+

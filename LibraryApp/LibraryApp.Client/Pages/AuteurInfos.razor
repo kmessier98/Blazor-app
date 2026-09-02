@@ -2,9 +2,13 @@
 
 <PageTitle>Fiche auteur - LibraryApp</PageTitle>
 
-@if (_auteur == null)
+@if (_isLoading)
 {
-    <span>En cours de chargement...</span>
+    <div class="loading-overlay">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Chargement...</span>
+        </div>
+    </div>
 }
 else
 {
@@ -13,7 +17,7 @@ else
 
         <div class="author-section">
             <div class="avatar-circle">
-                @_auteur.Initials
+                @_auteur!.Initials
             </div>
             <div>
                 <span class="author-name">@_auteur.Prenom @_auteur.Nom</span> <br />

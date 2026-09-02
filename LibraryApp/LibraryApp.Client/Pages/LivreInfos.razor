@@ -4,9 +4,14 @@
 
 @if (_isLoading)
 {
-    <span>Chargement...</span>
+    <div class="loading-overlay">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Chargement...</span>
+        </div>
+    </div>
 }
-else
+
+@if (_livre != null)
 {
     <div class="content">
         <h3>Infos livre</h3>
@@ -14,12 +19,12 @@ else
         <span class="title">@_livre.Titre</span><br />
         <span class="author-row">par
             <a href="/auteur/@_livre.AuteurId" class="author-link text-decoration-none">
-            @_livre.PrenomAuteur @_livre.NomAuteur
+                @_livre.PrenomAuteur @_livre.NomAuteur
             </a>
             · @_livre.NomEditeur
         </span><br />
         <div class="categories">
-            @foreach(var category in _livre.Categories)
+            @foreach (var category in _livre.Categories)
             {
                 <span class="badge rounded-pill custom-badge-color px-3 py-2">@category.Nom</span>
             }
@@ -74,7 +79,6 @@ else
         </div>
     </div>
 }
-
 
 @if (_isModalOpen)
 {

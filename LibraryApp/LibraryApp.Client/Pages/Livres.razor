@@ -4,69 +4,72 @@
 
 @if (_isLoading)
 {
-    <span>Les données sont en cours de chargement...</span>
-}
-else
-{
-    <div class="content">
-        <h3>Catalogue de livres</h3>
-
-        <div class="filter-container">
-            <div class="search-container">
-                <input type="text"
-                        @bind-value="_searchQuery"
-                        @bind-value:event="oninput"
-                        placeholder="Rechercher un titre..."
-                        class="form-control" />
-            </div>
-            <div class="categorie-list-filter">
-                <select class="form-select" @bind="_selectedCategory">
-                    <option value="0">Toutes les catégories</option>
-                    @foreach (var category in _categories)
-                    {
-                        <option value="@category.Id">@category.Nom</option>
-                    }
-                </select>
-            </div>
-        </div>
-
-        <div class="livres-container">
-            @if (!FilteredItems.Any())
-            {
-                <div class="alert alert-info">Aucun livre ne correspond à vos critères.</div>
-            }
-            else
-            {
-                <div class="list-livres">
-                    @for (int i = 0; i < FilteredItems.Count(); i++)
-                    {
-                        <div class="list-livre-item">
-                            <div class="left-element">
-                                <a href="/livre/@FilteredItems.ToList()[i].LivreId" class="title title-link text-decoration-none">
-                                    @FilteredItems.ToList()[i].Titre
-                                </a><br>
-                                <span>@FilteredItems.ToList()[i].PrenomAuteur @FilteredItems.ToList()[i].NomAuteur · @FilteredItems.ToList()[i].NomEditeur</span>
-                            </div>
-                            <div class="right-element">
-                                @if (FilteredItems.ToList()[i].EstDisponible)
-                                {
-                                    <span class="badge rounded-pill bg-success-subtle text-success px-3 py-2">Disponible</span>
-                                }
-                                else
-                                {
-                                    <span class="badge rounded-pill bg-danger-subtle text-danger px-3 py-2">Emprunté</span>
-                                }
-                            </div>
-                        </div>
-
-                        @if (i < FilteredItems.Count() - 1)
-                        {
-                            <hr />
-                        }        
-                    }
-                </div>
-            }
+    <div class="loading-overlay">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Chargement...</span>
         </div>
     </div>
 }
+
+<div class="content">
+    <h3>Catalogue de livres</h3>
+
+    <div class="filter-container">
+        <div class="search-container">
+            <input type="text"
+                    @bind-value="_searchQuery"
+                    @bind-value:event="oninput"
+                    placeholder="Rechercher un titre..."
+                    class="form-control" />
+        </div>
+        <div class="categorie-list-filter">
+            <select class="form-select" @bind="_selectedCategory">
+                <option value="0">Toutes les catégories</option>
+                @foreach (var category in _categories)
+                {
+                    <option value="@category.Id">@category.Nom</option>
+                }
+            </select>
+        </div>
+    </div>
+
+    <div class="livres-container">
+        @if (!FilteredItems.Any())
+        {
+            <div class="alert alert-info">Aucun livre ne correspond à vos critères.</div>
+        }
+        else
+        {
+            <div class="list-livres">
+                @for (int i = 0; i < FilteredItems.Count(); i++)
+                {
+                    <div class="list-livre-item">
+                        <div class="left-element">
+                            <a href="/livre/@FilteredItems.ToList()[i].LivreId" class="title title-link text-decoration-none">
+                                @FilteredItems.ToList()[i].Titre
+                            </a><br>
+                            <span>@FilteredItems.ToList()[i].PrenomAuteur @FilteredItems.ToList()[i].NomAuteur · @FilteredItems.ToList()[i].NomEditeur</span>
+                        </div>
+                        <div class="right-element">
+                            @if (FilteredItems.ToList()[i].EstDisponible)
+                            {
+                                <span class="badge rounded-pill bg-success-subtle text-success px-3 py-2">Disponible</span>
+                            }
+                            else
+                            {
+                                <span class="badge rounded-pill bg-danger-subtle text-danger px-3 py-2">Emprunté</span>
+                            }
+                        </div>
+                    </div>
+
+                    @if (i < FilteredItems.Count() - 1)
+                    {
+                        <hr />
+                    }        
+                }
+            </div>
+        }
+    </div>
+</div>
+
 
