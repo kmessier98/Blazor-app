@@ -83,7 +83,7 @@ else
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5">Emprunter</h1>
-                    <button type="button" class="btn-close" @onclick="(() => { _isModalOpen = false; })"></button>
+                    <button type="button" class="btn-close" @onclick="(() => { _isModalOpen = false; _selectedUserId = 1; })"></button>
                 </div>
                 <div class="modal-body">
                     <h4>Sélectionner un utilisateur:</h4>
@@ -97,7 +97,7 @@ else
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" @onclick="(() => { _isModalOpen = false; })">Annuler</button>
+                    <button type="button" class="btn btn-secondary" @onclick="(() => { _isModalOpen = false; _selectedUserId = 1; })">Annuler</button>
                     <button type="button" class="btn btn-primary" @onclick="() => Emprunter()">Emprunter</button>
                 </div>
             </div>
