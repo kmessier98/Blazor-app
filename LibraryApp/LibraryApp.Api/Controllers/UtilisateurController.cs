@@ -1,4 +1,5 @@
 ﻿using LibraryApp.Application.Interfaces;
+using LibraryApp.Shared.DTOs;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LibraryApp.Api.Controllers
@@ -15,7 +16,7 @@ namespace LibraryApp.Api.Controllers
         }
 
         [HttpGet("GetAll")]
-        public async Task<ActionResult> GetAll()
+        public async Task<ActionResult<UtilisateurDto>> GetAll()
         {
             try
             {

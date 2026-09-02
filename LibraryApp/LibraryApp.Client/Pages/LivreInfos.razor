@@ -2,7 +2,7 @@
 
 <PageTitle>Livre infos - LibraryApp</PageTitle>
 
-@if (_livre == null)
+@if (_livre == null || _utilisateurs == null)
 {
     <span>Chargement...</span>
 }
@@ -87,10 +87,18 @@ else
                 </div>
                 <div class="modal-body">
                     <h4>Sélectionner un utilisateur:</h4>
+                    <div class="utilisateurs-list-filter">
+                        <select class="form-select" @bind="_selectedUserId">
+                            @foreach (var utilisateur in _utilisateurs!)
+                            {
+                                <option value="@utilisateur.Id">@utilisateur.Nom</option>
+                            }
+                        </select>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" @onclick="(() => { _isModalOpen = false; })">Annuler</button>
-                    <button type="button" class="btn btn-primary" @onclick="() => Emprunter(1)">Emprunter</button>
+                    <button type="button" class="btn btn-primary" @onclick="() => Emprunter()">Emprunter</button>
                 </div>
             </div>
         </div>
