@@ -15,25 +15,25 @@ namespace LibraryApp.Client.Services
             _logger = logger;
         }
 
-        public async Task<List<EmpruntDto>?> GetAllActiveAsync()
+        public async Task<List<EmpruntDto>> GetAllActiveAsync()
         {
             try
             {
                 var response = await _httpClient.GetFromJsonAsync<List<EmpruntDto>>("api/emprunt/GetAllActive");
 
-                return response;
+                return response ?? [];
             }
             catch (HttpRequestException ex)
             {
                 // Erreur réseau ou code HTTP d'erreur (ex: 404, 500)
                 _logger.LogError(ex, "Erreur lors de la communication avec l'API.");
-                return null;
+                return [];
             }
             catch (Exception ex)
             {
                 // Tout autre type d'erreur imprévue
                 _logger.LogError(ex, "Une erreur inattendue est survenue lors de la récupération des données.");
-                return null;
+                return [];
             }
         }
 

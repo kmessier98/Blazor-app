@@ -9,28 +9,40 @@ namespace LibraryApp.Client.Pages
         [Inject]
         public IEmpruntService EmpruntService { get; set; }
 
-        private List<EmpruntDto>? _emprunts {  get; set; }
+        private List<EmpruntDto> _emprunts { get; set; } = new List<EmpruntDto>();
+        private bool _isLoading = true;
 
         protected override async Task OnInitializedAsync()
         {
              await base.OnInitializedAsync();
 
             _emprunts = await EmpruntService.GetAllActiveAsync();
+            _isLoading = false;
         }
 
         private async Task MarquerRetourne(int empruntId, int userId)
         {
-            var succes = await EmpruntService.RetournerLivre(empruntId, userId);
+            _isLoading = true;
 
-            if (succes)
+            try
             {
-                var empruntToRemove = _emprunts.Single(x => x.Id == empruntId && x.UserId == userId);
-                _emprunts.Remove(empruntToRemove);
+                var succes = await EmpruntService.RetournerLivre(empruntId, userId);
+
+                if (succes)
+                {
+                    var empruntToRemove = _emprunts.Single(x => x.Id == empruntId && x.UserId == userId);
+                    _emprunts.Remove(empruntToRemove);
+                }
+                else
+                {
+                    // afficher un message d'erreur à l'utilisateur
+                }
             }
-            else
+            finally
             {
-                // afficher un message d'erreur à l'utilisateur
+                _isLoading = false;
             }
+           
         }
     }
 }

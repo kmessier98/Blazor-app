@@ -4,6 +4,6 @@ namespace LibraryApp.Client.Services.Interfaces
 {
     public interface IUtilisateurService
     {
-        Task<List<UtilisateurDto>?> GetAll();
+        Task<List<UtilisateurDto>> GetAll();
     }
 }

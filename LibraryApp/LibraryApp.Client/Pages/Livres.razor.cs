@@ -12,10 +12,11 @@ namespace LibraryApp.Client.Pages
         [Inject]
         public ICategoryService CategoryService { get; set; }
 
-        private List<GetAllLivresDto>? _livres;
-        private List<GetAllCategoryDto>? _categories;
+        private List<GetAllLivresDto> _livres = new List<GetAllLivresDto>();
+        private List<GetAllCategoryDto> _categories = new List<GetAllCategoryDto>();
         private string _searchQuery = string.Empty;
         private int _selectedCategory = 0;
+        private bool _isLoading = true;
 
         private IEnumerable<GetAllLivresDto> FilteredItems 
         {
@@ -48,6 +49,8 @@ namespace LibraryApp.Client.Pages
             await Task.WhenAll(livresTask, categoriesTask);
             _livres = livresTask.Result;
             _categories = categoriesTask.Result;
+
+            _isLoading = false;
         }
     }
 }
