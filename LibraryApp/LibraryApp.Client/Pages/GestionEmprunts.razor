@@ -32,7 +32,7 @@ else
                             <tr>
                                 <td class="fw-bold text-dark">@emprunt.TitreLivre</td>
                                 <td class="fw-bold text-dark">@emprunt.NomUtilisateur</td>
-                                <td class="text-secondary">@emprunt.DateEmprunt</td>
+                                <td class="text-secondary">@emprunt.DateEmprunt.ToString("d MMMM yyyy HH:mm:ss")</td>
                                 <td class="text-end">
                                     <button class="btn btn-outline-dark btn-sm rounded-pill px-3 btn-retour" 
                                     @onclick="() => MarquerRetourne(emprunt.Id, emprunt.UserId)">

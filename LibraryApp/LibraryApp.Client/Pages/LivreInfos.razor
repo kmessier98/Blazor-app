@@ -57,10 +57,10 @@ else
                         {
                             <tr>
                                 <td>@emprunt.NomUtilisateur</td>
-                                <td>@emprunt.DateEmprunt</td>
+                                <td>@emprunt.DateEmprunt.ToString("d MMMM yyyy HH:mm:ss")</td>
                                 @if (emprunt.DateRetour != null)
                                 {
-                                    <td class="text-end">@emprunt.DateRetour</td>
+                                    <td class="text-end">@emprunt.DateRetour?.ToString("d MMMM yyyy HH:mm:ss")</td>
                                 }
                                 else
                                 {
