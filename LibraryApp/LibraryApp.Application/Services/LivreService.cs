@@ -13,7 +13,7 @@ namespace LibraryApp.Application.Services
         {
             _mapper = mapper;
             _livreRepository = livreRepository;
-            _empruntRepository = empruntRepository; 
+            _empruntRepository = empruntRepository;
         }
 
         public async Task<List<GetAllLivresDto>> GetAll()
@@ -40,15 +40,15 @@ namespace LibraryApp.Application.Services
             var currentLivre = await _livreRepository.FindByIdAsync(livreId);
 
             if (currentLivre is null) throw new Exception(); // TODO custom exception NotFound
-                                                     
+
             // Sécurité si le livre pour X ou y raison il est déjà emprunté...
             if (!currentLivre.EstDisponible)
             {
                 throw new InvalidOperationException("Le livre n'est pas disponible pour un emprunt");
             }
             //Sécurité supplémentaire
-            var empruntExistant = await _empruntRepository.GetActiveAsync(livreId);
-            if (empruntExistant != null)
+            var empruntExistant = currentLivre.Emprunts.Any(x => x.DateRetour == null);
+            if (empruntExistant)
             {
                 throw new InvalidOperationException("Ce livre a déjà un emprunt actif");
             }
