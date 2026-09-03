@@ -8,13 +8,15 @@ namespace LibraryApp.Client.Pages
     {
         [Inject]
         public IEmpruntService EmpruntService { get; set; }
+        [Inject]
+        public INotificationService NotificationService { get; set; }
 
         private List<EmpruntDto> _emprunts { get; set; } = new List<EmpruntDto>();
         private bool _isLoading = true;
 
         protected override async Task OnInitializedAsync()
         {
-             await base.OnInitializedAsync();
+            await base.OnInitializedAsync();
 
             _emprunts = await EmpruntService.GetAllActiveAsync();
             _isLoading = false;
@@ -32,17 +34,19 @@ namespace LibraryApp.Client.Pages
                 {
                     var empruntToRemove = _emprunts.Single(x => x.Id == empruntId && x.UserId == userId);
                     _emprunts.Remove(empruntToRemove);
+
+                    NotificationService.ShowSuccess("Le livre a été retourné avec succès");
                 }
                 else
                 {
-                    // afficher un message d'erreur à l'utilisateur
+                    NotificationService.ShowError("Un problème est survenu");
                 }
             }
             finally
             {
                 _isLoading = false;
             }
-           
+
         }
     }
 }

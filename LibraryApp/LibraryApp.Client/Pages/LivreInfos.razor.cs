@@ -11,11 +11,13 @@ namespace LibraryApp.Client.Pages
         public ILivreService LivreService { get; set; }
         [Inject]
         public IUtilisateurService UtilisateurService { get; set; }
+        [Inject]
+        public INotificationService NotificationService { get; set; }
         [Parameter]
         public int Id { get; set; }
 
         private GetLivreInfosDto? _livre;
-        private List<UtilisateurDto> _utilisateurs = new List<UtilisateurDto>(); 
+        private List<UtilisateurDto> _utilisateurs = new List<UtilisateurDto>();
         private bool _isModalOpen = false;
         private int _selectedUserId = 1;
         private bool _isLoading = true;
@@ -24,7 +26,7 @@ namespace LibraryApp.Client.Pages
         {
             await base.OnInitializedAsync();
 
-            var livreTask =  LivreService.GetLivreInfos(Id);
+            var livreTask = LivreService.GetLivreInfos(Id);
             var utilisateursTask = UtilisateurService.GetAll();
             await Task.WhenAll(livreTask, utilisateursTask);
             _livre = livreTask.Result;
@@ -46,17 +48,19 @@ namespace LibraryApp.Client.Pages
                     _livre = await LivreService.GetLivreInfos(Id);
                     _isModalOpen = false;
                     _selectedUserId = 1;
+
+                    NotificationService.ShowSuccess("Livre emprunté avec succès");
                 }
                 else
                 {
-                    // afficher un message d'erreur à l'utilisateur
+                    NotificationService.ShowError("Un problème est survenu");
                 }
             }
             finally
             {
                 _isLoading = false;
             }
-           
+
         }
     }
 }
