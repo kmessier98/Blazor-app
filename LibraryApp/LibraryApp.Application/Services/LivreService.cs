@@ -33,6 +33,7 @@ namespace LibraryApp.Application.Services
             var dto = _mapper.Map<GetLivreInfosDto>(result);
 
             return dto;
+
         }
 
         public async Task EmprunterLivre(int livreId, int utilisateurId)

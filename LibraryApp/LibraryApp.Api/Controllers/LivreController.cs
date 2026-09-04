@@ -59,7 +59,7 @@ namespace LibraryApp.Api.Controllers
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, new { message = "Une erreur interne est survenue sur le serveur." });
             }
-        
+
             return NoContent();
         }
 
