@@ -1,4 +1,5 @@
-﻿using LibraryApp.Application.Interfaces;
+﻿using LibraryApp.Application.Exceptions;
+using LibraryApp.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using static LibraryApp.Shared.DTOs.AuteurDto;
 
@@ -24,7 +25,11 @@ namespace LibraryApp.Api.Controllers
 
                 return Ok(auteurInfos);
             }
-            catch (Exception ex) //TODO catch notFoundException....
+            catch (NotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, new { message = "Une erreur interne est survenue sur le serveur." });
             }

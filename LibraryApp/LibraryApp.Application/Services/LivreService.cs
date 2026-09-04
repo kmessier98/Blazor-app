@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using LibraryApp.Application.Exceptions;
 using LibraryApp.Application.Interfaces;
+using LibraryApp.Domain.Entities;
 using static LibraryApp.Shared.DTOs.LivreDto;
 
 namespace LibraryApp.Application.Services
@@ -28,7 +30,10 @@ namespace LibraryApp.Application.Services
         {
             var result = await _livreRepository.FindByIdAsync(livreId);
 
-            if (result is null) throw new Exception(); // TODO custom exception NotFound
+            if (result is null)
+            {
+                throw new NotFoundException(nameof(Livre), livreId);
+            }
 
             var dto = _mapper.Map<GetLivreInfosDto>(result);
 

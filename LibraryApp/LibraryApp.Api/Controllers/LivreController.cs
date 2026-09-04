@@ -1,4 +1,5 @@
-﻿using LibraryApp.Application.Interfaces;
+﻿using LibraryApp.Application.Exceptions;
+using LibraryApp.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using static LibraryApp.Shared.DTOs.LivreDto;
 
@@ -37,6 +38,10 @@ namespace LibraryApp.Api.Controllers
                 var livreInfos = await _livreService.GetLivreInfos(livreId);
 
                 return Ok(livreInfos);
+            }
+            catch (NotFoundException ex)
+            {
+                return NotFound(ex.Message);
             }
             catch (Exception ex)
             {

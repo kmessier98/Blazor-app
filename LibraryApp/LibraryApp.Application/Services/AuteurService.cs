@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using LibraryApp.Application.Exceptions;
 using LibraryApp.Application.Interfaces;
+using LibraryApp.Domain.Entities;
 using static LibraryApp.Shared.DTOs.AuteurDto;
 
 namespace LibraryApp.Application.Services
@@ -19,7 +21,10 @@ namespace LibraryApp.Application.Services
             var result = await _auteurRepository.FindByIdAsync(auteurId);
             var dto = _mapper.Map<GetAuteurInfosDto>(result);
 
-            if (dto is null) throw new Exception(); // TODO return custom NotFoundException....
+            if (dto is null)
+            {
+                throw new NotFoundException(nameof(Auteur), auteurId);
+            }
 
             return dto;
         }
