@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using LibraryApp.Application.Interfaces;
-using LibraryApp.Domain.Entities;
 using LibraryApp.Shared.DTOs;
+using System.ComponentModel.DataAnnotations;
 
 namespace LibraryApp.Application.Services
 {
@@ -31,9 +31,9 @@ namespace LibraryApp.Application.Services
         {
             var emprunt = await _empruntRepository.GetActiveAsync(empruntId);
 
-            if (emprunt == null) throw new InvalidOperationException("Le livre que vous tentez de retourner n'existe pas ou n'est pas emprunté");
-            if (emprunt.Livre.EstDisponible == true) throw new InvalidOperationException("Le livre a déjà été retourné");
-            if (emprunt.UtilisateurId != userId) throw new InvalidOperationException("Vous n'êtes pas autorisé à retourner ce livre");
+            if (emprunt == null) throw new ValidationException("Le livre que vous tentez de retourner n'existe pas ou n'est pas emprunté");
+            if (emprunt.Livre.EstDisponible == true) throw new ValidationException("Le livre a déjà été retourné");
+            if (emprunt.UtilisateurId != userId) throw new ValidationException("Vous n'êtes pas autorisé à retourner ce livre");
 
             await _empruntRepository.RetournerLivre(emprunt);
         }

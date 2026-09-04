@@ -45,18 +45,21 @@ namespace LibraryApp.Application.Services
         {
             var currentLivre = await _livreRepository.FindByIdAsync(livreId);
 
-            if (currentLivre is null) throw new Exception(); // TODO custom exception NotFound
+            if (currentLivre is null)
+            {
+                throw new NotFoundException(nameof(Livre), livreId);
+            }
 
             // Sécurité si le livre pour X ou y raison il est déjà emprunté...
             if (!currentLivre.EstDisponible)
             {
-                throw new InvalidOperationException("Le livre n'est pas disponible pour un emprunt");
+                throw new ValidationException("Le livre n'est pas disponible pour un emprunt");
             }
             //Sécurité supplémentaire
             var empruntExistant = currentLivre.Emprunts.Any(x => x.DateRetour == null);
             if (empruntExistant)
             {
-                throw new InvalidOperationException("Ce livre a déjà un emprunt actif");
+                throw new ValidationException("Ce livre a déjà un emprunt actif");
             }
 
             await _livreRepository.EmprunterLivre(currentLivre, utilisateurId);

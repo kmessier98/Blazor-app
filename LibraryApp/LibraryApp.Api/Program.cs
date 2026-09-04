@@ -1,3 +1,4 @@
+using LibraryApp.Api.Middlewares;
 using LibraryApp.Application.Interfaces;
 using LibraryApp.Application.Mapping;
 using LibraryApp.Application.Services;
@@ -50,6 +51,7 @@ if (app.Environment.IsDevelopment())
     });
     app.MapScalarApiReference();
 }
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseHttpsRedirection();
 

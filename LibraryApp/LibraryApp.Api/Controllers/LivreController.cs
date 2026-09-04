@@ -1,5 +1,4 @@
-﻿using LibraryApp.Application.Exceptions;
-using LibraryApp.Application.Interfaces;
+﻿using LibraryApp.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using static LibraryApp.Shared.DTOs.LivreDto;
 
@@ -18,53 +17,21 @@ namespace LibraryApp.Api.Controllers
         [HttpGet("GetAll")]
         public async Task<ActionResult<GetAllLivresDto>> GetAll()
         {
-            try
-            {
-                var livres = await _livreService.GetAll();
-
-                return Ok(livres);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, new { message = "Une erreur interne est survenue sur le serveur." });
-            }
+            var livres = await _livreService.GetAll();
+            return Ok(livres);
         }
 
         [HttpGet("GetLivreInfos/{livreId}")]
         public async Task<ActionResult<GetLivreInfosDto>> GetLivreInfos([FromRoute] int livreId)
         {
-            try
-            {
-                var livreInfos = await _livreService.GetLivreInfos(livreId);
-
-                return Ok(livreInfos);
-            }
-            catch (NotFoundException ex)
-            {
-                return NotFound(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, new { message = "Une erreur interne est survenue sur le serveur." });
-            }
+            var livreInfos = await _livreService.GetLivreInfos(livreId);
+            return Ok(livreInfos);
         }
 
         [HttpPut("{livreId}/user/{userId}/emprunt")]
         public async Task<ActionResult> EmprunterLivre([FromRoute] int livreId, [FromRoute] int userId)
         {
-            try
-            {
-                await _livreService.EmprunterLivre(livreId, userId);
-            }
-            catch (InvalidOperationException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, new { message = "Une erreur interne est survenue sur le serveur." });
-            }
-
+            await _livreService.EmprunterLivre(livreId, userId);
             return NoContent();
         }
 

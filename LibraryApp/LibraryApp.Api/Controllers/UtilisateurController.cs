@@ -18,16 +18,8 @@ namespace LibraryApp.Api.Controllers
         [HttpGet("GetAll")]
         public async Task<ActionResult<UtilisateurDto>> GetAll()
         {
-            try
-            {
-                var dto = await _utilisateurService.GetAll();
-
-                return Ok(dto);
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, new { message = "Une erreur interne est survenue sur le serveur." });
-            }
+            var dto = await _utilisateurService.GetAll();
+            return Ok(dto);
         }
     }
 }
