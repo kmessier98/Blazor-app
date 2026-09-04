@@ -6,6 +6,6 @@ namespace LibraryApp.Application.Interfaces
     {
         Task<List<GetAllLivresDto>> GetAll();
         Task<GetLivreInfosDto> GetLivreInfos(int livreId);
-        Task EmprunterLivre(int livreId, int utilisateurId);
+        Task EmprunterLivre(int livreId, int membreId);
     }
 }

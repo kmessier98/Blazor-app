@@ -41,7 +41,7 @@ namespace LibraryApp.Application.Services
 
         }
 
-        public async Task EmprunterLivre(int livreId, int utilisateurId)
+        public async Task EmprunterLivre(int livreId, int membreId)
         {
             var currentLivre = await _livreRepository.FindByIdAsync(livreId);
 
@@ -62,7 +62,7 @@ namespace LibraryApp.Application.Services
                 throw new ValidationException("Ce livre a déjà un emprunt actif");
             }
 
-            await _livreRepository.EmprunterLivre(currentLivre, utilisateurId);
+            await _livreRepository.EmprunterLivre(currentLivre, membreId);
         }
     }
 }

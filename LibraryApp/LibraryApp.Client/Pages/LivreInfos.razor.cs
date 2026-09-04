@@ -10,16 +10,16 @@ namespace LibraryApp.Client.Pages
         [Inject]
         public ILivreService LivreService { get; set; }
         [Inject]
-        public IUtilisateurService UtilisateurService { get; set; }
+        public IMembreService UtilisateurService { get; set; }
         [Inject]
         public INotificationService NotificationService { get; set; }
         [Parameter]
         public int Id { get; set; }
 
         private GetLivreInfosDto? _livre;
-        private List<UtilisateurDto> _utilisateurs = new List<UtilisateurDto>();
+        private List<MembreDto> _membres = new List<MembreDto>();
         private bool _isModalOpen = false;
-        private int _selectedUserId = 1;
+        private int _selectedMembreId = 1;
         private bool _isLoading = true;
 
         protected override async Task OnInitializedAsync()
@@ -30,7 +30,7 @@ namespace LibraryApp.Client.Pages
             var utilisateursTask = UtilisateurService.GetAll();
             await Task.WhenAll(livreTask, utilisateursTask);
             _livre = livreTask.Result;
-            _utilisateurs = utilisateursTask.Result;
+            _membres = utilisateursTask.Result;
 
             _isLoading = false;
         }
@@ -41,13 +41,13 @@ namespace LibraryApp.Client.Pages
 
             try
             {
-                var success = await LivreService.EmprunterLivre(Id, _selectedUserId);
+                var success = await LivreService.EmprunterLivre(Id, _selectedMembreId);
 
                 if (success)
                 {
                     _livre = await LivreService.GetLivreInfos(Id);
                     _isModalOpen = false;
-                    _selectedUserId = 1;
+                    _selectedMembreId = 1;
 
                     NotificationService.ShowSuccess("Livre emprunté avec succès");
                 }

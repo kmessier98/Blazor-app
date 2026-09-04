@@ -49,7 +49,7 @@ namespace LibraryApp.Infrastructure.Repositories
             var result = await _dbContext.Emprunts
                 .Where(e => e.DateRetour == null)
                 .Include(l => l.Livre)
-                .Include(u => u.Utilisateur)
+                .Include(u => u.Membre)
                 .ToListAsync();
 
             return result;

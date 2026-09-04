@@ -6,6 +6,6 @@ namespace LibraryApp.Client.Services.Interfaces
     {
         Task<List<GetAllLivresDto>> GetAllAsync();
         Task<GetLivreInfosDto?> GetLivreInfos(int livreId);
-        Task<bool> EmprunterLivre(int livreId, int userId);
+        Task<bool> EmprunterLivre(int livreId, int membreId);
     }
 }

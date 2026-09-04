@@ -25,13 +25,13 @@ namespace LibraryApp.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
-        public async Task EmprunterLivre(Livre entity, int utilisateurId)
+        public async Task EmprunterLivre(Livre entity, int membreId)
         {
             entity.EstDisponible = false;
             entity.Emprunts.Add(new Emprunt()
             {
                 LivreId = entity.Id,
-                UtilisateurId = utilisateurId,
+                MembreId = membreId,
                 DateEmprunt = DateTime.Now,
                 DateRetour = null
             });
@@ -46,7 +46,7 @@ namespace LibraryApp.Infrastructure.Repositories
                 .Include(a => a.Auteurs)
                 .Include(c => c.Categories)
                 .Include(e => e.Emprunts)
-                    .ThenInclude(u => u.Utilisateur)
+                    .ThenInclude(u => u.Membre)
                 .SingleOrDefaultAsync();
 
             return result;

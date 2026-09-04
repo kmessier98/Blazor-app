@@ -6,43 +6,43 @@ using System.Linq.Expressions;
 
 namespace LibraryApp.Infrastructure.Repositories
 {
-    public class UtilisateurRepository : IUtilisateurRepository
+    public class MembreRepository : IMembreRepository
     {
         private AppDbContext _dbContext { get; set; }
 
-        public UtilisateurRepository(AppDbContext dbContext)
+        public MembreRepository(AppDbContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-        public Task CreateAsync(Utilisateur entity)
+        public Task CreateAsync(Membre entity)
         {
             throw new NotImplementedException();
         }
 
-        public Task DeleteAsync(Utilisateur entity)
+        public Task DeleteAsync(Membre entity)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Utilisateur?> FindByIdAsync(int id)
+        public Task<Membre?> FindByIdAsync(int id)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<IReadOnlyList<Utilisateur>> GetAllAsync()
+        public async Task<IReadOnlyList<Membre>> GetAllAsync()
         {
-            var result = await _dbContext.Utilisateurs.AsNoTracking().ToListAsync();
+            var result = await _dbContext.Membres.AsNoTracking().ToListAsync();
 
             return result;
         }
 
-        public Task<Utilisateur> GetByAsync(Expression<Func<Utilisateur, bool>> predicate)
+        public Task<Membre> GetByAsync(Expression<Func<Membre, bool>> predicate)
         {
             throw new NotImplementedException();
         }
 
-        public Task UpdateAsync(Utilisateur entity)
+        public Task UpdateAsync(Membre entity)
         {
             throw new NotImplementedException();
         }

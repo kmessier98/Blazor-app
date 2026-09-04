@@ -22,11 +22,11 @@ namespace LibraryApp.Api.Controllers
             return Ok(emprunts);
         }
 
-        [HttpPut("{empruntId}/user/{userId}/retour")]
-        public async Task<ActionResult> RetournerLivre([FromRoute] int empruntId, [FromRoute] int userId)
+        [HttpPut("{empruntId}/membre/{membreId}/retour")]
+        public async Task<ActionResult> RetournerLivre([FromRoute] int empruntId, [FromRoute] int membreId)
         {
 
-            await _empruntService.RetournerLivre(empruntId, userId);
+            await _empruntService.RetournerLivre(empruntId, membreId);
             return NoContent();
         }
     }

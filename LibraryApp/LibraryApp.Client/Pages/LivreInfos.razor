@@ -61,7 +61,7 @@
                         @foreach (var emprunt in _livre.Emprunts)
                         {
                             <tr>
-                                <td>@emprunt.NomUtilisateur</td>
+                                <td>@emprunt.NomMembre</td>
                                 <td>@emprunt.DateEmprunt.ToString("d MMMM yyyy HH:mm:ss")</td>
                                 @if (emprunt.DateRetour != null)
                                 {
@@ -87,21 +87,21 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5">Emprunter</h1>
-                    <button type="button" class="btn-close" @onclick="(() => { _isModalOpen = false; _selectedUserId = 1; })"></button>
+                    <button type="button" class="btn-close" @onclick="(() => { _isModalOpen = false; _selectedMembreId = 1; })"></button>
                 </div>
                 <div class="modal-body">
-                    <h4>Sélectionner un utilisateur:</h4>
-                    <div class="utilisateurs-list-filter">
-                        <select class="form-select" @bind="_selectedUserId">
-                            @foreach (var utilisateur in _utilisateurs!)
+                    <h4>Sélectionner un membre:</h4>
+                    <div class="membres-list-filter">
+                        <select class="form-select" @bind="_selectedMembreId">
+                            @foreach (var membre in _membres!)
                             {
-                                <option value="@utilisateur.Id">@utilisateur.Nom</option>
+                                <option value="@membre.Id">@membre.Nom</option>
                             }
                         </select>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" @onclick="(() => { _isModalOpen = false; _selectedUserId = 1; })">Annuler</button>
+                    <button type="button" class="btn btn-secondary" @onclick="(() => { _isModalOpen = false; _selectedMembreId = 1; })">Annuler</button>
                     <button type="button" class="btn btn-primary" @onclick="() => Emprunter()">Emprunter</button>
                 </div>
             </div>

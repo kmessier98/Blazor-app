@@ -6,17 +6,17 @@ namespace LibraryApp.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UtilisateurController : ControllerBase
+    public class MembreController : ControllerBase
     {
-        private readonly IUtilisateurService _utilisateurService;
+        private readonly IMembreService _utilisateurService;
 
-        public UtilisateurController(IUtilisateurService utilisateurService)
+        public MembreController(IMembreService utilisateurService)
         {
             _utilisateurService = utilisateurService;
         }
 
         [HttpGet("GetAll")]
-        public async Task<ActionResult<UtilisateurDto>> GetAll()
+        public async Task<ActionResult<MembreDto>> GetAll()
         {
             var dto = await _utilisateurService.GetAll();
             return Ok(dto);

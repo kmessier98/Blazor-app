@@ -2,8 +2,8 @@
 
 namespace LibraryApp.Client.Services.Interfaces
 {
-    public interface IUtilisateurService
+    public interface IMembreService
     {
-        Task<List<UtilisateurDto>> GetAll();
+        Task<List<MembreDto>> GetAll();
     }
 }

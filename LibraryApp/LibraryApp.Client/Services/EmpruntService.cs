@@ -37,11 +37,11 @@ namespace LibraryApp.Client.Services
             }
         }
 
-        public async Task<bool> RetournerLivre(int empruntId, int userId)
+        public async Task<bool> RetournerLivre(int empruntId, int membreId)
         {
             try
             {
-                var response = await _httpClient.PutAsync($"api/emprunt/{empruntId}/user/{userId}/retour", null);
+                var response = await _httpClient.PutAsync($"api/emprunt/{empruntId}/membre/{membreId}/retour", null);
 
                 if (!response.IsSuccessStatusCode)
                 {

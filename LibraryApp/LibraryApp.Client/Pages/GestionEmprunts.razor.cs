@@ -22,17 +22,17 @@ namespace LibraryApp.Client.Pages
             _isLoading = false;
         }
 
-        private async Task MarquerRetourne(int empruntId, int userId)
+        private async Task MarquerRetourne(int empruntId, int membreId)
         {
             _isLoading = true;
 
             try
             {
-                var succes = await EmpruntService.RetournerLivre(empruntId, userId);
+                var succes = await EmpruntService.RetournerLivre(empruntId, membreId);
 
                 if (succes)
                 {
-                    var empruntToRemove = _emprunts.Single(x => x.Id == empruntId && x.UserId == userId);
+                    var empruntToRemove = _emprunts.Single(x => x.Id == empruntId && x.MembreId == membreId);
                     _emprunts.Remove(empruntToRemove);
 
                     NotificationService.ShowSuccess("Le livre a été retourné avec succès");

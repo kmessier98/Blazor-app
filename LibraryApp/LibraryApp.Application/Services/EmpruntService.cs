@@ -27,13 +27,13 @@ namespace LibraryApp.Application.Services
             return dto;
         }
 
-        public async Task RetournerLivre(int empruntId, int userId)
+        public async Task RetournerLivre(int empruntId, int membreId)
         {
             var emprunt = await _empruntRepository.GetActiveAsync(empruntId);
 
             if (emprunt == null) throw new ValidationException("Le livre que vous tentez de retourner n'existe pas ou n'est pas emprunté");
             if (emprunt.Livre.EstDisponible == true) throw new ValidationException("Le livre a déjà été retourné");
-            if (emprunt.UtilisateurId != userId) throw new ValidationException("Vous n'êtes pas autorisé à retourner ce livre");
+            if (emprunt.MembreId != membreId) throw new ValidationException("Vous n'êtes pas autorisé à retourner ce livre");
 
             await _empruntRepository.RetournerLivre(emprunt);
         }

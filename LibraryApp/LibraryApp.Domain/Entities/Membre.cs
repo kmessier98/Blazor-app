@@ -2,8 +2,8 @@
 
 namespace LibraryApp.Domain.Entities
 {
-    [Table("Utilisateur")]
-    public class Utilisateur
+    [Table("Membre")]
+    public class Membre
     {
         public int Id { get; set; }
         public string Nom { get; set; }

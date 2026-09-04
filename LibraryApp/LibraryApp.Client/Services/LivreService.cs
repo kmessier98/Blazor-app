@@ -29,7 +29,7 @@ namespace LibraryApp.Client.Services
                 _logger.LogError(ex, "Erreur lors de la communication avec l'API.");
                 return [];
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 // Tout autre type d'erreur imprévue
                 _logger.LogError(ex, "Une erreur inattendue est survenue lors de la récupération des données.");
@@ -59,11 +59,11 @@ namespace LibraryApp.Client.Services
             }
         }
 
-        public async Task<bool> EmprunterLivre(int livreId, int userId)
+        public async Task<bool> EmprunterLivre(int livreId, int membreId)
         {
             try
             {
-                var response = await _httpClient.PutAsync($"api/livre/{livreId}/user/{userId}/emprunt", null);
+                var response = await _httpClient.PutAsync($"api/livre/{livreId}/membre/{membreId}/emprunt", null);
 
                 if (!response.IsSuccessStatusCode)
                 {
@@ -72,7 +72,7 @@ namespace LibraryApp.Client.Services
                     return false;
                 }
 
-                return true; 
+                return true;
             }
             catch (HttpRequestException ex)
             {

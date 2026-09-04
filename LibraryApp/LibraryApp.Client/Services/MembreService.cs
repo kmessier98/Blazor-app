@@ -4,21 +4,21 @@ using System.Net.Http.Json;
 
 namespace LibraryApp.Client.Services
 {
-    public class UtilisateurService : IUtilisateurService
+    public class MembreService : IMembreService
     {
         private readonly HttpClient _httpClient;
-        private readonly ILogger<UtilisateurService> _logger;
+        private readonly ILogger<MembreService> _logger;
 
-        public UtilisateurService(HttpClient httpClient, ILogger<UtilisateurService> logger)
+        public MembreService(HttpClient httpClient, ILogger<MembreService> logger)
         {
-            _httpClient = httpClient; 
+            _httpClient = httpClient;
             _logger = logger;
         }
-        public async Task<List<UtilisateurDto>> GetAll()
+        public async Task<List<MembreDto>> GetAll()
         {
             try
             {
-                var response = await _httpClient.GetFromJsonAsync<List<UtilisateurDto>>("api/utilisateur/GetAll");
+                var response = await _httpClient.GetFromJsonAsync<List<MembreDto>>("api/membre/GetAll");
 
                 return response ?? [];
             }

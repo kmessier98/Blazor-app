@@ -11,7 +11,7 @@ namespace LibraryApp.Infrastructure.Data
         public DbSet<Editeur> Editeurs { get; set; }
         public DbSet<Emprunt> Emprunts { get; set; }
         public DbSet<Livre> Livres { get; set; }
-        public DbSet<Utilisateur> Utilisateurs { get; set; }
+        public DbSet<Membre> Membres { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -103,9 +103,9 @@ namespace LibraryApp.Infrastructure.Data
             );
 
             // --- Utilisateurs ---
-            modelBuilder.Entity<Utilisateur>().HasData(
-                new Utilisateur { Id = 1, Nom = "Marc Tremblay", Courriel = "marc.tremblay@example.com" },
-                new Utilisateur { Id = 2, Nom = "Julie Bouchard", Courriel = "julie.bouchard@example.com" }
+            modelBuilder.Entity<Membre>().HasData(
+                new Membre { Id = 1, Nom = "Marc Tremblay", Courriel = "marc.tremblay@example.com" },
+                new Membre { Id = 2, Nom = "Julie Bouchard", Courriel = "julie.bouchard@example.com" }
             );
 
             // --- Emprunts ---
@@ -114,7 +114,7 @@ namespace LibraryApp.Infrastructure.Data
                 {
                     Id = 1,
                     LivreId = 1,
-                    UtilisateurId = 1,
+                    MembreId = 1,
                     DateEmprunt = new DateTime(2026, 1, 3),
                     DateRetour = new DateTime(2026, 1, 17)
                 },
@@ -122,7 +122,7 @@ namespace LibraryApp.Infrastructure.Data
                 {
                     Id = 2,
                     LivreId = 1,
-                    UtilisateurId = 2,
+                    MembreId = 2,
                     DateEmprunt = new DateTime(2026, 3, 2),
                     DateRetour = new DateTime(2026, 3, 9)
                 },
@@ -130,7 +130,7 @@ namespace LibraryApp.Infrastructure.Data
                 {
                     Id = 3,
                     LivreId = 3, // Fondation
-                    UtilisateurId = 1,
+                    MembreId = 1,
                     DateEmprunt = new DateTime(2026, 8, 15),
                     DateRetour = null // emprunt actif
                 }
