@@ -1,7 +1,9 @@
+using FluentValidation;
 using LibraryApp.Api.Middlewares;
 using LibraryApp.Application.Interfaces;
 using LibraryApp.Application.Mapping;
 using LibraryApp.Application.Services;
+using LibraryApp.Application.Validators;
 using LibraryApp.Infrastructure.Data;
 using LibraryApp.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -37,6 +39,8 @@ builder.Services.AddScoped<IEmpruntService, EmpruntService>();
 builder.Services.AddScoped<IEmpruntRepository, EmpruntRepository>();
 builder.Services.AddScoped<IMembreService, MembreService>();
 builder.Services.AddScoped<IMembreRepository, MembreRepository>();
+
+builder.Services.AddValidatorsFromAssembly(typeof(CreateMembreDtoValidator).Assembly);
 
 var app = builder.Build();
 
