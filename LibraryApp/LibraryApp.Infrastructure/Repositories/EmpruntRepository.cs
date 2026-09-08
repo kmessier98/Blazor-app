@@ -58,7 +58,7 @@ namespace LibraryApp.Infrastructure.Repositories
         public async Task<Emprunt?> GetActiveByLivreIdAsync(int livreId)
         {
             var result = await _dbContext.Emprunts
-                .Where(x =>x.LivreId == livreId && x.DateRetour == null)
+                .Where(x => x.LivreId == livreId && x.DateRetour == null)
                 .Include(l => l.Livre)
                 .SingleOrDefaultAsync();
 

@@ -15,9 +15,10 @@ namespace LibraryApp.Infrastructure.Repositories
             _dbContext = dbContext;
         }
 
-        public Task CreateAsync(Membre entity)
+        public async Task CreateAsync(Membre entity)
         {
-            throw new NotImplementedException();
+            await _dbContext.Membres.AddAsync(entity);
+            await _dbContext.SaveChangesAsync();
         }
 
         public Task DeleteAsync(Membre entity)

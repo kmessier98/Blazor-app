@@ -1,4 +1,5 @@
-﻿using LibraryApp.Application.Exceptions;
+﻿using FluentValidation;
+using LibraryApp.Application.Exceptions;
 
 namespace LibraryApp.Api.Middlewares
 {
@@ -14,12 +15,17 @@ namespace LibraryApp.Api.Middlewares
             {
                 await _next(context);
             }
+            catch (ValidationException ex) //FluentValidation errors
+            {
+                context.Response.StatusCode = StatusCodes.Status400BadRequest;
+                await context.Response.WriteAsJsonAsync(new { errors = ex.Errors.Select(e => e.ErrorMessage) });
+            }
             catch (NotFoundException ex)
             {
                 context.Response.StatusCode = StatusCodes.Status404NotFound;
                 await context.Response.WriteAsJsonAsync(new { error = ex.Message });
             }
-            catch (ValidationException ex)
+            catch (BusinessRuleException ex)
             {
                 context.Response.StatusCode = StatusCodes.Status400BadRequest;
                 await context.Response.WriteAsJsonAsync(new { error = ex.Message });

@@ -14,6 +14,7 @@ namespace LibraryApp.Client.Services
             _httpClient = httpClient;
             _logger = logger;
         }
+
         public async Task<List<MembreDto>> GetAll()
         {
             try

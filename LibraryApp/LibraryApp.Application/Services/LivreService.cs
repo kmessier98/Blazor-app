@@ -53,13 +53,13 @@ namespace LibraryApp.Application.Services
             // Sécurité si le livre pour X ou y raison il est déjà emprunté...
             if (!currentLivre.EstDisponible)
             {
-                throw new ValidationException("Le livre n'est pas disponible pour un emprunt");
+                throw new BusinessRuleException("Le livre n'est pas disponible pour un emprunt");
             }
             //Sécurité supplémentaire
             var empruntExistant = currentLivre.Emprunts.Any(x => x.DateRetour == null);
             if (empruntExistant)
             {
-                throw new ValidationException("Ce livre a déjà un emprunt actif");
+                throw new BusinessRuleException("Ce livre a déjà un emprunt actif");
             }
 
             await _livreRepository.EmprunterLivre(currentLivre, membreId);

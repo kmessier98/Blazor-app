@@ -21,5 +21,20 @@ namespace LibraryApp.Api.Controllers
             var dto = await _utilisateurService.GetAll();
             return Ok(dto);
         }
+
+        [HttpPost]
+        public async Task<ActionResult<MembreDto>> Create(CreateMembreDto dto)
+        {
+            var result = await _utilisateurService.Create(dto);
+
+            return Ok(result); //TODO createdAtAction
+
+            /*
+            return CreatedAtAction(
+                nameof(GetById),           
+                new { id = membreCree.Id },
+                membreCree                 
+)           ; */
+        }
     }
 }

@@ -2,10 +2,7 @@
 using LibraryApp.Domain.Entities;
 using LibraryApp.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Text;
 
 namespace LibraryApp.Infrastructure.Repositories
 {

@@ -12,9 +12,9 @@
             : base($"{entityName} avec l'id '{key}' n'a pas été trouvé.") { }
     }
 
-    public class ValidationException : AppException
+    public class BusinessRuleException : AppException
     {
-        public ValidationException(string message) : base(message) { }
+        public BusinessRuleException(string message) : base(message) { }
     }
 
     public class ConflictException : AppException
