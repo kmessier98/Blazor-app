@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using FluentValidation;
+using LibraryApp.Application.Exceptions;
 using LibraryApp.Application.Interfaces;
 using LibraryApp.Domain.Entities;
 using LibraryApp.Shared.DTOs;
@@ -31,6 +32,14 @@ namespace LibraryApp.Application.Services
             return _mapper.Map<MembreDto>(entity);
         }
 
+        public async Task<MembreDto> Get(int id)
+        {
+            var entity = await _membreRepository.FindByIdAsync(id);
+            if (entity is null)
+                throw new NotFoundException(nameof(Membre), id);
+
+            return _mapper.Map<MembreDto>(entity);
+        }
 
         public async Task<List<MembreDto>> GetAll()
         {

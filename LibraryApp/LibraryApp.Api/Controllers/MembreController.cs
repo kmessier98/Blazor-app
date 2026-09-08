@@ -8,33 +8,36 @@ namespace LibraryApp.Api.Controllers
     [ApiController]
     public class MembreController : ControllerBase
     {
-        private readonly IMembreService _utilisateurService;
+        private readonly IMembreService _membreService;
 
-        public MembreController(IMembreService utilisateurService)
+        public MembreController(IMembreService membreService)
         {
-            _utilisateurService = utilisateurService;
+            _membreService = membreService;
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<MembreDto>> Get(int id)
+        {
+            var dto = await _membreService.Get(id);
+            return Ok(dto);
         }
 
         [HttpGet("GetAll")]
         public async Task<ActionResult<MembreDto>> GetAll()
         {
-            var dto = await _utilisateurService.GetAll();
+            var dto = await _membreService.GetAll();
             return Ok(dto);
         }
 
         [HttpPost]
         public async Task<ActionResult<MembreDto>> Create(CreateMembreDto dto)
         {
-            var result = await _utilisateurService.Create(dto);
+            var result = await _membreService.Create(dto);
 
-            return Ok(result); //TODO createdAtAction
-
-            /*
             return CreatedAtAction(
-                nameof(GetById),           
-                new { id = membreCree.Id },
-                membreCree                 
-)           ; */
+                nameof(Get),
+                new { id = result.Id },
+                result);
         }
     }
 }
