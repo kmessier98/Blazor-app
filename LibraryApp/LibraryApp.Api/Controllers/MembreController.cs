@@ -22,7 +22,7 @@ namespace LibraryApp.Api.Controllers
             return Ok(dto);
         }
 
-        [HttpGet("GetAll")]
+        [HttpGet]
         public async Task<ActionResult<MembreDto>> GetAll()
         {
             var dto = await _membreService.GetAll();

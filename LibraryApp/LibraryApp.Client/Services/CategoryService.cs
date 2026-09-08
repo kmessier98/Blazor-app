@@ -1,8 +1,6 @@
 ﻿using LibraryApp.Client.Services.Interfaces;
-using LibraryApp.Shared.DTOs;
 using System.Net.Http.Json;
 using static LibraryApp.Shared.DTOs.CategoryDto;
-using static LibraryApp.Shared.DTOs.LivreDto;
 
 namespace LibraryApp.Client.Services
 {
@@ -21,7 +19,7 @@ namespace LibraryApp.Client.Services
         {
             try
             {
-                var response = await _httpClient.GetFromJsonAsync<List<GetAllCategoryDto>>("api/category/GetAll");
+                var response = await _httpClient.GetFromJsonAsync<List<GetAllCategoryDto>>("api/category");
 
                 return response ?? [];
             }

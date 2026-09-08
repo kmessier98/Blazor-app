@@ -19,7 +19,7 @@ namespace LibraryApp.Client.Services
         {
             try
             {
-                var response = await _httpClient.GetFromJsonAsync<List<MembreDto>>("api/membre/GetAll");
+                var response = await _httpClient.GetFromJsonAsync<List<MembreDto>>("api/membre");
 
                 return response ?? [];
             }

@@ -14,7 +14,7 @@ namespace LibraryApp.Api.Controllers
             _livreService = livreService;
         }
 
-        [HttpGet("GetAll")]
+        [HttpGet]
         public async Task<ActionResult<GetAllLivresDto>> GetAll()
         {
             var livres = await _livreService.GetAll();

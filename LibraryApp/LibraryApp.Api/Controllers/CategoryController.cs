@@ -15,7 +15,7 @@ namespace LibraryApp.Api.Controllers
             _categoryService = categoryService;
         }
 
-        [HttpGet("GetAll")]
+        [HttpGet]
         public async Task<ActionResult<List<GetAllCategoryDto>>> GetAll()
         {
             var categories = await _categoryService.GetAll();
