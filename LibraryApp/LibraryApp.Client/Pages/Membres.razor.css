@@ -1,0 +1,61 @@
+﻿.content {
+    width: 65%;
+    margin: 0 auto;
+
+    h3 {
+        text-align: center;
+    }
+
+    .filter-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .search-container {
+            width: 100%;
+        }
+
+        .new-membre-btn {
+            width: 35%;
+        }
+    }
+
+    .membres-container {
+        margin-top: 10px;
+
+        .list-membre {
+            .membre {
+                display: flex;
+                align-items: center;
+                padding: 6px 8px;
+
+                .left {
+                    display: flex;
+                    flex-direction: column;
+
+                    .membre-name {
+                        font-weight: bold;
+                        font-size: 14px;
+                    }
+
+                    .membre-courriel {
+                        font-size: 14px;
+                    }
+                }
+
+                .right {
+                    margin-left: auto;
+
+
+                    .nbr-emprunt {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            hr {
+                margin: 0 !important;
+            }
+        }
+    }
+}

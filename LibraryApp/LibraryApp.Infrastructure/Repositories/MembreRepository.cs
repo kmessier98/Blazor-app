@@ -37,7 +37,9 @@ namespace LibraryApp.Infrastructure.Repositories
 
         public async Task<IReadOnlyList<Membre>> GetAllAsync()
         {
-            var result = await _dbContext.Membres.AsNoTracking().ToListAsync();
+            var result = await _dbContext.Membres
+                    .Include(e => e.Emprunts)
+                    .AsNoTracking().ToListAsync();
 
             return result;
         }

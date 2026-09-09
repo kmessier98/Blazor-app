@@ -1,0 +1,64 @@
+﻿@page "/Membres"
+
+@if (_isLoading)
+{
+    <div class="loading-overlay">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Chargement...</span>
+        </div>
+    </div>
+}
+
+<div class="content">
+    <h3>Membres</h3>
+    <div class="filter-container">
+        <div class="search-container">
+            <input type="text"
+                   @bind-value="_searchQuery"
+                   @bind-value:event="oninput"
+                   placeholder="Rechercher un membre..."
+                   class="form-control" />
+        </div>
+        <div class="new-membre-btn">
+            <button type="button" class="btn btn-light border text-dark px-4 py-2">+ Nouveau membre</button>
+        </div>
+    </div>
+
+    <div class="membres-container">
+        @if (!FilteredItems.Any())
+        {
+            <div class="alert alert-info">Aucun membre ne correspond à vos critères.</div>
+        }
+        else
+        {
+            <div class="list-membre">
+                @for (int i = 0; i < FilteredItems.ToList().Count; i++)
+                {
+                    <div class="membre">
+                        <div class="left">
+                            <span class="membre-name">@FilteredItems.ToList()[i].Nom</span>
+                            <span class="membre-courriel">@FilteredItems.ToList()[i].Courriel</span>
+                        </div>
+                        <div class="right">
+
+                        </div>
+                        @if (FilteredItems.ToList()[i].NombreEmprunt > 1)
+                        {
+                            <span class="nbr-emprunt">@FilteredItems.ToList()[i].NombreEmprunt emprunts actifs</span>
+                        }
+                        else
+                        {
+                            <span class="nbr-emprunt">@FilteredItems.ToList()[i].NombreEmprunt emprunt actif</span>
+                        }
+                    </div>
+
+                    @if (i < FilteredItems.ToList().Count - 1)
+                    {
+                        <hr />
+                    } 
+                }           
+            </div>
+        }
+    </div>
+</div>
+
