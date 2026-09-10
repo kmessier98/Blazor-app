@@ -62,6 +62,11 @@ namespace LibraryApp.Client.Pages
             _isLoading = false;
         }
 
+        private async Task DeleteMembre(int id)
+        {
+            //TODO modal
+        }
+
         private void ClearModal()
         {
             _isModalOpen = false;

@@ -34,30 +34,32 @@
         else
         {
             <div class="list-membre">
-                @for (int i = 0; i < FilteredItems.ToList().Count; i++)
+                @foreach (var membre in FilteredItems)
                 {
+                    var aDesEmpruntsActifs = membre.NombreEmprunt > 0;
+
                     <div class="membre">
                         <div class="left">
-                            <span class="membre-name">@FilteredItems.ToList()[i].Nom</span>
-                            <span class="membre-courriel">@FilteredItems.ToList()[i].Courriel</span>
+                            <span class="membre-name">@membre.Nom</span>
+                            <span class="membre-courriel">@membre.Courriel</span>
                         </div>
                         <div class="right">
-
+                            <span class="nbr-emprunt">
+                                @membre.NombreEmprunt @(membre.NombreEmprunt > 1 ? "emprunts actifs" : "emprunt actif")
+                            </span>
+                            <button class="btn-icon-supprimer"
+                                    disabled="@aDesEmpruntsActifs" 
+                                    title="@(aDesEmpruntsActifs ? "Impossible de supprimer un membre avec un emprunt actif" : "Supprimer")"
+                                    @onclick="(async () => { await DeleteMembre(membre.Id); } )">
+                                <span class="bi bi-trash"></span>
+                            </button>                           
                         </div>
-                        @if (FilteredItems.ToList()[i].NombreEmprunt > 1)
-                        {
-                            <span class="nbr-emprunt">@FilteredItems.ToList()[i].NombreEmprunt emprunts actifs</span>
-                        }
-                        else
-                        {
-                            <span class="nbr-emprunt">@FilteredItems.ToList()[i].NombreEmprunt emprunt actif</span>
-                        }
                     </div>
 
-                    @if (i < FilteredItems.ToList().Count - 1)
+                    @if (!membre.Equals(FilteredItems.Last()))
                     {
                         <hr />
-                    } 
+                    }
                 }           
             </div>
         }
@@ -109,4 +111,7 @@
             </div>
         </div>
     </div>
+}
+@code {
+ 
 }
