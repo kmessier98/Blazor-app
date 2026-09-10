@@ -40,6 +40,18 @@ namespace LibraryApp.Infrastructure.Data
                         j.HasKey(cl => new { cl.CategorieId, cl.LivreId });
                     });
 
+            modelBuilder.Entity<Emprunt>()
+               .HasOne(e => e.Membre)
+               .WithMany(m => m.Emprunts)
+               .HasForeignKey(e => e.MembreId)
+               .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Emprunt>()
+                .HasOne(e => e.Livre)
+                .WithMany(l => l.Emprunts)
+                .HasForeignKey(e => e.LivreId)
+                .OnDelete(DeleteBehavior.Restrict);
+
             SeedData(modelBuilder);
         }
 
