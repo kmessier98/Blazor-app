@@ -59,3 +59,61 @@
         }
     }
 }
+
+.modal {
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .element {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+
+            input {
+                width: 100%;
+                padding: 5px 8px;
+                font-size: 15px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                color: #212529;
+                outline: none;
+                transition: border-color 0.2s, box-shadow 0.2s;
+            }
+        }
+    }
+
+    .modal-footer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+.actions {
+    display: flex;
+    gap: 10px;
+    align-self: end;
+
+    .btn-new-membre {
+        background: #c8d7ea;
+        color: #253995;
+        border: 1px solid black;
+    }
+
+        .btn-new-membre:hover {
+            background: #98b7dd;
+            color: rgb(26 49 152);
+        }
+
+        .btn-new-membre:focus,
+        .btn-new-membre:focus-visible {
+            /* Enlève l'ombre bleue de Bootstrap */
+            box-shadow: none !important;
+            /* Optionnel : Conserve votre bordure noire intacte au clic */
+            border: 1px solid black;
+        }
+}
+

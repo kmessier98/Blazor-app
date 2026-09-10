@@ -12,6 +12,9 @@ namespace LibraryApp.Client.Pages
         private bool _isLoading = true;
         private List<MembreDto> _membres = new List<MembreDto>();
         private string _searchQuery = string.Empty;
+        private bool _isModalOpen = false;
+        private CreateMembreDto? _newMembre = null;
+        private List<string> _validationErrors = new();
 
         private IEnumerable<MembreDto> FilteredItems
         {
@@ -35,6 +38,35 @@ namespace LibraryApp.Client.Pages
 
             _membres = await MembreService.GetAll();
             _isLoading = false;
+        }
+
+        private async Task CreateNewMembre()
+        {
+            if (_newMembre is null) return;
+
+            _isLoading = true;
+
+            _validationErrors.Clear();
+            var result = await MembreService.Create(_newMembre);
+
+            if (result.IsSuccess)
+            {
+                ClearModal();
+                _membres.Add(result.Data!);
+            }
+            else
+            {
+                _validationErrors = result.Errors;
+            }
+
+            _isLoading = false;
+        }
+
+        private void ClearModal()
+        {
+            _isModalOpen = false;
+            _newMembre = null;
+            _validationErrors.Clear();
         }
     }
 }

@@ -18,7 +18,10 @@ namespace LibraryApp.Api.Middlewares
             catch (ValidationException ex) //FluentValidation errors
             {
                 context.Response.StatusCode = StatusCodes.Status400BadRequest;
-                await context.Response.WriteAsJsonAsync(new { errors = ex.Errors.Select(e => e.ErrorMessage) });
+                await context.Response.WriteAsJsonAsync(new
+                {
+                    errors = ex.Errors.Select(e => e.ErrorMessage)
+                });
             }
             catch (NotFoundException ex)
             {
@@ -28,7 +31,10 @@ namespace LibraryApp.Api.Middlewares
             catch (BusinessRuleException ex)
             {
                 context.Response.StatusCode = StatusCodes.Status400BadRequest;
-                await context.Response.WriteAsJsonAsync(new { error = ex.Message });
+                await context.Response.WriteAsJsonAsync(new
+                {
+                    errors = new List<string> { ex.Message }
+                });
             }
             catch (Exception ex)
             {

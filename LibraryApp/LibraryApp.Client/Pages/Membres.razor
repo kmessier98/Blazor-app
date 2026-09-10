@@ -20,7 +20,9 @@
                    class="form-control" />
         </div>
         <div class="new-membre-btn">
-            <button type="button" class="btn btn-light border text-dark px-4 py-2">+ Nouveau membre</button>
+            <button type="button"
+                    class="btn btn-light border text-dark px-4 py-2"
+                    @onclick="(() => { _isModalOpen = true; _newMembre = new(); })">+ Nouveau membre</button>
         </div>
     </div>
 
@@ -62,3 +64,49 @@
     </div>
 </div>
 
+
+@if (_isModalOpen)
+{
+    <div class="modal fade show d-block" tabindex="-1" style="background-color: rgba(0, 0, 0, 0.5);">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Emprunter</h1>
+                    <button type="button" class="btn-close" @onclick="(() => { ClearModal(); })"></button>
+                </div>
+                <div class="modal-body">
+                    @*TODO utiliser EditForm pour gérer les erreurs clients*@
+                    <div class="form">
+                        <div class="element">
+                           <label for="nom-membre">Nom complet</label>
+                            <input type="text" id="nom-membre" placeholder="Ex: Sophie Gagnon" @bind-value="_newMembre!.Nom" @bind-value:event="oninput" />
+                        </div>
+                        <div class="element">
+                            <label for="courriel-membre" >Courriel</label>
+                            <input type="email" id="courriel-membre" placeholder="Ex: sophie.gagnon@example.com" @bind-value="_newMembre.Courriel" @bind-value:event="oninput" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div>
+                    @if (_validationErrors.Count > 0)
+                    {
+                        <div class="alert alert-danger">
+                            <ul class="mb-0">
+                                @foreach (var error in _validationErrors)
+                                {
+                                    <li>@error</li>
+                                }
+                            </ul>
+                        </div>
+                    }
+                    </div>
+                    <div class="actions">
+                        <button type="button" class="btn btn-secondary" @onclick="(() => { ClearModal(); })">Annuler</button>
+                        <button type="button" class="btn btn-new-membre" @onclick="() => CreateNewMembre()">Créer le membre</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
