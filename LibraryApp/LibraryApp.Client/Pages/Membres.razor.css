@@ -134,5 +134,25 @@
             /* Optionnel : Conserve votre bordure noire intacte au clic */
             border: 1px solid black;
         }
+
+    .btn-delete-membre {
+        background: #ff00004a;
+        color: #aa3131;
+        border: 1px solid black;
+
+    }
+
+        .btn-delete-membre:hover {
+            background: #ff000070;
+            color: #a70000;
+        }
+
+        .btn-delete-membre:focus,
+        .btn-delete-membre:focus-visible {
+            /* Enlève l'ombre bleue de Bootstrap */
+            box-shadow: none !important;
+            /* Optionnel : Conserve votre bordure noire intacte au clic */
+            border: 1px solid black;
+        }
 }
 

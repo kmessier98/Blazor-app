@@ -50,7 +50,7 @@
                             <button class="btn-icon-supprimer"
                                     disabled="@aDesEmpruntsActifs" 
                                     title="@(aDesEmpruntsActifs ? "Impossible de supprimer un membre avec un emprunt actif" : "Supprimer")"
-                                    @onclick="(async () => { await DeleteMembre(membre.Id); } )">
+                                    @onclick="(async () => { _isDeleteConfirmationOpen = true; _membreToDelete = membre; } )">
                                 <span class="bi bi-trash"></span>
                             </button>                           
                         </div>
@@ -112,6 +112,27 @@
         </div>
     </div>
 }
-@code {
- 
+
+@if (_isDeleteConfirmationOpen)
+{
+    <div class="modal fade show d-block" tabindex="-1" style="background-color: rgba(0, 0, 0, 0.5);">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Supprimer</h1>
+                    <button type="button" class="btn-close" @onclick="(() => { ClearDeleteConfirmationModal(); })"></button>
+                </div>
+                <div class="modal-body">
+                    <h4>Supprimer ce membre?</h4>
+                    <p>@_membreToDelete.Nom sera retiré définitivement. Cette action est irréversible.</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="actions">
+                        <button type="button" class="btn btn-secondary" @onclick="(() => { ClearDeleteConfirmationModal(); })">Annuler</button>
+                        <button type="button" class="btn btn-delete-membre" @onclick="() => DeleteMembre()">Supprimer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 }

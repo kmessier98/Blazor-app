@@ -13,8 +13,10 @@ namespace LibraryApp.Client.Pages
         private List<MembreDto> _membres = new List<MembreDto>();
         private string _searchQuery = string.Empty;
         private bool _isModalOpen = false;
+        private bool _isDeleteConfirmationOpen = false;
         private CreateMembreDto? _newMembre = null;
         private List<string> _validationErrors = new();
+        private MembreDto _membreToDelete = null;
 
         private IEnumerable<MembreDto> FilteredItems
         {
@@ -62,16 +64,27 @@ namespace LibraryApp.Client.Pages
             _isLoading = false;
         }
 
-        private async Task DeleteMembre(int id)
+        private async Task DeleteMembre()
         {
-            //TODO modal
+            if (_membreToDelete is null) return;
+
+            _isLoading = true;
+
+            _isLoading = false;
         }
+
 
         private void ClearModal()
         {
             _isModalOpen = false;
             _newMembre = null;
             _validationErrors.Clear();
+        }
+
+        private void ClearDeleteConfirmationModal()
+        {
+            _isDeleteConfirmationOpen = false;
+            _membreToDelete = null;
         }
     }
 }
