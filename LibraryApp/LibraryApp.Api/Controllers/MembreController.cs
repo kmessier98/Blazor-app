@@ -39,5 +39,12 @@ namespace LibraryApp.Api.Controllers
                 new { id = result.Id },
                 result);
         }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            await _membreService.Delete(id);
+            return NoContent();
+        }
     }
 }

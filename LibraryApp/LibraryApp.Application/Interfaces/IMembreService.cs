@@ -7,5 +7,6 @@ namespace LibraryApp.Application.Interfaces
         Task<MembreDto> Get(int id);
         Task<List<MembreDto>> GetAll();
         Task<MembreDto> Create(CreateMembreDto dto);
+        Task Delete(int id);
     }
 }

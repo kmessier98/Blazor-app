@@ -21,9 +21,10 @@ namespace LibraryApp.Infrastructure.Repositories
             await _dbContext.SaveChangesAsync();
         }
 
-        public Task DeleteAsync(Membre entity)
+        public async Task DeleteAsync(Membre entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Remove(entity);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task<Membre?> FindByIdAsync(int id)

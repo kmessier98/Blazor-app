@@ -28,6 +28,11 @@ namespace LibraryApp.Api.Middlewares
                 context.Response.StatusCode = StatusCodes.Status404NotFound;
                 await context.Response.WriteAsJsonAsync(new { error = ex.Message });
             }
+            catch (ConflictException ex)
+            {
+                context.Response.StatusCode = StatusCodes.Status409Conflict;
+                await context.Response.WriteAsJsonAsync(new { error = ex.Message });
+            }
             catch (BusinessRuleException ex)
             {
                 context.Response.StatusCode = StatusCodes.Status400BadRequest;

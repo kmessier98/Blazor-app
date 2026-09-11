@@ -32,6 +32,18 @@ namespace LibraryApp.Application.Services
             return _mapper.Map<MembreDto>(entity);
         }
 
+        public async Task Delete(int id)
+        {
+            var entity = await _membreRepository.FindByIdAsync(id);
+            if (entity is null)
+                throw new NotFoundException(nameof(Membre), id);
+
+            if (entity.Emprunts.Any(x => x.DateRetour == null))
+                throw new ConflictException("Impossible de supprimer un membre avec des emprunts actifs.");
+
+            await _membreRepository.DeleteAsync(entity);
+        }
+
         public async Task<MembreDto> Get(int id)
         {
             var entity = await _membreRepository.FindByIdAsync(id);
