@@ -50,6 +50,11 @@ namespace LibraryApp.Client.Services
             }
         }
 
+        public async Task<bool> Delete(int id)
+        {
+            return true;
+        }
+
         public async Task<List<MembreDto>> GetAll()
         {
             try

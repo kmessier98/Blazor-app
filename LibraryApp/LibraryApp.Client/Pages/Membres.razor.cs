@@ -8,6 +8,8 @@ namespace LibraryApp.Client.Pages
     {
         [Inject]
         public IMembreService MembreService { get; set; }
+        [Inject]
+        public INotificationService NotificationService { get; set; }
 
         private bool _isLoading = true;
         private List<MembreDto> _membres = new List<MembreDto>();
@@ -16,7 +18,7 @@ namespace LibraryApp.Client.Pages
         private bool _isDeleteConfirmationOpen = false;
         private CreateMembreDto? _newMembre = null;
         private List<string> _validationErrors = new();
-        private MembreDto _membreToDelete = null;
+        private MembreDto? _membreToDelete = null;
 
         private IEnumerable<MembreDto> FilteredItems
         {
@@ -69,6 +71,20 @@ namespace LibraryApp.Client.Pages
             if (_membreToDelete is null) return;
 
             _isLoading = true;
+
+            bool success = await MembreService.Delete(_membreToDelete.Id);
+
+            if (success)
+            {
+                _isDeleteConfirmationOpen = false;
+                _membres.Remove(_membreToDelete);
+                _membreToDelete = null;
+                NotificationService.ShowSuccess("Le membre a été supprimé avec succès!");
+            }
+            else
+            {
+                NotificationService.ShowSuccess("Un problème est survenu.");
+            }
 
             _isLoading = false;
         }

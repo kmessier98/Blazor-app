@@ -7,5 +7,6 @@ namespace LibraryApp.Client.Services.Interfaces
     {
         Task<List<MembreDto>> GetAll();
         Task<ServiceResult<MembreDto>> Create(CreateMembreDto dto);
+        Task<bool> Delete(int id);
     }
 }
