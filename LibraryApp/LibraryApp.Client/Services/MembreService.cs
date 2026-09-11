@@ -52,7 +52,26 @@ namespace LibraryApp.Client.Services
 
         public async Task<bool> Delete(int id)
         {
-            return true;
+            try
+            {
+                var response = await _httpClient.DeleteAsync($"api/membre/{id}");
+                if (response.IsSuccessStatusCode)
+                {
+                    return true;
+                }
+
+                return false;
+            }
+            catch (HttpRequestException ex)
+            {
+                _logger.LogError(ex, "Erreur lors de la communication avec l'API.");
+                return false;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Une erreur inattendue est survenue lors de la suppression du membre.");
+                return false;
+            }
         }
 
         public async Task<List<MembreDto>> GetAll()
