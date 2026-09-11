@@ -31,7 +31,10 @@ namespace LibraryApp.Api.Middlewares
             catch (ConflictException ex)
             {
                 context.Response.StatusCode = StatusCodes.Status409Conflict;
-                await context.Response.WriteAsJsonAsync(new { error = ex.Message });
+                await context.Response.WriteAsJsonAsync(new
+                {
+                    errors = new List<string> { ex.Message }
+                });
             }
             catch (BusinessRuleException ex)
             {

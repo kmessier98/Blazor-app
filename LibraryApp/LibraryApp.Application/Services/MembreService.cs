@@ -26,6 +26,10 @@ namespace LibraryApp.Application.Services
             if (!result.IsValid)
                 throw new ValidationException(result.Errors);
 
+            bool courrielExist = await _membreRepository.ExistsByCourrielAsync(dto.Courriel);
+            if (courrielExist)
+                throw new ConflictException("Le courriel est déjà utilisé pour un membre.");
+
             var entity = _mapper.Map<Membre>(dto);
             await _membreRepository.CreateAsync(entity); // entity.Id rempli après cet appel   
 

@@ -35,6 +35,13 @@ namespace LibraryApp.Client.Services
                         errorContent?.Errors ?? ["Erreur de validation inconnue."]);
                 }
 
+                if (response.StatusCode == System.Net.HttpStatusCode.Conflict)
+                {
+                    var errorContent = await response.Content.ReadFromJsonAsync<ApiErrorResponse>();
+                    return ServiceResult<MembreDto>.Failure(
+                        errorContent?.Errors ?? ["Erreur de validation inconnue."]);
+                }
+
                 _logger.LogError("Erreur API {StatusCode} lors de la création du membre.", response.StatusCode);
                 return ServiceResult<MembreDto>.Failure(["Une erreur est survenue sur le serveur."]);
             }

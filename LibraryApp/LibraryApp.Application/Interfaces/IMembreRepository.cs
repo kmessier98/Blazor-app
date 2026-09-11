@@ -5,5 +5,6 @@ namespace LibraryApp.Application.Interfaces
 {
     public interface IMembreRepository : IGenericInterface<Membre>
     {
+        Task<bool> ExistsByCourrielAsync(string courriel);
     }
 }

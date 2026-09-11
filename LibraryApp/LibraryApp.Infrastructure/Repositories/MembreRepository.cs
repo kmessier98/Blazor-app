@@ -54,5 +54,11 @@ namespace LibraryApp.Infrastructure.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public async Task<bool> ExistsByCourrielAsync(string courriel)
+        {
+            return await _dbContext.Membres
+                .AnyAsync(m => m.Courriel == courriel);
+        }
     }
 }
