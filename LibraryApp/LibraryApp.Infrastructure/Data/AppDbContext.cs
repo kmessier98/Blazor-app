@@ -104,7 +104,7 @@ namespace LibraryApp.Infrastructure.Data
 
             // --- Exemplaires ---
             modelBuilder.Entity<Exemplaire>().HasData(
-                new Exemplaire { Id = 1, CodeBarre = "DUNE-001", EstDisponible = true, LivreId = 1 },
+                new Exemplaire { Id = 1, CodeBarre = "DUNE-001", EstDisponible = false, LivreId = 1 },
                 new Exemplaire { Id = 2, CodeBarre = "DUNE-002", EstDisponible = true, LivreId = 1 },
                 new Exemplaire { Id = 3, CodeBarre = "MESSIE-001", EstDisponible = true, LivreId = 2 },
                 new Exemplaire { Id = 4, CodeBarre = "FONDATION-001", EstDisponible = false, LivreId = 3 },

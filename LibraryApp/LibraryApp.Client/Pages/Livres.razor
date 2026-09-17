@@ -51,14 +51,15 @@
                             <span>@FilteredItems.ToList()[i].PrenomAuteur @FilteredItems.ToList()[i].NomAuteur · @FilteredItems.ToList()[i].NomEditeur</span>
                         </div>
                         <div class="right-element">
-                            @if (FilteredItems.ToList()[i].EstDisponible)
-                            {
-                                <span class="badge rounded-pill bg-success-subtle text-success px-3 py-2">Disponible</span>
+                            @{
+                                bool isDisponible = FilteredItems.ToList()[i].ContientDisponible;
+                                bool hasMultiples = FilteredItems.ToList()[i].NombreExemplairesDisponible > 1;
                             }
-                            else
-                            {
-                                <span class="badge rounded-pill bg-danger-subtle text-danger px-3 py-2">Emprunté</span>
-                            }
+
+                            <span class="badge rounded-pill px-3 py-2 @(isDisponible ? "text-success bg-success-subtle " : "text-danger bg-danger-subtle")">
+                                @FilteredItems.ToList()[i].NombreExemplairesDisponible /  @FilteredItems.ToList()[i].NombreExemplaires 
+                                @(hasMultiples ? "disponibles" : "disponible")
+                            </span>
                         </div>
                     </div>
 

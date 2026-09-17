@@ -17,7 +17,10 @@ namespace LibraryApp.Application.Mapping
                 .ForMember(t => t.AuteurId, m => m.MapFrom(s => s.Auteurs.FirstOrDefault().Id))
                 .ForMember(t => t.NomAuteur, m => m.MapFrom(s => s.Auteurs.FirstOrDefault().Nom))
                 .ForMember(t => t.PrenomAuteur, m => m.MapFrom(s => s.Auteurs.FirstOrDefault().Prenom))
-                .ForMember(t => t.CategoryIds, m => m.MapFrom(s => s.Categories.Select(c => c.Id)));
+                .ForMember(t => t.CategoryIds, m => m.MapFrom(s => s.Categories.Select(c => c.Id)))
+                .ForMember(t => t.ContientDisponible, m => m.MapFrom(s => s.Exemplaires.Any(x => x.EstDisponible)))
+                .ForMember(t => t.NombreExemplaires, m => m.MapFrom(s => s.Exemplaires.Count))
+                .ForMember(t => t.NombreExemplairesDisponible, m => m.MapFrom(s => s.Exemplaires.Count(x => x.EstDisponible)));
 
 
             CreateMap<Categorie, GetAllCategoryDto>()

@@ -59,6 +59,7 @@ namespace LibraryApp.Infrastructure.Repositories
                 .Include(e => e.Editeur)
                 .Include(a => a.Auteurs)
                 .Include(c => c.Categories)
+                .Include(e => e.Exemplaires)
                 .ToListAsync();
 
             return result;
