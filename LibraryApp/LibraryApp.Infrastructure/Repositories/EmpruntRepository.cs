@@ -48,18 +48,20 @@ namespace LibraryApp.Infrastructure.Repositories
         {
             var result = await _dbContext.Emprunts
                 .Where(e => e.DateRetour == null)
-                .Include(l => l.Livre)
+                .Include(ex => ex.Exemplaire)
+                    .ThenInclude(l => l.Livre)
                 .Include(u => u.Membre)
                 .ToListAsync();
 
             return result;
         }
 
-        public async Task<Emprunt?> GetActiveByLivreIdAsync(int livreId)
+        public async Task<Emprunt?> GetActiveByExemplaireIdAsync(int exemplaireId)
         {
             var result = await _dbContext.Emprunts
-                .Where(x => x.LivreId == livreId && x.DateRetour == null)
-                .Include(l => l.Livre)
+                .Where(x => x.ExemplaireId == exemplaireId && x.DateRetour == null)
+                .Include(ex => ex.Exemplaire)
+                    .ThenInclude(l => l.Livre) //todo retiré
                 .SingleOrDefaultAsync();
 
             return result;
@@ -68,7 +70,7 @@ namespace LibraryApp.Infrastructure.Repositories
         public async Task RetournerLivre(Emprunt entity)
         {
             entity.DateRetour = DateTime.Now;
-            entity.Livre.EstDisponible = true;
+            entity.Exemplaire.Livre.EstDisponible = true;
 
             await _dbContext.SaveChangesAsync();
         }
@@ -77,7 +79,8 @@ namespace LibraryApp.Infrastructure.Repositories
         {
             var result = await _dbContext.Emprunts
               .Where(x => x.Id == empruntId && x.DateRetour == null)
-              .Include(l => l.Livre)
+              .Include(e => e.Exemplaire)
+                .ThenInclude(l => l.Livre)
               .SingleOrDefaultAsync();
 
             return result;

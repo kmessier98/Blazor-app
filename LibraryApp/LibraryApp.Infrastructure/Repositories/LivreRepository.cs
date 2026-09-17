@@ -25,19 +25,19 @@ namespace LibraryApp.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
-        public async Task EmprunterLivre(Livre entity, int membreId)
-        {
-            entity.EstDisponible = false;
-            entity.Emprunts.Add(new Emprunt()
-            {
-                LivreId = entity.Id,
-                MembreId = membreId,
-                DateEmprunt = DateTime.Now,
-                DateRetour = null
-            });
+        //public async Task EmprunterLivre(Livre entity, int membreId)
+        //{
+        //    entity.EstDisponible = false;
+        //    entity.Emprunts.Add(new Emprunt()
+        //    {
+        //        LivreId = entity.Id,
+        //        MembreId = membreId,
+        //        DateEmprunt = DateTime.Now,
+        //        DateRetour = null
+        //    });
 
-            await _dbContext.SaveChangesAsync();
-        }
+        //    await _dbContext.SaveChangesAsync();
+        //}
 
         public async Task<Livre?> FindByIdAsync(int id)
         {
@@ -45,8 +45,9 @@ namespace LibraryApp.Infrastructure.Repositories
                  .Include(e => e.Editeur)
                 .Include(a => a.Auteurs)
                 .Include(c => c.Categories)
-                .Include(e => e.Emprunts)
-                    .ThenInclude(u => u.Membre)
+                .Include(e => e.Exemplaires)
+                    .ThenInclude(e => e.Emprunts)
+                        .ThenInclude(u => u.Membre)
                 .SingleOrDefaultAsync();
 
             return result;

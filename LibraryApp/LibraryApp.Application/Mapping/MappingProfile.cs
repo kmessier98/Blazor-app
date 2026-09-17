@@ -29,14 +29,15 @@ namespace LibraryApp.Application.Mapping
             CreateMap<Emprunt, EmpruntDto>()
                 .ForMember(t => t.MembreId, m => m.MapFrom(s => s.Membre.Id))
                 .ForMember(t => t.NomMembre, m => m.MapFrom(s => s.Membre.Nom))
-                .ForMember(t => t.TitreLivre, m => m.MapFrom(s => s.Livre != null ? s.Livre.Titre : ""));
+                .ForMember(t => t.TitreLivre, m => m.MapFrom(s => s.Exemplaire.Livre != null ? s.Exemplaire.Livre.Titre : ""));
 
             CreateMap<Livre, GetLivreInfosDto>()
                 .ForMember(t => t.LivreId, m => m.MapFrom(s => s.Id))
                 .ForMember(t => t.NomEditeur, m => m.MapFrom(s => s.Editeur.Nom))
                 .ForMember(t => t.AuteurId, m => m.MapFrom(s => s.Auteurs.FirstOrDefault().Id))
                 .ForMember(t => t.NomAuteur, m => m.MapFrom(s => s.Auteurs.FirstOrDefault().Nom))
-                .ForMember(t => t.PrenomAuteur, m => m.MapFrom(s => s.Auteurs.FirstOrDefault().Prenom));
+                .ForMember(t => t.PrenomAuteur, m => m.MapFrom(s => s.Auteurs.FirstOrDefault().Prenom))
+                .ForMember(t => t.Emprunts, m => m.MapFrom(s => s.Exemplaires[0].Emprunts)); // TODO devra etre repenser...
 
             CreateMap<Membre, MembreDto>()
                 .ForMember(t => t.NombreEmprunt, m => m.MapFrom(s => s.Emprunts.Count(x => x.DateRetour == null)));

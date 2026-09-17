@@ -47,13 +47,6 @@ namespace LibraryApp.Infrastructure.Data
                .HasForeignKey(e => e.MembreId)
                .OnDelete(DeleteBehavior.Restrict);
 
-            //todo retiré
-            modelBuilder.Entity<Emprunt>()
-                .HasOne(e => e.Livre)
-                .WithMany(l => l.Emprunts)
-                .HasForeignKey(e => e.LivreId)
-                .OnDelete(DeleteBehavior.Restrict);
-
             modelBuilder.Entity<Exemplaire>()
                 .HasOne(e => e.Livre)
                 .WithMany(l => l.Exemplaires)
@@ -149,7 +142,6 @@ namespace LibraryApp.Infrastructure.Data
                 new Emprunt
                 {
                     Id = 1,
-                    LivreId = 1,
                     ExemplaireId = 1, // Dune - exemplaire 1
                     MembreId = 1,
                     DateEmprunt = new DateTime(2026, 1, 3),
@@ -158,7 +150,6 @@ namespace LibraryApp.Infrastructure.Data
                 new Emprunt
                 {
                     Id = 2,
-                    LivreId = 1,
                     ExemplaireId = 2, // Dune - exemplaire 2
                     MembreId = 2,
                     DateEmprunt = new DateTime(2026, 3, 2),
@@ -167,7 +158,6 @@ namespace LibraryApp.Infrastructure.Data
                 new Emprunt
                 {
                     Id = 3,
-                    LivreId = 3, // Fondation
                     ExemplaireId = 4, // Fondation - exemplaire 1
                     MembreId = 1,
                     DateEmprunt = new DateTime(2026, 8, 15),

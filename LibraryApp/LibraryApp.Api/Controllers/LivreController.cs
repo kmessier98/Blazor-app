@@ -28,12 +28,13 @@ namespace LibraryApp.Api.Controllers
             return Ok(livreInfos);
         }
 
-        [HttpPut("{livreId}/membre/{membreId}/emprunt")]
-        public async Task<ActionResult> EmprunterLivre([FromRoute] int livreId, [FromRoute] int membreId)
-        {
-            await _livreService.EmprunterLivre(livreId, membreId);
-            return NoContent();
-        }
+        //TODO devra etre emprunerExemplaire..
+        //[HttpPut("{livreId}/membre/{membreId}/emprunt")]
+        //public async Task<ActionResult> EmprunterLivre([FromRoute] int livreId, [FromRoute] int membreId)
+        //{
+        //    await _livreService.EmprunterLivre(livreId, membreId);
+        //    return NoContent();
+        //}
 
     }
 }
