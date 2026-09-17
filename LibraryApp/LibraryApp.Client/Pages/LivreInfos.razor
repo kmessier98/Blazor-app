@@ -58,20 +58,25 @@
 
                     <!-- Corps du tableau -->
                     <tbody>
-                        @foreach (var emprunt in _livre.Emprunts)
+                        @foreach (var exemplaire in _livre.Exemplaires)
                         {
-                            <tr>
-                                <td>@emprunt.NomMembre</td>
-                                <td>@emprunt.DateEmprunt.ToString("d MMMM yyyy HH:mm:ss")</td>
-                                @if (emprunt.DateRetour != null)
-                                {
-                                    <td class="text-end">@emprunt.DateRetour?.ToString("d MMMM yyyy HH:mm:ss")</td>
-                                }
-                                else
-                                {
-                                    <td class="text-end">En cours d'emprunt</td>
-                                }
-                            </tr>
+                            <div>TODO exemplaire @exemplaire.CodeBar</div>
+
+                            @foreach (var emprunt in exemplaire.Emprunts)
+                            {
+                                <tr>
+                                    <td>@emprunt.NomMembre</td>
+                                    <td>@emprunt.DateEmprunt.ToString("d MMMM yyyy HH:mm:ss")</td>
+                                    @if (emprunt.DateRetour != null)
+                                    {
+                                        <td class="text-end">@emprunt.DateRetour?.ToString("d MMMM yyyy HH:mm:ss")</td>
+                                    }
+                                    else
+                                    {
+                                        <td class="text-end">En cours d'emprunt</td>
+                                    }
+                                </tr>
+                            }
                         }
                     </tbody>
                 </table>
