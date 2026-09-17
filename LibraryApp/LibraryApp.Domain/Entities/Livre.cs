@@ -12,6 +12,7 @@ namespace LibraryApp.Domain.Entities
         public Editeur Editeur { get; set; }
         public List<Auteur> Auteurs { get; set; }
         public List<Categorie> Categories { get; set; }
-        public List<Emprunt> Emprunts { get; set; }
+        public List<Emprunt> Emprunts { get; set; } // TOOD a retirer... + retirer la relation EF plus tard
+        public List<Exemplaire> Exemplaires { get; set; }
     }
 }

@@ -10,6 +10,7 @@ namespace LibraryApp.Infrastructure.Data
         public DbSet<Categorie> Categories { get; set; }
         public DbSet<Editeur> Editeurs { get; set; }
         public DbSet<Emprunt> Emprunts { get; set; }
+        public DbSet<Exemplaire> Exemplaires { get; set; }
         public DbSet<Livre> Livres { get; set; }
         public DbSet<Membre> Membres { get; set; }
 
@@ -49,6 +50,12 @@ namespace LibraryApp.Infrastructure.Data
             modelBuilder.Entity<Emprunt>()
                 .HasOne(e => e.Livre)
                 .WithMany(l => l.Emprunts)
+                .HasForeignKey(e => e.LivreId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Exemplaire>()
+                .HasOne(e => e.Livre)
+                .WithMany(l => l.Exemplaires)
                 .HasForeignKey(e => e.LivreId)
                 .OnDelete(DeleteBehavior.Restrict);
 
