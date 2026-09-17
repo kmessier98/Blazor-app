@@ -10,5 +10,6 @@ namespace LibraryApp.Domain.Entities
         public bool EstDisponible { get; set; }
         public int LivreId { get; set; }
         public Livre Livre { get; set; }
+        public List<Emprunt> Emprunts { get; set; }
     }
 }

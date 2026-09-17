@@ -47,6 +47,7 @@ namespace LibraryApp.Infrastructure.Data
                .HasForeignKey(e => e.MembreId)
                .OnDelete(DeleteBehavior.Restrict);
 
+            //todo retiré
             modelBuilder.Entity<Emprunt>()
                 .HasOne(e => e.Livre)
                 .WithMany(l => l.Emprunts)
@@ -57,6 +58,12 @@ namespace LibraryApp.Infrastructure.Data
                 .HasOne(e => e.Livre)
                 .WithMany(l => l.Exemplaires)
                 .HasForeignKey(e => e.LivreId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Exemplaire>()
+                .HasMany(e => e.Emprunts)
+                .WithOne(emp => emp.Exemplaire)
+                .HasForeignKey(emp => emp.ExemplaireId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             SeedData(modelBuilder);
@@ -102,6 +109,16 @@ namespace LibraryApp.Infrastructure.Data
                 new Livre { Id = 5, Titre = "L'Étranger", EditeurId = 3, EstDisponible = true }
             );
 
+            // --- Exemplaires ---
+            modelBuilder.Entity<Exemplaire>().HasData(
+                new Exemplaire { Id = 1, CodeBarre = "DUNE-001", EstDisponible = true, LivreId = 1 },
+                new Exemplaire { Id = 2, CodeBarre = "DUNE-002", EstDisponible = true, LivreId = 1 },
+                new Exemplaire { Id = 3, CodeBarre = "MESSIE-001", EstDisponible = true, LivreId = 2 },
+                new Exemplaire { Id = 4, CodeBarre = "FONDATION-001", EstDisponible = false, LivreId = 3 },
+                new Exemplaire { Id = 5, CodeBarre = "NEURO-001", EstDisponible = true, LivreId = 4 },
+                new Exemplaire { Id = 6, CodeBarre = "ETRANGER-001", EstDisponible = true, LivreId = 5 }
+            );
+
             // --- AuteurLivre (jonction plusieurs-à-plusieurs) ---
             modelBuilder.Entity<AuteurLivre>().HasData(
                 new AuteurLivre { AuteurId = 1, LivreId = 1 }, // Herbert - Dune
@@ -133,6 +150,7 @@ namespace LibraryApp.Infrastructure.Data
                 {
                     Id = 1,
                     LivreId = 1,
+                    ExemplaireId = 1, // Dune - exemplaire 1
                     MembreId = 1,
                     DateEmprunt = new DateTime(2026, 1, 3),
                     DateRetour = new DateTime(2026, 1, 17)
@@ -141,6 +159,7 @@ namespace LibraryApp.Infrastructure.Data
                 {
                     Id = 2,
                     LivreId = 1,
+                    ExemplaireId = 2, // Dune - exemplaire 2
                     MembreId = 2,
                     DateEmprunt = new DateTime(2026, 3, 2),
                     DateRetour = new DateTime(2026, 3, 9)
@@ -149,6 +168,7 @@ namespace LibraryApp.Infrastructure.Data
                 {
                     Id = 3,
                     LivreId = 3, // Fondation
+                    ExemplaireId = 4, // Fondation - exemplaire 1
                     MembreId = 1,
                     DateEmprunt = new DateTime(2026, 8, 15),
                     DateRetour = null // emprunt actif
