@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
         public string TiteLivre { get; set; }
-        public string CodeBar { get; set; }
+        public string CodeBarre { get; set; }
         public bool EstDisponible { get; set; }
         public List<EmpruntDto> Emprunts { get; set; } = new List<EmpruntDto>();
     }

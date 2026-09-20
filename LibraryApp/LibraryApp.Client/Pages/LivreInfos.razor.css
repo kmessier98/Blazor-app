@@ -82,5 +82,9 @@
                 font-size: 14px;
                 border-bottom: none;
             }
+
+        .text-en-cours-emprunt {
+            font-weight: bold;
+        }
     }
 }

@@ -50,6 +50,7 @@
                     <!-- Entête du tableau -->
                     <thead>
                         <tr>
+                            <th scope="col" class="col-user">Exemplaire</th>
                             <th scope="col" class="col-user">Utilisateur</th>
                             <th scope="col" class="col-emprunt-date">Emprunté le</th>
                             <th scope="col" class="retour-date text-end">Retourné le</th>
@@ -60,11 +61,10 @@
                     <tbody>
                         @foreach (var exemplaire in _livre.Exemplaires)
                         {
-                            <div>TODO exemplaire @exemplaire.CodeBar</div>
-
                             @foreach (var emprunt in exemplaire.Emprunts)
                             {
                                 <tr>
+                                    <td>@exemplaire.CodeBarre</td>
                                     <td>@emprunt.NomMembre</td>
                                     <td>@emprunt.DateEmprunt.ToString("d MMMM yyyy HH:mm:ss")</td>
                                     @if (emprunt.DateRetour != null)
@@ -73,7 +73,7 @@
                                     }
                                     else
                                     {
-                                        <td class="text-end">En cours d'emprunt</td>
+                                        <td class="text-end text-en-cours-emprunt">En cours d'emprunt</td>
                                     }
                                 </tr>
                             }
