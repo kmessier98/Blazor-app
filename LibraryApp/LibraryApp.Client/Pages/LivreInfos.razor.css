@@ -57,8 +57,31 @@
             background-color: #F5F5F5;
         }
 
+    .user-select {
+    }
+
+    .exemplaire-container {
+        .exemplaires {
+            padding: 10px;
+
+            .exemplaire-row {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+
+                button {
+                    margin-left: auto;
+                }
+            }
+            .avertissement {
+                display: block;
+                margin-top: 10px;
+            }
+        }
+    }
+
     .history {
-        margin-top: 10px;
+        margin-top: 15px;
 
         .history-title {
             font-size: 14px;

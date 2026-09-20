@@ -20,6 +20,7 @@ namespace LibraryApp.Client.Pages
         private List<MembreDto> _membres = new List<MembreDto>();
         private bool _isModalOpen = false;
         private int _selectedMembreId = 1;
+        private int _modalSelectedMembreId = 1;
         private bool _isLoading = true;
 
         protected override async Task OnInitializedAsync()
@@ -41,13 +42,13 @@ namespace LibraryApp.Client.Pages
 
             try
             {
-                var success = await LivreService.EmprunterLivre(Id, _selectedMembreId);
+                var success = await LivreService.EmprunterLivre(Id, _modalSelectedMembreId);
 
                 if (success)
                 {
                     _livre = await LivreService.GetLivreInfos(Id);
                     _isModalOpen = false;
-                    _selectedMembreId = 1;
+                    _modalSelectedMembreId = 1;
 
                     NotificationService.ShowSuccess("Livre emprunté avec succès");
                 }

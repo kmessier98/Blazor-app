@@ -31,16 +31,50 @@
         </div>
         <hr />
 
-        <div class="disponible-row">
-            @if (_livre.EstDisponible)
-            {
-                <div><span class="badge rounded-pill bg-success-subtle text-success px-3 py-2">Disponible</span></div>
-                <button class="btn-emprunter" @onclick="(() => { _isModalOpen = true; })">Emprunter</button>
-            }
-            else
-            {
-                <span class="badge rounded-pill bg-danger-subtle text-danger px-3 py-2">Emprunté</span>
-            }
+        <div class="user-select">
+            <span>Membre</span>
+            <select class="form-select" @bind="_selectedMembreId">
+                @foreach (var membre in _membres!)
+                {
+                    <option value="@membre.Id">@membre.Nom</option>
+                }
+            </select>
+        </div>
+
+        <hr />
+
+        <div class="exemplaire-container">
+            <span>Exemplaires <span class="text-success">(@_livre.Exemplaires.Count(x => x.EstDisponible) / @_livre.Exemplaires.Count disponibles)</span></span>
+            <div class="exemplaires">
+                @foreach(var exemplaire in _livre.Exemplaires)
+                {
+                    <div class="exemplaire-row">
+                        <span>@exemplaire.CodeBarre</span>
+                           @if (exemplaire.EstDisponible)
+                            {
+                                <span class="text-success">Disponible</span>
+                                <button type="button" class="btn btn-light border border-secondary-subtle rounded-3 px-4 py-2 text-primary-emphasis">
+                                    Emprunter
+                                </button>
+                            }
+                            else
+                            {
+                                var nomEmprunteur = exemplaire.Emprunts
+                                    .FirstOrDefault(x => x.DateRetour == null)?.NomMembre;
+
+                                <span class="text-danger">Emprunté par @nomEmprunteur</span>
+                                <button type="button" class="btn border rounded-3 px-4 py-2 disabled">Emprunter</button>
+                            }
+                    </div>
+                    
+                    if (!exemplaire.Equals(_livre.Exemplaires.Last()))
+                    {
+                        <hr />
+                    }
+                }
+
+                <span class="text-danger avertissement">⚠ NOM a déjà l'exemplaire ... de ce livre -- tous les autres boutons Emprunter pour elle sont désactivés</span>
+            </div>
         </div>
 
         <div class="history">
@@ -92,12 +126,12 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5">Emprunter</h1>
-                    <button type="button" class="btn-close" @onclick="(() => { _isModalOpen = false; _selectedMembreId = 1; })"></button>
+                    <button type="button" class="btn-close" @onclick="(() => { _isModalOpen = false; _modalSelectedMembreId = 1; })"></button>
                 </div>
                 <div class="modal-body">
                     <h4>Sélectionner un membre:</h4>
                     <div class="membres-list-filter">
-                        <select class="form-select" @bind="_selectedMembreId">
+                        <select class="form-select" @bind="_modalSelectedMembreId">
                             @foreach (var membre in _membres!)
                             {
                                 <option value="@membre.Id">@membre.Nom</option>
@@ -106,7 +140,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" @onclick="(() => { _isModalOpen = false; _selectedMembreId = 1; })">Annuler</button>
+                    <button type="button" class="btn btn-secondary" @onclick="(() => { _isModalOpen = false; _modalSelectedMembreId = 1; })">Annuler</button>
                     <button type="button" class="btn btn-primary" @onclick="() => Emprunter()">Emprunter</button>
                 </div>
             </div>
