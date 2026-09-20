@@ -13,7 +13,7 @@ namespace LibraryApp.Shared.DTOs
             public string NomAuteur { get; set; }
             public string PrenomAuteur { get; set; }
             public string NomEditeur { get; set; }
-            public bool ContientDisponible { get; set; }
+            public bool EstDisponible { get; set; }
             public int NombreExemplaires { get; set; }
             public int NombreExemplairesDisponible { get; set; }
             public List<int> CategoryIds { get; set; }
@@ -28,6 +28,8 @@ namespace LibraryApp.Shared.DTOs
             public string PrenomAuteur { get; set; }
             public string NomEditeur { get; set; }
             public bool EstDisponible { get; set; }
+            public int NombreExemplaires { get; set; }
+            public int NombreExemplairesDisponible { get; set; }
             public List<GetAllCategoryDto> Categories { get; set; }
             public List<ExemplaireDto> Exemplaires { get; set; }
 

@@ -95,11 +95,11 @@ namespace LibraryApp.Infrastructure.Data
 
             // --- Livres ---
             modelBuilder.Entity<Livre>().HasData(
-                new Livre { Id = 1, Titre = "Dune", EditeurId = 1, EstDisponible = true },
-                new Livre { Id = 2, Titre = "Le Messie de Dune", EditeurId = 1, EstDisponible = true },
-                new Livre { Id = 3, Titre = "Fondation", EditeurId = 2, EstDisponible = false },
-                new Livre { Id = 4, Titre = "Neuromancien", EditeurId = 2, EstDisponible = true },
-                new Livre { Id = 5, Titre = "L'Étranger", EditeurId = 3, EstDisponible = true }
+                new Livre { Id = 1, Titre = "Dune", EditeurId = 1 },
+                new Livre { Id = 2, Titre = "Le Messie de Dune", EditeurId = 1 },
+                new Livre { Id = 3, Titre = "Fondation", EditeurId = 2},
+                new Livre { Id = 4, Titre = "Neuromancien", EditeurId = 2 },
+                new Livre { Id = 5, Titre = "L'Étranger", EditeurId = 3 }
             );
 
             // --- Exemplaires ---

@@ -18,7 +18,7 @@ namespace LibraryApp.Application.Mapping
                 .ForMember(t => t.NomAuteur, m => m.MapFrom(s => s.Auteurs.FirstOrDefault().Nom))
                 .ForMember(t => t.PrenomAuteur, m => m.MapFrom(s => s.Auteurs.FirstOrDefault().Prenom))
                 .ForMember(t => t.CategoryIds, m => m.MapFrom(s => s.Categories.Select(c => c.Id)))
-                .ForMember(t => t.ContientDisponible, m => m.MapFrom(s => s.Exemplaires.Any(x => x.EstDisponible)))
+                .ForMember(t => t.EstDisponible, m => m.MapFrom(s => s.Exemplaires.Any(x => x.EstDisponible)))
                 .ForMember(t => t.NombreExemplaires, m => m.MapFrom(s => s.Exemplaires.Count))
                 .ForMember(t => t.NombreExemplairesDisponible, m => m.MapFrom(s => s.Exemplaires.Count(x => x.EstDisponible)));
 
@@ -34,7 +34,11 @@ namespace LibraryApp.Application.Mapping
                 .ForMember(t => t.NomMembre, m => m.MapFrom(s => s.Membre.Nom));
 
             CreateMap<Exemplaire, ExemplaireDto>()
-                .ForMember(t => t.TiteLivre, m => m.MapFrom(s => s.Livre.Titre));
+                .ForMember(t => t.TiteLivre, m => m.MapFrom(s => s.Livre.Titre))
+               .ForMember(t => t.EmpruntePar, m => m.MapFrom(s =>
+                    s.Emprunts.FirstOrDefault(x => x.DateRetour == null) != null
+                    ? s.Emprunts.FirstOrDefault(x => x.DateRetour == null).Membre.Nom
+                    : string.Empty));
 
             CreateMap<Livre, GetLivreInfosDto>()
                 .ForMember(t => t.LivreId, m => m.MapFrom(s => s.Id))
@@ -42,6 +46,9 @@ namespace LibraryApp.Application.Mapping
                 .ForMember(t => t.AuteurId, m => m.MapFrom(s => s.Auteurs.FirstOrDefault().Id))
                 .ForMember(t => t.NomAuteur, m => m.MapFrom(s => s.Auteurs.FirstOrDefault().Nom))
                 .ForMember(t => t.PrenomAuteur, m => m.MapFrom(s => s.Auteurs.FirstOrDefault().Prenom))
+                .ForMember(t => t.EstDisponible, m => m.MapFrom(s => s.Exemplaires.Any(x => x.EstDisponible)))
+                .ForMember(t => t.NombreExemplaires, m => m.MapFrom(s => s.Exemplaires.Count))
+                .ForMember(t => t.NombreExemplairesDisponible, m => m.MapFrom(s => s.Exemplaires.Count(x => x.EstDisponible)))
                 .ForMember(t => t.Exemplaires, m => m.MapFrom(s => s.Exemplaires));
 
             CreateMap<Membre, MembreDto>()

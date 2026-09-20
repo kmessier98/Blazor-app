@@ -44,7 +44,7 @@
         <hr />
 
         <div class="exemplaire-container">
-            <span>Exemplaires <span class="text-success">(@_livre.Exemplaires.Count(x => x.EstDisponible) / @_livre.Exemplaires.Count disponibles)</span></span>
+            <span>Exemplaires <span class="@(_livre.EstDisponible ? "text-success" : "text-danger")">(@_livre.NombreExemplairesDisponible / @_livre.NombreExemplaires @(_livre.NombreExemplairesDisponible > 1 ? "disponibles" : "disponible"))</span></span>
             <div class="exemplaires">
                 @foreach(var exemplaire in _livre.Exemplaires)
                 {
@@ -59,10 +59,7 @@
                             }
                             else
                             {
-                                var nomEmprunteur = exemplaire.Emprunts
-                                    .FirstOrDefault(x => x.DateRetour == null)?.NomMembre;
-
-                                <span class="text-danger">Emprunté par @nomEmprunteur</span>
+                                <span class="text-danger">Emprunté par @exemplaire.EmpruntePar</span>
                                 <button type="button" class="btn border rounded-3 px-4 py-2 disabled">Emprunter</button>
                             }
                     </div>

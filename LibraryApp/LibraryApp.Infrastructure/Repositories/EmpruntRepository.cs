@@ -70,7 +70,7 @@ namespace LibraryApp.Infrastructure.Repositories
         public async Task RetournerLivre(Emprunt entity)
         {
             entity.DateRetour = DateTime.Now;
-            entity.Exemplaire.Livre.EstDisponible = true;
+            entity.Exemplaire.EstDisponible = true;
 
             await _dbContext.SaveChangesAsync();
         }

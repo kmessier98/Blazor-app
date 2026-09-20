@@ -42,7 +42,7 @@ namespace LibraryApp.Infrastructure.Repositories
         public async Task<Livre?> FindByIdAsync(int id)
         {
             var result = await _dbContext.Livres.Where(l => l.Id == id)
-                 .Include(e => e.Editeur)
+                .Include(e => e.Editeur)
                 .Include(a => a.Auteurs)
                 .Include(c => c.Categories)
                 .Include(e => e.Exemplaires)

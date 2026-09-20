@@ -32,7 +32,7 @@ namespace LibraryApp.Application.Services
             var emprunt = await _empruntRepository.GetActiveAsync(empruntId);
 
             if (emprunt == null) throw new ValidationException("Le livre que vous tentez de retourner n'existe pas ou n'est pas emprunté");
-            if (emprunt.Exemplaire.Livre.EstDisponible == true) throw new ValidationException("Le livre a déjà été retourné");
+            if (emprunt.Exemplaire.EstDisponible == true) throw new ValidationException("Le livre a déjà été retourné");
             if (emprunt.MembreId != membreId) throw new ValidationException("Vous n'êtes pas autorisé à retourner ce livre");
 
             await _empruntRepository.RetournerLivre(emprunt);
