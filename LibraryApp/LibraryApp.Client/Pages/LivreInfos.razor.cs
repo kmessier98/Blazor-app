@@ -22,6 +22,8 @@ namespace LibraryApp.Client.Pages
         private int _selectedMembreId = 1;
         private int _modalSelectedMembreId = 1;
         private bool _isLoading = true;
+        private bool _selectedUserCanEmprunte = true;
+        private ExemplaireDto? _selectedUserExemplaireEmprunte = null;
 
         protected override async Task OnInitializedAsync()
         {
@@ -33,7 +35,42 @@ namespace LibraryApp.Client.Pages
             _livre = livreTask.Result;
             _membres = utilisateursTask.Result;
 
+            VerifySelectedUserCanEmprunte();
+
             _isLoading = false;
+        }
+
+        private void OnUserSelectedChanged(ChangeEventArgs e)
+        {
+            if (_livre == null) return;
+
+            if (int.TryParse(e.Value?.ToString(), out int membreId))
+            {
+                _selectedMembreId = membreId;
+            }
+            else
+            {
+                _selectedMembreId = 0;
+            }
+
+            VerifySelectedUserCanEmprunte();
+
+        }
+
+        private void VerifySelectedUserCanEmprunte()
+        {
+            bool userHasEmpruntEnCours = _livre.Exemplaires.Any(x => x.Emprunts.Any(x => x.MembreId == _selectedMembreId && x.DateRetour == null));
+
+            if (userHasEmpruntEnCours)
+            {
+                _selectedUserCanEmprunte = false;
+                _selectedUserExemplaireEmprunte = _livre.Exemplaires.SingleOrDefault(x => x.Emprunts.Any(x => x.MembreId == _selectedMembreId && x.DateRetour == null));
+            }
+            else
+            {
+                _selectedUserCanEmprunte = true;
+                _selectedUserExemplaireEmprunte = null;
+            }
         }
 
         private async Task Emprunter()

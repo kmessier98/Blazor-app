@@ -33,7 +33,7 @@
 
         <div class="user-select">
             <span>Membre</span>
-            <select class="form-select" @bind="_selectedMembreId">
+            <select class="form-select" @onchange="OnUserSelectedChanged">
                 @foreach (var membre in _membres!)
                 {
                     <option value="@membre.Id">@membre.Nom</option>
@@ -53,9 +53,16 @@
                            @if (exemplaire.EstDisponible)
                             {
                                 <span class="text-success">Disponible</span>
-                                <button type="button" class="btn btn-light border border-secondary-subtle rounded-3 px-4 py-2 text-primary-emphasis">
-                                    Emprunter
-                                </button>
+                                @if (_selectedUserCanEmprunte)
+                                {
+                                    <button type="button" class="btn btn-light border border-secondary-subtle rounded-3 px-4 py-2 text-primary-emphasis">
+                                        Emprunter
+                                    </button>
+                                }
+                                else
+                                {
+                                    <button type="button" class="btn border rounded-3 px-4 py-2 disabled">Emprunter</button>
+                                }
                             }
                             else
                             {
@@ -70,7 +77,12 @@
                     }
                 }
 
-                <span class="text-danger avertissement">⚠ NOM a déjà l'exemplaire ... de ce livre -- tous les autres boutons Emprunter pour elle sont désactivés</span>
+                @if (!_selectedUserCanEmprunte)
+                {
+                    string membreName = _membres.Single(x => x.Id == _selectedMembreId).Nom;
+
+                    <span class="text-danger avertissement">⚠ @membreName a déjà l'exemplaire @_selectedUserExemplaireEmprunte?.CodeBarre de ce livre -- il est donc impossible d'effectuer à nouveau un emprunt</span>
+                }
             </div>
         </div>
 
