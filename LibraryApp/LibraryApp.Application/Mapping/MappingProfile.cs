@@ -31,7 +31,9 @@ namespace LibraryApp.Application.Mapping
 
             CreateMap<Emprunt, EmpruntDto>()
                 .ForMember(t => t.MembreId, m => m.MapFrom(s => s.Membre.Id))
-                .ForMember(t => t.NomMembre, m => m.MapFrom(s => s.Membre.Nom));
+                .ForMember(t => t.NomMembre, m => m.MapFrom(s => s.Membre.Nom))
+                .ForMember(t => t.TitreLivreEmprunte, m => m.MapFrom(s => s.Exemplaire.Livre.Titre))
+                .ForMember(t => t.CodeBarreLivreEmprunte, m => m.MapFrom(s => s.Exemplaire.CodeBarre));
 
             CreateMap<Exemplaire, ExemplaireDto>()
                 .ForMember(t => t.TiteLivre, m => m.MapFrom(s => s.Livre.Titre))

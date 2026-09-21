@@ -11,7 +11,7 @@ namespace LibraryApp.Client.Pages
         [Inject]
         public INotificationService NotificationService { get; set; }
 
-        private List<EmpruntDto> _emprunts { get; set; } = new List<EmpruntDto>(); //TODO devra etre list de exemplaire a la palce... et afficher le livre, l'exemplaire (le codebare)
+        private List<EmpruntDto> _emprunts { get; set; } = new List<EmpruntDto>();
         private bool _isLoading = true;
 
         protected override async Task OnInitializedAsync()
