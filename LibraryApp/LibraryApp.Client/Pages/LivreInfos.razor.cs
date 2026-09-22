@@ -10,6 +10,8 @@ namespace LibraryApp.Client.Pages
         [Inject]
         public ILivreService LivreService { get; set; }
         [Inject]
+        public IExemplaireService ExemplaireService { get; set; }
+        [Inject]
         public IMembreService UtilisateurService { get; set; }
         [Inject]
         public INotificationService NotificationService { get; set; }
@@ -18,9 +20,7 @@ namespace LibraryApp.Client.Pages
 
         private GetLivreInfosDto? _livre;
         private List<MembreDto> _membres = new List<MembreDto>();
-        private bool _isModalOpen = false;
         private int _selectedMembreId = 1;
-        private int _modalSelectedMembreId = 1;
         private bool _isLoading = true;
         private bool _selectedUserCanEmprunte = true;
         private ExemplaireDto? _selectedUserExemplaireEmprunte = null;
@@ -73,21 +73,19 @@ namespace LibraryApp.Client.Pages
             }
         }
 
-        private async Task Emprunter()
+        private async Task Emprunter(ExemplaireDto exemplaire)
         {
             _isLoading = true;
 
             try
             {
-                var success = await LivreService.EmprunterLivre(Id, _modalSelectedMembreId);
+                var result = await ExemplaireService.EmprunterExemplaire(exemplaire.Id, _selectedMembreId);
 
-                if (success)
+                if (result is not null)
                 {
-                    _livre = await LivreService.GetLivreInfos(Id);
-                    _isModalOpen = false;
-                    _modalSelectedMembreId = 1;
+                    _livre = await LivreService.GetLivreInfos(Id); 
 
-                    NotificationService.ShowSuccess("Livre emprunté avec succès");
+                    NotificationService.ShowSuccess($"Le livre {exemplaire.CodeBarre} a été emprunté avec succès");
                 }
                 else
                 {

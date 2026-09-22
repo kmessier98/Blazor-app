@@ -55,7 +55,9 @@
                                 <span class="text-success">Disponible</span>
                                 @if (_selectedUserCanEmprunte)
                                 {
-                                    <button type="button" class="btn btn-light border border-secondary-subtle rounded-3 px-4 py-2 text-primary-emphasis">
+                                    <button type="button" 
+                                            class="btn btn-light border border-secondary-subtle rounded-3 px-4 py-2 text-primary-emphasis"
+                                            @onclick="() => Emprunter(exemplaire)">
                                         Emprunter
                                     </button>
                                 }
@@ -67,7 +69,10 @@
                             else
                             {
                                 <span class="text-danger">Emprunté par @exemplaire.EmpruntePar</span>
-                                <button type="button" class="btn border rounded-3 px-4 py-2 disabled">Emprunter</button>
+                                <button type="button"
+                                        class="btn border rounded-3 px-4 py-2 disabled">
+                                      Emprunter
+                                </button>
                             }
                     </div>
                     
@@ -123,35 +128,6 @@
                         }
                     </tbody>
                 </table>
-            </div>
-        </div>
-    </div>
-}
-
-@if (_isModalOpen)
-{
-    <div class="modal fade show d-block" tabindex="-1" style="background-color: rgba(0, 0, 0, 0.5);">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5">Emprunter</h1>
-                    <button type="button" class="btn-close" @onclick="(() => { _isModalOpen = false; _modalSelectedMembreId = 1; })"></button>
-                </div>
-                <div class="modal-body">
-                    <h4>Sélectionner un membre:</h4>
-                    <div class="membres-list-filter">
-                        <select class="form-select" @bind="_modalSelectedMembreId">
-                            @foreach (var membre in _membres!)
-                            {
-                                <option value="@membre.Id">@membre.Nom</option>
-                            }
-                        </select>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" @onclick="(() => { _isModalOpen = false; _modalSelectedMembreId = 1; })">Annuler</button>
-                    <button type="button" class="btn btn-primary" @onclick="() => Emprunter()">Emprunter</button>
-                </div>
             </div>
         </div>
     </div>

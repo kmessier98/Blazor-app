@@ -1,0 +1,10 @@
+using LibraryApp.Domain.Entities;
+using LibraryApp.Shared.Interfaces;
+
+namespace LibraryApp.Application.Interfaces
+{
+    public interface IExemplaireRepository : IGenericInterface<Exemplaire>
+    {
+        Task EmprunterExemplaire(Exemplaire entity, int membreId);
+    }
+}
