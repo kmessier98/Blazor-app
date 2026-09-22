@@ -23,6 +23,7 @@ namespace LibraryApp.Client.Pages
         private int _selectedMembreId = 1;
         private bool _isLoading = true;
         private bool _selectedUserCanEmprunte = true;
+        private bool _showAvertissement = false;
         private ExemplaireDto? _selectedUserExemplaireEmprunte = null;
 
         protected override async Task OnInitializedAsync()
@@ -64,11 +65,13 @@ namespace LibraryApp.Client.Pages
             if (userHasEmpruntEnCours)
             {
                 _selectedUserCanEmprunte = false;
+                _showAvertissement = _livre.Exemplaires.Any(x => x.EstDisponible);
                 _selectedUserExemplaireEmprunte = _livre.Exemplaires.SingleOrDefault(x => x.Emprunts.Any(x => x.MembreId == _selectedMembreId && x.DateRetour == null));
             }
             else
             {
                 _selectedUserCanEmprunte = true;
+                _showAvertissement = false;
                 _selectedUserExemplaireEmprunte = null;
             }
         }

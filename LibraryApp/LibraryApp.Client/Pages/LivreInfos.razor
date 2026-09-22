@@ -82,7 +82,7 @@
                     }
                 }
 
-                @if (!_selectedUserCanEmprunte)
+                @if (_showAvertissement)
                 {
                     string membreName = _membres.Single(x => x.Id == _selectedMembreId).Nom;
 
