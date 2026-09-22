@@ -27,14 +27,5 @@ namespace LibraryApp.Api.Controllers
             var livreInfos = await _livreService.GetLivreInfos(livreId);
             return Ok(livreInfos);
         }
-
-        //TODO devra etre emprunerExemplaire..
-        //[HttpPut("{livreId}/membre/{membreId}/emprunt")]
-        //public async Task<ActionResult> EmprunterLivre([FromRoute] int livreId, [FromRoute] int membreId)
-        //{
-        //    await _livreService.EmprunterLivre(livreId, membreId);
-        //    return NoContent();
-        //}
-
     }
 }
