@@ -6,11 +6,11 @@ namespace LibraryApp.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuteurController : ControllerBase
+    public class AuteursController : ControllerBase
     {
         private readonly IAuteurService _auteurService;
 
-        public AuteurController(IAuteurService auteurService)
+        public AuteursController(IAuteurService auteurService)
         {
             _auteurService = auteurService;
         }

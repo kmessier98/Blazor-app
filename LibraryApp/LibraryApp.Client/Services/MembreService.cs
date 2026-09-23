@@ -20,7 +20,7 @@ namespace LibraryApp.Client.Services
         {
             try
             {
-                var response = await _httpClient.PostAsJsonAsync("api/membre", dto);
+                var response = await _httpClient.PostAsJsonAsync("api/membres", dto);
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -61,7 +61,7 @@ namespace LibraryApp.Client.Services
         {
             try
             {
-                var response = await _httpClient.DeleteAsync($"api/membre/{id}");
+                var response = await _httpClient.DeleteAsync($"api/membres/{id}");
                 if (response.IsSuccessStatusCode)
                 {
                     return true;
@@ -85,7 +85,7 @@ namespace LibraryApp.Client.Services
         {
             try
             {
-                var response = await _httpClient.GetFromJsonAsync<List<MembreDto>>("api/membre");
+                var response = await _httpClient.GetFromJsonAsync<List<MembreDto>>("api/membres");
 
                 return response ?? [];
             }

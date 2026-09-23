@@ -6,10 +6,10 @@ namespace LibraryApp.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class LivreController : ControllerBase
+    public class LivresController : ControllerBase
     {
         private ILivreService _livreService;
-        public LivreController(ILivreService livreService)
+        public LivresController(ILivreService livreService)
         {
             _livreService = livreService;
         }

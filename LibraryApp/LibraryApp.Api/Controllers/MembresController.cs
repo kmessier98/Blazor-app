@@ -6,11 +6,11 @@ namespace LibraryApp.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class MembreController : ControllerBase
+    public class MembresController : ControllerBase
     {
         private readonly IMembreService _membreService;
 
-        public MembreController(IMembreService membreService)
+        public MembresController(IMembreService membreService)
         {
             _membreService = membreService;
         }
