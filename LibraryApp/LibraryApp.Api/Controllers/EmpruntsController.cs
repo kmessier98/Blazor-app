@@ -6,11 +6,11 @@ namespace LibraryApp.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EmpruntController : ControllerBase
+    public class EmpruntsController : ControllerBase
     {
         private readonly IEmpruntService _empruntService;
 
-        public EmpruntController(IEmpruntService empruntService)
+        public EmpruntsController(IEmpruntService empruntService)
         {
             _empruntService = empruntService;
         }
@@ -22,11 +22,11 @@ namespace LibraryApp.Api.Controllers
             return Ok(emprunts);
         }
 
-        [HttpPut("{empruntId}/membre/{membreId}/retour")]
-        public async Task<ActionResult> RetournerLivre([FromRoute] int empruntId, [FromRoute] int membreId)
+        [HttpPut("{empruntId}/retour")]
+        public async Task<ActionResult> RetournerExemplaire([FromRoute] int empruntId)
         {
 
-            await _empruntService.RetournerLivre(empruntId, membreId);
+            await _empruntService.RetournerExemplaire(empruntId);
             return NoContent();
         }
     }

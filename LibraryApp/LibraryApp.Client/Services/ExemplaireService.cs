@@ -1,4 +1,3 @@
-using LibraryApp.Client.Models;
 using LibraryApp.Client.Services.Interfaces;
 using LibraryApp.Shared.DTOs;
 using System.Net.Http.Json;
@@ -21,7 +20,7 @@ namespace LibraryApp.Client.Services
             try
             {
                 var request = new CreerEmpruntDto { ExemplaireId = exemplaireId, MembreId = membreId };
-                var response = await _httpClient.PostAsJsonAsync("api/exemplaire/emprunts", request);
+                var response = await _httpClient.PostAsJsonAsync("api/exemplaires/emprunts", request);
 
                 if (!response.IsSuccessStatusCode)
                 {

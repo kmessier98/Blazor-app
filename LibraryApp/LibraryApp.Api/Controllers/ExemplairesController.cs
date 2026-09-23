@@ -6,11 +6,11 @@ namespace LibraryApp.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ExemplaireController : ControllerBase
+    public class ExemplairesController : ControllerBase
     {
         private readonly IExemplaireService _exemplaireService;
 
-        public ExemplaireController(IExemplaireService exemplaireService)
+        public ExemplairesController(IExemplaireService exemplaireService)
         {
             _exemplaireService = exemplaireService;
         }

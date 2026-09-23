@@ -19,7 +19,7 @@ namespace LibraryApp.Client.Services
         {
             try
             {
-                var response = await _httpClient.GetFromJsonAsync<List<EmpruntDto>>("api/emprunt/GetAllActive");
+                var response = await _httpClient.GetFromJsonAsync<List<EmpruntDto>>("api/emprunts/GetAllActive");
 
                 return response ?? [];
             }
@@ -37,11 +37,11 @@ namespace LibraryApp.Client.Services
             }
         }
 
-        public async Task<bool> RetournerLivre(int empruntId, int membreId)
+        public async Task<bool> RetournerExemplaire(int empruntId)
         {
             try
             {
-                var response = await _httpClient.PutAsync($"api/emprunt/{empruntId}/membre/{membreId}/retour", null);
+                var response = await _httpClient.PutAsync($"api/emprunts/{empruntId}/retour", null);
 
                 if (!response.IsSuccessStatusCode)
                 {

@@ -56,18 +56,8 @@ namespace LibraryApp.Infrastructure.Repositories
             return result;
         }
 
-        public async Task<Emprunt?> GetActiveByExemplaireIdAsync(int exemplaireId)
-        {
-            var result = await _dbContext.Emprunts
-                .Where(x => x.ExemplaireId == exemplaireId && x.DateRetour == null)
-                .Include(ex => ex.Exemplaire)
-                    .ThenInclude(l => l.Livre) //todo retiré
-                .SingleOrDefaultAsync();
 
-            return result;
-        }
-
-        public async Task RetournerLivre(Emprunt entity)
+        public async Task RetournerExemplaire(Emprunt entity)
         {
             entity.DateRetour = DateTime.Now;
             entity.Exemplaire.EstDisponible = true;
