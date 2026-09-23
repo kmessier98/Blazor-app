@@ -50,20 +50,5 @@ namespace LibraryApp.Infrastructure.Repositories
         {
             throw new NotImplementedException();
         }
-
-        public async Task EmprunterExemplaire(Exemplaire entity, int membreId)
-        {
-            entity.EstDisponible = false;
-
-            await _dbContext.Emprunts.AddAsync(new Emprunt
-            {
-                ExemplaireId = entity.Id,
-                MembreId = membreId,
-                DateEmprunt = DateTime.Now,
-                DateRetour = null
-            });
-
-            await _dbContext.SaveChangesAsync();
-        }
     }
 }

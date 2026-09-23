@@ -5,6 +5,6 @@ namespace LibraryApp.Application.Interfaces
 {
     public interface IExemplaireRepository : IGenericInterface<Exemplaire>
     {
-        Task EmprunterExemplaire(Exemplaire entity, int membreId);
+
     }
 }

@@ -16,6 +16,5 @@ builder.Services.AddScoped<IAuteurService, AuteurService>();
 builder.Services.AddScoped<IEmpruntService, EmpruntService>();
 builder.Services.AddScoped<IMembreService, MembreService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
-builder.Services.AddScoped<IExemplaireService, ExemplaireService>();
 
 await builder.Build().RunAsync();

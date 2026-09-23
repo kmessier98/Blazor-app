@@ -39,7 +39,6 @@ builder.Services.AddScoped<IEmpruntService, EmpruntService>();
 builder.Services.AddScoped<IEmpruntRepository, EmpruntRepository>();
 builder.Services.AddScoped<IMembreService, MembreService>();
 builder.Services.AddScoped<IMembreRepository, MembreRepository>();
-builder.Services.AddScoped<IExemplaireService, ExemplaireService>();
 builder.Services.AddScoped<IExemplaireRepository, ExemplaireRepository>();
 
 builder.Services.AddValidatorsFromAssembly(typeof(CreateMembreDtoValidator).Assembly);

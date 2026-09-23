@@ -15,11 +15,30 @@ namespace LibraryApp.Api.Controllers
             _empruntService = empruntService;
         }
 
+        [HttpGet("{id}")]
+        public async Task<ActionResult<EmpruntDto>> Get(int id)
+        {
+            var dto = await _empruntService.Get(id);
+            return Ok(dto);
+        }
+
         [HttpGet("GetAllActive")]
         public async Task<ActionResult<List<EmpruntDto>>> GetAllActive()
         {
             var emprunts = await _empruntService.GetAllActiveAsync();
             return Ok(emprunts);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<EmpruntDto>> EmprunterExemplaire(CreerEmpruntDto dto)
+        {
+            var result = await _empruntService.EmprunterExemplaire(dto.ExemplaireId, dto.MembreId);
+
+            return CreatedAtAction(
+                nameof(Get),
+                new { id = result.Id },
+                result);
+
         }
 
         [HttpPut("{empruntId}/retour")]

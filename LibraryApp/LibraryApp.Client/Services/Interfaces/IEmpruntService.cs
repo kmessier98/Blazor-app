@@ -6,5 +6,6 @@ namespace LibraryApp.Client.Services.Interfaces
     {
         Task<List<EmpruntDto>> GetAllActiveAsync();
         Task<bool> RetournerExemplaire(int empruntId);
+        Task<EmpruntDto?> EmprunterExemplaire(int exemplaireId, int membreId);
     }
 }

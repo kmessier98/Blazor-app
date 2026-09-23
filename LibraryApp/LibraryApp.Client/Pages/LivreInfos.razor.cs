@@ -10,7 +10,7 @@ namespace LibraryApp.Client.Pages
         [Inject]
         public ILivreService LivreService { get; set; }
         [Inject]
-        public IExemplaireService ExemplaireService { get; set; }
+        public IEmpruntService EmpruntService { get; set; }
         [Inject]
         public IMembreService UtilisateurService { get; set; }
         [Inject]
@@ -82,7 +82,7 @@ namespace LibraryApp.Client.Pages
 
             try
             {
-                var result = await ExemplaireService.EmprunterExemplaire(exemplaire.Id, _selectedMembreId);
+                var result = await EmpruntService.EmprunterExemplaire(exemplaire.Id, _selectedMembreId);
 
                 if (result is not null)
                 {

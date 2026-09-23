@@ -7,6 +7,7 @@ namespace LibraryApp.Application.Interfaces
     {
         Task<IReadOnlyList<Emprunt>> GetAllActiveAsync();
         Task<Emprunt?> GetActiveAsync(int empruntId);
+        Task<Emprunt> EmprunterExemplaire(Exemplaire entity, int membreId);
         Task RetournerExemplaire(Emprunt entity);
     }
 }

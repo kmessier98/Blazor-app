@@ -24,9 +24,15 @@ namespace LibraryApp.Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<Emprunt?> FindByIdAsync(int id)
+        public async Task<Emprunt?> FindByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var result = await _dbContext.Emprunts
+                .Include(e => e.Exemplaire)
+                    .ThenInclude(l => l.Livre)
+                .Include(e => e.Membre)
+                .SingleOrDefaultAsync(x => x.Id == id);
+
+            return result;
         }
 
         public Task<IReadOnlyList<Emprunt>> GetAllAsync()
@@ -56,6 +62,23 @@ namespace LibraryApp.Infrastructure.Repositories
             return result;
         }
 
+        public async Task<Emprunt> EmprunterExemplaire(Exemplaire entity, int membreId)
+        {
+            entity.EstDisponible = false;
+
+            var emprunt = new Emprunt
+            {
+                ExemplaireId = entity.Id,
+                MembreId = membreId,
+                DateEmprunt = DateTime.Now,
+                DateRetour = null
+            };
+
+            await _dbContext.Emprunts.AddAsync(emprunt);
+            await _dbContext.SaveChangesAsync();
+
+            return emprunt;
+        }
 
         public async Task RetournerExemplaire(Emprunt entity)
         {
