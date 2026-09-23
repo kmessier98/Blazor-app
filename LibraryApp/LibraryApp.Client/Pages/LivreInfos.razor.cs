@@ -86,7 +86,8 @@ namespace LibraryApp.Client.Pages
 
                 if (result is not null)
                 {
-                    _livre = await LivreService.GetLivreInfos(Id); 
+                    _livre = await LivreService.GetLivreInfos(Id);
+                    VerifySelectedUserCanEmprunte();
 
                     NotificationService.ShowSuccess($"Le livre {exemplaire.CodeBarre} a été emprunté avec succès");
                 }
