@@ -13,6 +13,7 @@ namespace LibraryApp.Infrastructure.Data
         public DbSet<Exemplaire> Exemplaires { get; set; }
         public DbSet<Livre> Livres { get; set; }
         public DbSet<Membre> Membres { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -57,6 +58,18 @@ namespace LibraryApp.Infrastructure.Data
                 .HasMany(e => e.Emprunts)
                 .WithOne(emp => emp.Exemplaire)
                 .HasForeignKey(emp => emp.ExemplaireId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Reservation>()
+                .HasOne(e => e.Livre)
+                .WithMany(r => r.Reservations)
+                .HasForeignKey(r => r.LivreId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Reservation>()
+                .HasOne(e => e.Membre)
+                .WithMany(r => r.Reservations)
+                .HasForeignKey(r => r.MembreId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             SeedData(modelBuilder);
