@@ -44,7 +44,6 @@ namespace LibraryApp.Api.Controllers
         [HttpPut("{empruntId}/retour")]
         public async Task<ActionResult> RetournerExemplaire([FromRoute] int empruntId)
         {
-
             await _empruntService.RetournerExemplaire(empruntId);
             return NoContent();
         }

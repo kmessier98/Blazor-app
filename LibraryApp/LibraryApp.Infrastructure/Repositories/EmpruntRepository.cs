@@ -80,10 +80,10 @@ namespace LibraryApp.Infrastructure.Repositories
             return emprunt;
         }
 
-        public async Task RetournerExemplaire(Emprunt entity)
+        public async Task RetournerExemplaire(Emprunt entity, bool remettreDisponible)
         {
             entity.DateRetour = DateTime.Now;
-            entity.Exemplaire.EstDisponible = true;
+            entity.Exemplaire.EstDisponible = remettreDisponible;
 
             await _dbContext.SaveChangesAsync();
         }
@@ -94,6 +94,7 @@ namespace LibraryApp.Infrastructure.Repositories
               .Where(x => x.Id == empruntId && x.DateRetour == null)
               .Include(e => e.Exemplaire)
                 .ThenInclude(l => l.Livre)
+                    .ThenInclude(r => r.Reservations)
               .SingleOrDefaultAsync();
 
             return result;

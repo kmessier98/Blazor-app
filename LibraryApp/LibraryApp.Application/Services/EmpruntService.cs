@@ -75,7 +75,19 @@ namespace LibraryApp.Application.Services
             if (emprunt == null) throw new ValidationException("L'exemplaire que vous tentez de retourner n'existe pas ou n'est pas emprunté");
             if (emprunt.Exemplaire.EstDisponible == true) throw new ValidationException($"L'exemplaire {emprunt.Exemplaire.CodeBarre} a déjà été retourné");
 
-            await _empruntRepository.RetournerExemplaire(emprunt);
+            var prochaineReservation = emprunt.Exemplaire.Livre.Reservations
+                .Where(x => x.Statut == StatutReservation.EnAttente)
+                .MinBy(x => x.DateReservation);
+
+            if (prochaineReservation != null)
+            {
+                prochaineReservation.Statut = StatutReservation.Complete;
+
+                await _empruntRepository.EmprunterExemplaire(emprunt.Exemplaire, prochaineReservation.MembreId);
+            }
+
+
+            await _empruntRepository.RetournerExemplaire(emprunt, remettreDisponible: prochaineReservation == null);
         }
     }
 }

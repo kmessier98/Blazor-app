@@ -12,6 +12,6 @@ namespace LibraryApp.Domain.Entities
         public List<Auteur> Auteurs { get; set; }
         public List<Categorie> Categories { get; set; }
         public List<Exemplaire> Exemplaires { get; set; }
-        public List<Reservation> Reservations { get; set; }
+        public List<Reservation> Reservations { get; set; } = new List<Reservation>();
     }
 }
