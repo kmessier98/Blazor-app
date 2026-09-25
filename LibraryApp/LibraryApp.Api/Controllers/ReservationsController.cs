@@ -32,5 +32,12 @@ namespace LibraryApp.Api.Controllers
                 new { id = result.Id },
                 result);
         }
+
+        [HttpPatch("{id}/annuler")]
+        public async Task<ActionResult> Cancel([FromRoute] int id)
+        {
+            await _reservationService.Cancel(id);
+            return NoContent();
+        }
     }
 }

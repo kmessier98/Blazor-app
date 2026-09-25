@@ -15,6 +15,12 @@ namespace LibraryApp.Infrastructure.Repositories
             _dbContext = dbContext;
         }
 
+        public async Task Cancel(Reservation reservation)
+        {
+            reservation.Statut = StatutReservation.Annulee;
+            await _dbContext.SaveChangesAsync();
+        }
+
         public async Task CreateAsync(Reservation entity)
         {
             await _dbContext.AddAsync(entity);

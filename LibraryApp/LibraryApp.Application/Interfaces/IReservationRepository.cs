@@ -5,5 +5,6 @@ namespace LibraryApp.Application.Interfaces
 {
     public interface IReservationRepository : IGenericInterface<Reservation>
     {
+        Task Cancel(Reservation reservation);
     }
 }

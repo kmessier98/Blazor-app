@@ -6,6 +6,6 @@ namespace LibraryApp.Application.Interfaces
     {
         Task<ReservationDto> Get(int id);
         Task<ReservationDto> Create(CreateReservationDto dto);
-        Task Cancel(int id);
+        Task Cancel(int reservationId);
     }
 }

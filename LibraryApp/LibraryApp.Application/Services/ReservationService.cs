@@ -63,9 +63,16 @@ namespace LibraryApp.Application.Services
             return _mapper.Map<ReservationDto>(entity);
         }
 
-        public Task Cancel(int id)
+        public async Task Cancel(int reservationId)
         {
-            throw new NotImplementedException();
+            var reservation = await _reservationRepository.FindByIdAsync(reservationId);
+            if (reservation is null)
+                throw new NotFoundException(nameof(reservation), reservationId);
+
+            if (reservation.Statut != StatutReservation.EnAttente)
+                throw new BusinessRuleException("Impossible d'annuler cette réservation, elle n'est plus en attente.");
+
+            await _reservationRepository.Cancel(reservation);
         }
 
     }
