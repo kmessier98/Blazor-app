@@ -57,6 +57,8 @@ namespace LibraryApp.Application.Mapping
                 .ForMember(t => t.NombreEmprunt, m => m.MapFrom(s => s.Emprunts.Count(x => x.DateRetour == null)));
             CreateMap<CreateMembreDto, Membre>();
 
+            CreateMap<Reservation, ReservationDto>();
+
         }
     }
 }

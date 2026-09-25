@@ -8,7 +8,7 @@ namespace LibraryApp.Domain.Entities
         public int Id { get; set; }
         public string Nom { get; set; }
         public string Courriel { get; set; }
-        public List<Emprunt> Emprunts { get; set; }
-        public List<Reservation> Reservations { get; set; }
+        public List<Emprunt> Emprunts { get; set; } = new List<Emprunt>();
+        public List<Reservation> Reservations { get; set; } = new List<Reservation>();
     }
 }

@@ -31,6 +31,7 @@ namespace LibraryApp.Infrastructure.Repositories
         {
             var result = await _dbContext.Membres
                 .Include(e => e.Emprunts)
+                .Include(r => r.Reservations)
                 .SingleOrDefaultAsync(x => x.Id == id);
 
             return result;
