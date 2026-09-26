@@ -100,7 +100,16 @@ namespace LibraryApp.Client.Pages
             {
                 _isLoading = false;
             }
+        }
 
+        private async Task Reserver()
+        {
+            throw new NotImplementedException();
+        }
+
+        private async Task AnnulerReservation()
+        {
+            throw new NotImplementedException();
         }
     }
 }
