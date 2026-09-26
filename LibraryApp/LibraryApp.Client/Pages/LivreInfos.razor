@@ -99,16 +99,15 @@
         {
             <div class="reservation-container">
                 @if (aUneReservation)
-                {
-                    
-                    int position = _livre.Reservations.Single(x => x.Statut == Shared.Enums.StatutReservation.EnAttente && x.MembreId == _selectedMembreId).Position;
+                {              
+                    var reservation = _livre.Reservations.Single(x => x.Statut == Shared.Enums.StatutReservation.EnAttente && x.MembreId == _selectedMembreId);
                     int nombreReservation = _livre.Reservations.Count(x => x.Statut == Shared.Enums.StatutReservation.EnAttente);
                     
                     <div class="reservation">
-                        <span>Vous êtes @(position)e dans la file d'attente (@nombreReservation réservations)</span>
+                        <span>Vous êtes @(reservation.Position)e dans la file d'attente (@nombreReservation réservations)</span>
                         <button type="button"
                                 class="btn btn-light border border-secondary-subtle rounded-3 px-4 py-2 text-primary-emphasis btn-annuler"
-                                @onclick="(async () => { await AnnulerReservation(); })">
+                                @onclick="(async () => { await AnnulerReservation(reservation.Id); })">
                             Annuler
                         </button>
                     </div>

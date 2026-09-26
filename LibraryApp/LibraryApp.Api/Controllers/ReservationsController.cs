@@ -16,14 +16,14 @@ namespace LibraryApp.Api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<MembreDto>> Get(int id)
+        public async Task<ActionResult<ReservationDto>> Get(int id)
         {
             var dto = await _reservationService.Get(id);
             return Ok(dto);
         }
 
         [HttpPost]
-        public async Task<ActionResult<MembreDto>> Create(CreateReservationDto dto)
+        public async Task<ActionResult<ReservationDto>> Create(CreateReservationDto dto)
         {
             var result = await _reservationService.Create(dto);
 

@@ -15,6 +15,8 @@ namespace LibraryApp.Client.Pages
         public IMembreService UtilisateurService { get; set; }
         [Inject]
         public INotificationService NotificationService { get; set; }
+        [Inject]
+        public IReservationService ReservationService { get; set; }
         [Parameter]
         public int Id { get; set; }
 
@@ -104,12 +106,54 @@ namespace LibraryApp.Client.Pages
 
         private async Task Reserver()
         {
-            throw new NotImplementedException();
+            _isLoading = true;
+
+            try
+            {
+                var dto = new CreateReservationDto
+                {
+                    LivreId = _livre.LivreId,
+                    MembreId = _selectedMembreId
+                };
+                var result = await ReservationService.Create(dto);
+
+                if (result is not null)
+                {
+                    _livre = await LivreService.GetLivreInfos(Id);
+                    NotificationService.ShowSuccess($"La réservation pour le livre {_livre.Titre} a été effectué avec succès.");
+                }
+                else
+                {
+                    NotificationService.ShowError("Un problème est survenu");
+                }
+            }
+            finally
+            {
+                _isLoading = false;
+            }
         }
 
-        private async Task AnnulerReservation()
+        private async Task AnnulerReservation(int reservationId)
         {
-            throw new NotImplementedException();
+            _isLoading = true;
+
+            try
+            {
+                var result = await ReservationService.Cancel(reservationId);
+
+                if (result)
+                {
+                    NotificationService.ShowSuccess($"La réservation pour le livre {_livre.Titre} a été annulé avec succès.");
+                }
+                else
+                {
+                    NotificationService.ShowError("Un problème est survenu");
+                }
+            }
+            finally
+            {
+                _isLoading = false;
+            }
         }
     }
 }
