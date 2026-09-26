@@ -37,6 +37,17 @@ namespace LibraryApp.Application.Services
 
             var dto = _mapper.Map<GetLivreInfosDto>(result);
 
+            var idsTriesParDate = result.Reservations
+                .OrderBy(r => r.DateReservation)
+                .Select(r => r.Id)
+                .ToList();
+
+            foreach (var reservationDto in dto.Reservations.Where(x => x.Statut == Shared.Enums.StatutReservation.EnAttente))
+            {
+                int index = idsTriesParDate.IndexOf(reservationDto.Id);
+                reservationDto.Position = index + 1;
+            }
+
             return dto;
 
         }

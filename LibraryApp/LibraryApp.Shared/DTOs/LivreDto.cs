@@ -32,6 +32,7 @@ namespace LibraryApp.Shared.DTOs
             public int NombreExemplairesDisponible { get; set; }
             public List<GetAllCategoryDto> Categories { get; set; }
             public List<ExemplaireDto> Exemplaires { get; set; }
+            public List<ReservationDto> Reservations { get; set; }
 
         }
     }

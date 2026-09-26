@@ -34,6 +34,7 @@ namespace LibraryApp.Infrastructure.Repositories
                 .Include(e => e.Exemplaires)
                     .ThenInclude(e => e.Emprunts)
                         .ThenInclude(u => u.Membre)
+                .Include(r => r.Reservations)
                 .SingleOrDefaultAsync();
 
             return result;

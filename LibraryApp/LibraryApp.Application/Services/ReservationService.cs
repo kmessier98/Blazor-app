@@ -3,6 +3,7 @@ using LibraryApp.Application.Exceptions;
 using LibraryApp.Application.Interfaces;
 using LibraryApp.Domain.Entities;
 using LibraryApp.Shared.DTOs;
+using LibraryApp.Shared.Enums;
 
 namespace LibraryApp.Application.Services
 {
@@ -44,7 +45,7 @@ namespace LibraryApp.Application.Services
             if (livre.Exemplaires.Any(x => x.EstDisponible))
                 throw new BusinessRuleException("Impossible de faire une réservation. Il y a au moins un exemplaire de disponible");
 
-            if (membre.Reservations.Any(x => x.LivreId == dto.LivreId && x.Statut == Domain.Entities.StatutReservation.EnAttente))
+            if (membre.Reservations.Any(x => x.LivreId == dto.LivreId && x.Statut == StatutReservation.EnAttente))
                 throw new BusinessRuleException("Impossible de faire une réservation. Ce membre a déjà une réservation pour ce livre.");
 
             if (membre.Emprunts.Any(x => x.DateRetour == null && x.Exemplaire.LivreId == dto.LivreId))

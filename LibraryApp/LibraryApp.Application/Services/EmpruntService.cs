@@ -3,6 +3,7 @@ using LibraryApp.Application.Exceptions;
 using LibraryApp.Application.Interfaces;
 using LibraryApp.Domain.Entities;
 using LibraryApp.Shared.DTOs;
+using LibraryApp.Shared.Enums;
 using System.ComponentModel.DataAnnotations;
 
 namespace LibraryApp.Application.Services

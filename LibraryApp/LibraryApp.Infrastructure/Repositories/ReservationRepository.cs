@@ -1,6 +1,7 @@
 using LibraryApp.Application.Interfaces;
 using LibraryApp.Domain.Entities;
 using LibraryApp.Infrastructure.Data;
+using LibraryApp.Shared.Enums;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 

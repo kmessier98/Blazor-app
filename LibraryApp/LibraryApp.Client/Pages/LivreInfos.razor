@@ -88,39 +88,45 @@
 
                     <span class="text-danger avertissement">⚠ @membreName a déjà l'exemplaire @_selectedUserExemplaireEmprunte?.CodeBarre de ce livre -- il est donc impossible d'effectuer à nouveau un emprunt</span>
                 }
-            </div>
-            @{
-                bool estDisponible = _livre.EstDisponible;
-                bool aDejaUnEmprunt = _livre.Exemplaires.Any(x => x.Emprunts.Any(x => x.MembreId == _selectedMembreId && x.DateRetour == null));
-                bool aUneReservation = false; // TODO
-            }
-            @if (!estDisponible && !aDejaUnEmprunt)
-            {
-                <div class="reservation-container">
-                    @if (aUneReservation)
-                    {
-                        <div class="reservation">
-                            <span>Vous êtes 2e dans la file d'attente (3 réservations)</span>
-                            <button type="button" 
-                                    class="btn btn-light border border-secondary-subtle rounded-3 px-4 py-2 text-primary-emphasis btn-annuler"
-                                    @onclick="(async () => { await AnnulerReservation(); })">Annuler</button>
-                        </div>
-                    }
-                    else
-                    {
-                  
-                        <div class="reserver">
-                            <button type="button"
-                                    class="btn btn-light border border-secondary-subtle rounded-3 px-4 py-2 text-primary-emphasis"
-                                    @onclick="(async() =>  { await Reserver(); })">
-                                Réserver ce livre
-                            </button>
-                        </div>
-                    
-                    }
-                </div>
-            }
+            </div>          
         </div>
+        @{
+            bool estDisponible = _livre.EstDisponible;
+            bool aDejaUnEmprunt = _livre.Exemplaires.Any(x => x.Emprunts.Any(x => x.MembreId == _selectedMembreId && x.DateRetour == null));
+            bool aUneReservation = _livre.Reservations.Any(x => x.Statut == Shared.Enums.StatutReservation.EnAttente && x.MembreId == _selectedMembreId);
+        }
+        @if (!estDisponible && !aDejaUnEmprunt)
+        {
+            <div class="reservation-container">
+                @if (aUneReservation)
+                {
+                    
+                    int position = _livre.Reservations.Single(x => x.Statut == Shared.Enums.StatutReservation.EnAttente && x.MembreId == _selectedMembreId).Position;
+                    int nombreReservation = _livre.Reservations.Count(x => x.Statut == Shared.Enums.StatutReservation.EnAttente);
+                    
+                    <div class="reservation">
+                        <span>Vous êtes @(position)e dans la file d'attente (@nombreReservation réservations)</span>
+                        <button type="button"
+                                class="btn btn-light border border-secondary-subtle rounded-3 px-4 py-2 text-primary-emphasis btn-annuler"
+                                @onclick="(async () => { await AnnulerReservation(); })">
+                            Annuler
+                        </button>
+                    </div>
+                }
+                else
+                {
+
+                    <div class="reserver">
+                        <button type="button"
+                                class="btn btn-light border border-secondary-subtle rounded-3 px-4 py-2 text-primary-emphasis"
+                                @onclick="(async () => { await Reserver(); })">
+                            Réserver ce livre
+                        </button>
+                    </div>
+
+                }
+            </div>
+        }
 
         <div class="history">
             <span class="history-title">Historique des emprunts</span>

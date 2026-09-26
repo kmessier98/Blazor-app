@@ -79,28 +79,28 @@
                 margin-top: 10px;
             }
         }
+    }
 
-        .reservation-container {
+    .reservation-container {
+        display: flex;
+        margin-top: 15px;
+
+        .reservation {
             display: flex;
-            margin-top: 15px;
+            align-items: center;
+            background-color: antiquewhite;
+            width: 100%;
+            padding: 15px;
+            border-radius: 15px;
 
-            .reservation {
-                display: flex;
-                align-items: center;
-                background-color: antiquewhite;
-                width: 100%;
-                padding: 15px;
-                border-radius: 15px;
-
-                .btn-annuler {
-                    margin-left: auto;
-                    color: red !important;
-                }
-            }
-
-            .reserver {
+            .btn-annuler {
                 margin-left: auto;
+                color: red !important;
             }
+        }
+
+        .reserver {
+            margin-left: auto;
         }
     }
 

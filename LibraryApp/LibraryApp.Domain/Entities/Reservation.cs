@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using LibraryApp.Shared.Enums;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LibraryApp.Domain.Entities
 {
@@ -12,12 +13,5 @@ namespace LibraryApp.Domain.Entities
         public Livre Livre { get; set; }
         public int MembreId { get; set; }
         public Membre Membre { get; set; }
-    }
-
-    public enum StatutReservation
-    {
-        EnAttente,
-        Annulee,
-        Complete
     }
 }
