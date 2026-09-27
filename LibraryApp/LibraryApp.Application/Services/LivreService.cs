@@ -38,6 +38,7 @@ namespace LibraryApp.Application.Services
             var dto = _mapper.Map<GetLivreInfosDto>(result);
 
             var idsTriesParDate = result.Reservations
+                .Where(x => x.Statut == Shared.Enums.StatutReservation.EnAttente)
                 .OrderBy(r => r.DateReservation)
                 .Select(r => r.Id)
                 .ToList();

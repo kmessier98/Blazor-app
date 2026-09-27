@@ -54,7 +54,7 @@ namespace LibraryApp.Client.Services
         {
             try
             {
-                var response = await _httpClient.PatchAsync($"api/{reservationId}/annuler", null);
+                var response = await _httpClient.PatchAsync($"api/reservations/{reservationId}/annuler", null);
 
                 if (response.IsSuccessStatusCode)
                 {

@@ -143,7 +143,8 @@ namespace LibraryApp.Client.Pages
 
                 if (result)
                 {
-                    NotificationService.ShowSuccess($"La réservation pour le livre {_livre.Titre} a été annulé avec succès.");
+                    _livre = await LivreService.GetLivreInfos(Id);
+                    NotificationService.ShowSuccess($"La réservation pour le livre {_livre.Titre} a été annulé avec succès.");       
                 }
                 else
                 {
